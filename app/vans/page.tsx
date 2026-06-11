@@ -23,13 +23,13 @@ export default function VansPage() {
                 <span className="eyebrow text-[#888884]">For Sale</span>
               </div>
               <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-4">Vans for Sale</h1>
-              <p className="text-white/50 max-w-xl font-light">
+              <p className="text-white/75 max-w-xl font-light">
                 Quality used vans prepared by our own mechanics. We also work with fleet operators — get in touch for volume enquiries.
               </p>
             </div>
             <div className="flex gap-3 shrink-0">
               <Link href="/cars"
-                className="border border-white/20 hover:border-white/50 text-white/60 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors">
+                className="border border-white/30 hover:border-white/60 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors">
                 View Cars
               </Link>
               <Link href="/contact"
@@ -43,7 +43,7 @@ export default function VansPage() {
 
       <section className="bg-[#F7F7F5] py-14">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-[#888884] text-sm mb-10 tracking-wide">
+          <p className="text-[#5A5A57] text-sm mb-10 tracking-wide">
             {vans.length} van{vans.length !== 1 ? 's' : ''} currently available
           </p>
           {vans.length > 0 ? (
@@ -66,8 +66,8 @@ export default function VansPage() {
                       <h3 className="font-semibold text-[#111110] tracking-tight">{v.year} {v.make} {v.model}</h3>
                       <span className="text-[#004225] font-semibold shrink-0 text-lg">£{v.price.toLocaleString()}</span>
                     </div>
-                    <p className="text-[#888884] text-xs mb-4 tracking-wide">{v.variant}</p>
-                    <div className="flex gap-4 text-xs text-[#888884] mb-5">
+                    <p className="text-[#5A5A57] text-xs mb-4 tracking-wide">{v.variant}</p>
+                    <div className="flex gap-4 text-xs text-[#5A5A57] mb-5">
                       <span>{v.mileage.toLocaleString()} miles</span>
                       <span>{v.fuel}</span>
                       <span>{v.transmission}</span>
@@ -83,7 +83,7 @@ export default function VansPage() {
           ) : (
             <div className="text-center py-24 border border-[#EFEFEB] bg-white">
               <p className="text-[#111110] font-medium">No vans listed at the moment</p>
-              <p className="text-sm mt-2 text-[#888884]">Call us — we may have vehicles not yet listed, or can source one for you.</p>
+              <p className="text-sm mt-2 text-[#5A5A57]">Call us — we may have vehicles not yet listed, or can source one for you.</p>
             </div>
           )}
         </div>
@@ -94,7 +94,7 @@ export default function VansPage() {
           <div>
             <div className="w-5 h-[2px] bg-[#004225] mb-5" />
             <h2 className="text-xl font-semibold text-[#111110] tracking-tight">Fleet operators welcome</h2>
-            <p className="text-[#888884] text-sm mt-1">We work with businesses of all sizes. Call us to discuss your requirements.</p>
+            <p className="text-[#5A5A57] text-sm mt-1">We work with businesses of all sizes. Call us to discuss your requirements.</p>
           </div>
           <a href="tel:01604696225"
             className="bg-[#004225] hover:bg-[#005a30] text-white font-medium px-6 py-3 text-sm transition-colors whitespace-nowrap">

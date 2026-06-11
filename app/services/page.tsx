@@ -39,7 +39,7 @@ export default function ServicesPage() {
               <span className="eyebrow text-[#888884]">Services & Repairs</span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-6">Keeping you on the road</h1>
-            <p className="text-white/50 text-lg leading-relaxed font-light">
+            <p className="text-white/75 text-lg leading-relaxed font-light">
               With over 150 years of combined experience, our team services and repairs all makes and models.
               Free estimates always available.
             </p>
@@ -54,7 +54,7 @@ export default function ServicesPage() {
             <div className="max-w-7xl mx-auto px-6">
               <div className="flex items-center gap-4 mb-10">
                 <div className="w-5 h-[2px] bg-[#004225]" />
-                <h2 className="text-sm font-medium uppercase tracking-[0.14em] text-[#888884]">{category}</h2>
+                <h2 className="text-sm font-medium uppercase tracking-[0.14em] text-[#5A5A57]">{category}</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#EFEFEB]">
                 {categoryServices.map((s) => (
@@ -63,17 +63,17 @@ export default function ServicesPage() {
                       <h3 className="font-semibold text-[#111110] tracking-tight">{s.name}</h3>
                       <span className={`shrink-0 text-xs font-semibold px-3 py-1.5 ${
                         s.price_type === 'quote'
-                          ? 'bg-[#F7F7F5] text-[#888884]'
+                          ? 'bg-[#F7F7F5] text-[#5A5A57]'
                           : 'bg-[#EAF0EC] text-[#004225]'
                       }`}>
                         {priceLabel(s)}
                       </span>
                     </div>
-                    <p className="text-[#888884] text-sm leading-relaxed mb-5">{s.description}</p>
+                    <p className="text-[#5A5A57] text-sm leading-relaxed mb-5">{s.description}</p>
                     {s.includes.length > 0 && (
                       <ul className="space-y-1.5 mb-5">
                         {s.includes.map((item) => (
-                          <li key={item} className="flex items-start gap-2.5 text-xs text-[#888884]">
+                          <li key={item} className="flex items-start gap-2.5 text-xs text-[#5A5A57]">
                             <svg className="w-3 h-3 text-[#004225] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                             </svg>
@@ -83,7 +83,7 @@ export default function ServicesPage() {
                       </ul>
                     )}
                     {s.duration_hours && (
-                      <p className="text-xs text-[#888884]/60 mb-5">
+                      <p className="text-xs text-[#5A5A57]/60 mb-5">
                         Approx. {s.duration_hours < 1 ? '30 mins' : `${s.duration_hours} hr${s.duration_hours > 1 ? 's' : ''}`}
                       </p>
                     )}
@@ -94,7 +94,7 @@ export default function ServicesPage() {
                       </Link>
                     ) : (
                       <Link href="/contact"
-                        className="block w-full text-center border border-[#EFEFEB] hover:border-[#004225] hover:text-[#004225] text-[#888884] font-medium py-2.5 text-sm transition-colors">
+                        className="block w-full text-center border border-[#EFEFEB] hover:border-[#004225] hover:text-[#004225] text-[#5A5A57] font-medium py-2.5 text-sm transition-colors">
                         Get a Quote
                       </Link>
                     )}
@@ -118,17 +118,17 @@ export default function ServicesPage() {
                   {[['Mon – Fri', '8:00am – 5:30pm'], ['Saturday', '8:30am – 12:00 noon'], ['Sunday', 'Closed']].map(([day, hrs]) => (
                     <tr key={day} className="border-b border-[#EFEFEB] last:border-0">
                       <td className="py-3 font-medium text-[#111110] pr-10">{day}</td>
-                      <td className={`py-3 ${hrs === 'Closed' ? 'text-[#888884]/50' : 'text-[#888884]'}`}>{hrs}</td>
+                      <td className={`py-3 ${hrs === 'Closed' ? 'text-[#5A5A57]/50' : 'text-[#5A5A57]'}`}>{hrs}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
-              <p className="mt-6 text-sm text-[#888884]">Free estimates always available. Call or drop in — we are always happy to take a look.</p>
+              <p className="mt-6 text-sm text-[#5A5A57]">Free estimates always available. Call or drop in — we are always happy to take a look.</p>
             </div>
             <div className="flex-1 border border-[#004225]/20 bg-[#EAF0EC]/30 p-8">
               <div className="w-5 h-[2px] bg-[#004225] mb-6" />
               <h2 className="text-xl font-semibold text-[#111110] mb-3 tracking-tight">Not sure what you need?</h2>
-              <p className="text-[#888884] text-sm leading-relaxed mb-7">
+              <p className="text-[#5A5A57] text-sm leading-relaxed mb-7">
                 Call us or send an enquiry. We will advise you honestly on what needs doing and when — no unnecessary upselling.
               </p>
               <div className="flex flex-col gap-3">
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                   Send an Enquiry
                 </Link>
                 <a href="tel:01604696225"
-                  className="inline-flex items-center justify-center border border-[#EFEFEB] hover:border-[#111110] text-[#888884] hover:text-[#111110] font-medium px-6 py-3 text-sm transition-colors">
+                  className="inline-flex items-center justify-center border border-[#EFEFEB] hover:border-[#111110] text-[#5A5A57] hover:text-[#111110] font-medium px-6 py-3 text-sm transition-colors">
                   Call 01604 696225
                 </a>
               </div>

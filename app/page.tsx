@@ -81,7 +81,7 @@ export default function Home() {
             <h1 className="text-5xl lg:text-7xl font-semibold leading-[1.05] tracking-tight mb-8 text-white">
               The standard<br />you expect.
             </h1>
-            <p className="text-white/50 text-lg leading-relaxed mb-12 max-w-xl font-light">
+            <p className="text-white/75 text-lg leading-relaxed mb-12 max-w-xl font-light">
               Servicing, repairs, bodywork and classic restoration — delivered with care and precision.
               Trusted by private customers, fleet operators and major insurers across Northamptonshire.
             </p>
@@ -112,7 +112,7 @@ export default function Home() {
             {trust.map((t, i) => (
               <div key={t.label} className={`text-center ${i > 0 ? 'pl-8' : ''}`}>
                 <div className="text-xl font-semibold text-[#004225] tracking-tight">{t.label}</div>
-                <div className="text-[11px] text-[#888884] mt-1.5 tracking-[0.1em] uppercase">{t.sub}</div>
+                <div className="text-[11px] text-[#5A5A57] mt-1.5 tracking-[0.1em] uppercase">{t.sub}</div>
               </div>
             ))}
           </div>
@@ -136,7 +136,7 @@ export default function Home() {
                   0{i + 1}
                 </div>
                 <h3 className="text-[#111110] font-semibold text-lg mb-4 tracking-tight">{s.title}</h3>
-                <p className="text-[#888884] leading-relaxed text-sm mb-8">{s.body}</p>
+                <p className="text-[#5A5A57] leading-relaxed text-sm mb-8">{s.body}</p>
                 <Link href={s.href}
                   className="text-[#004225] hover:text-[#111110] text-sm font-medium flex items-center gap-2 transition-colors group/link">
                   Learn more
@@ -189,7 +189,7 @@ export default function Home() {
               <h2 className="text-4xl font-semibold text-white mt-3 mb-6 leading-tight tracking-tight">
                 Quality vehicles,<br />honestly presented
               </h2>
-              <p className="text-white/40 leading-relaxed mb-10 font-light text-[15px]">
+              <p className="text-white/70 leading-relaxed mb-10 font-light text-[15px]">
                 We carry a curated selection of quality used cars and vans, all prepared by our own mechanics.
                 Our reputation is built on placing the right vehicle with the right customer — not on shifting stock.
                 We are also happy to source specific vehicles on request.
@@ -209,7 +209,7 @@ export default function Home() {
               {['Vehicle Sourcing', 'MG Approved', 'Subaru Specialist', 'Fleet Enquiries'].map((tag) => (
                 <div key={tag}
                   className="bg-[#1F1F1D] px-5 py-6 text-center hover:bg-[#004225]/10 transition-colors">
-                  <span className="text-white/30 text-xs font-medium tracking-[0.1em] uppercase leading-tight">{tag}</span>
+                  <span className="text-white/60 text-xs font-medium tracking-[0.1em] uppercase leading-tight">{tag}</span>
                 </div>
               ))}
             </div>
@@ -235,7 +235,7 @@ export default function Home() {
                   <span className="w-2 h-2 rounded-full bg-[#004225] opacity-40" />
                 </div>
                 <h3 className="font-semibold text-[#111110] mb-3 text-[17px] tracking-tight">{item.title}</h3>
-                <p className="text-[#888884] leading-relaxed text-sm">{item.body}</p>
+                <p className="text-[#5A5A57] leading-relaxed text-sm">{item.body}</p>
               </div>
             ))}
           </div>
@@ -250,7 +250,7 @@ export default function Home() {
             <h2 className="text-3xl font-semibold text-white mb-2 tracking-tight">
               Ready to book, or need advice?
             </h2>
-            <p className="text-white/40 font-light text-sm">Free estimates always available. We are happy to take a look.</p>
+            <p className="text-white/65 font-light text-sm">Free estimates always available. We are happy to take a look.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Link href="/contact"
@@ -258,7 +258,7 @@ export default function Home() {
               Get in Touch
             </Link>
             <a href="tel:01604696225"
-              className="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/30 text-white/60 hover:text-white font-medium px-7 py-3.5 text-sm tracking-wide transition-colors">
+              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white/80 hover:text-white font-medium px-7 py-3.5 text-sm tracking-wide transition-colors">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>

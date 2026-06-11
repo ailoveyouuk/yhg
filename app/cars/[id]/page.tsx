@@ -48,7 +48,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
   return (
     <>
       {/* Breadcrumb */}
-      <div className="bg-white border-b border-[#EFEFEB] text-[#888884] text-xs px-6 py-3">
+      <div className="bg-white border-b border-[#EFEFEB] text-[#5A5A57] text-xs px-6 py-3">
         <div className="max-w-7xl mx-auto flex gap-2 items-center tracking-wide">
           <Link href="/cars" className="hover:text-[#111110] transition-colors">Cars for Sale</Link>
           <span className="text-[#EFEFEB]">/</span>
@@ -80,7 +80,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
                   </div>
                 ) : (
                   <div className="h-72 flex items-center justify-center bg-[#F7F7F5]">
-                    <div className="text-center text-[#888884]">
+                    <div className="text-center text-[#5A5A57]">
                       <svg className="w-12 h-12 mx-auto mb-3 opacity-25" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                       </svg>
@@ -94,7 +94,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
               <div className="bg-white border border-[#EFEFEB] p-7">
                 <div className="w-5 h-[2px] bg-[#004225] mb-5" />
                 <h2 className="text-base font-semibold text-[#111110] mb-4 tracking-tight">About this vehicle</h2>
-                <p className="text-[#888884] leading-relaxed text-sm">{v.description}</p>
+                <p className="text-[#5A5A57] leading-relaxed text-sm">{v.description}</p>
               </div>
 
               {/* Features */}
@@ -104,7 +104,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
                   <h2 className="text-base font-semibold text-[#111110] mb-5 tracking-tight">Key features</h2>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {v.features.map((f) => (
-                      <li key={f} className="flex items-center gap-2.5 text-sm text-[#888884]">
+                      <li key={f} className="flex items-center gap-2.5 text-sm text-[#5A5A57]">
                         <svg className="w-3.5 h-3.5 text-[#004225] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
@@ -123,7 +123,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
                   <tbody>
                     {specRows(v).map(([label, value]) => (
                       <tr key={label} className="border-b border-[#EFEFEB] last:border-0">
-                        <td className="py-2.5 text-[#888884] pr-6 w-1/2 text-xs uppercase tracking-[0.08em]">{label}</td>
+                        <td className="py-2.5 text-[#5A5A57] pr-6 w-1/2 text-xs uppercase tracking-[0.08em]">{label}</td>
                         <td className={`py-2.5 font-medium text-sm ${label === 'HPI clear' || label === 'V5C present' ? 'text-[#004225]' : 'text-[#111110]'}`}>{value}</td>
                       </tr>
                     ))}
@@ -136,13 +136,13 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
             <div>
               <div className="bg-white border border-[#EFEFEB] p-7 sticky top-24">
                 <div className="mb-5">
-                  <p className="text-xs text-[#888884] uppercase tracking-[0.1em] mb-1">{v.year} {v.make} {v.model}</p>
+                  <p className="text-xs text-[#5A5A57] uppercase tracking-[0.1em] mb-1">{v.year} {v.make} {v.model}</p>
                   <div className="text-3xl font-semibold text-[#004225] tracking-tight">£{v.price.toLocaleString()}</div>
-                  <p className="text-[#888884] text-sm mt-1">{v.variant}</p>
+                  <p className="text-[#5A5A57] text-sm mt-1">{v.variant}</p>
                 </div>
 
                 {v.status === 'reserved' && (
-                  <div className="border border-[#EFEFEB] bg-[#F7F7F5] text-[#888884] text-xs px-4 py-3 mb-5 tracking-wide uppercase">
+                  <div className="border border-[#EFEFEB] bg-[#F7F7F5] text-[#5A5A57] text-xs px-4 py-3 mb-5 tracking-wide uppercase">
                     This vehicle is currently reserved
                   </div>
                 )}
@@ -156,7 +156,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
                     Call 01604 696225
                   </a>
                   <a href={`mailto:admin@yardleyhastingsgarage.co.uk?subject=Enquiry: ${v.year} ${v.make} ${v.model}&body=Hi, I'm interested in the ${v.year} ${v.make} ${v.model} listed at £${v.price.toLocaleString()}. Please get in touch.`}
-                    className="flex items-center justify-center gap-2 w-full border border-[#EFEFEB] hover:border-[#111110] text-[#888884] hover:text-[#111110] font-medium py-3 text-sm transition-colors">
+                    className="flex items-center justify-center gap-2 w-full border border-[#EFEFEB] hover:border-[#111110] text-[#5A5A57] hover:text-[#111110] font-medium py-3 text-sm transition-colors">
                     Email Enquiry
                   </a>
                 </div>

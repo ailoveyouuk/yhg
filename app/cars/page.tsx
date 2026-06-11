@@ -35,9 +35,9 @@ function VehicleCard({ v }: { v: Vehicle }) {
           <h3 className="font-semibold text-[#111110] leading-tight tracking-tight">{v.year} {v.make} {v.model}</h3>
           <span className="text-[#004225] font-semibold shrink-0 text-lg">£{v.price.toLocaleString()}</span>
         </div>
-        <p className="text-[#888884] text-xs mb-4 tracking-wide">{v.variant}</p>
+        <p className="text-[#5A5A57] text-xs mb-4 tracking-wide">{v.variant}</p>
 
-        <div className="grid grid-cols-2 gap-y-1.5 text-xs text-[#888884] mb-5">
+        <div className="grid grid-cols-2 gap-y-1.5 text-xs text-[#5A5A57] mb-5">
           <span>{v.mileage.toLocaleString()} miles</span>
           <span>{v.transmission}</span>
           <span>{v.colour}</span>
@@ -79,14 +79,14 @@ export default function CarsPage() {
                 <span className="eyebrow text-[#888884]">For Sale</span>
               </div>
               <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-4">Cars for Sale</h1>
-              <p className="text-white/50 max-w-xl font-light">
+              <p className="text-white/75 max-w-xl font-light">
                 Quality used cars, all checked and prepared by our own mechanics.
                 Can&apos;t find what you&apos;re after? We can source it for you.
               </p>
             </div>
             <div className="flex gap-3 shrink-0">
               <Link href="/vans"
-                className="border border-white/20 hover:border-white/50 text-white/60 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors">
+                className="border border-white/30 hover:border-white/60 text-white/80 hover:text-white px-5 py-2.5 text-sm font-medium transition-colors">
                 View Vans
               </Link>
               <Link href="/contact"
@@ -100,7 +100,7 @@ export default function CarsPage() {
 
       <section className="bg-[#F7F7F5] py-14">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-[#888884] text-sm mb-10 tracking-wide">
+          <p className="text-[#5A5A57] text-sm mb-10 tracking-wide">
             {cars.length} car{cars.length !== 1 ? 's' : ''} currently available
           </p>
           {cars.length > 0 ? (
@@ -110,7 +110,7 @@ export default function CarsPage() {
           ) : (
             <div className="text-center py-24 border border-[#EFEFEB] bg-white">
               <p className="text-[#111110] font-medium">No cars listed at the moment</p>
-              <p className="text-sm mt-2 text-[#888884]">Call us — we may have vehicles not yet listed, or can source one for you.</p>
+              <p className="text-sm mt-2 text-[#5A5A57]">Call us — we may have vehicles not yet listed, or can source one for you.</p>
             </div>
           )}
         </div>
@@ -122,7 +122,7 @@ export default function CarsPage() {
           <div>
             <div className="w-5 h-[2px] bg-[#004225] mb-5" />
             <h2 className="text-xl font-semibold text-[#111110] tracking-tight">Looking for something specific?</h2>
-            <p className="text-[#888884] text-sm mt-1">We can source vehicles to your requirements. Call or send us a message.</p>
+            <p className="text-[#5A5A57] text-sm mt-1">We can source vehicles to your requirements. Call or send us a message.</p>
           </div>
           <div className="flex gap-3 shrink-0">
             <Link href="/contact"
@@ -130,7 +130,7 @@ export default function CarsPage() {
               Get in Touch
             </Link>
             <a href="tel:01604696225"
-              className="border border-[#EFEFEB] hover:border-[#111110] text-[#888884] hover:text-[#111110] font-medium px-5 py-2.5 text-sm transition-colors">
+              className="border border-[#EFEFEB] hover:border-[#111110] text-[#5A5A57] hover:text-[#111110] font-medium px-5 py-2.5 text-sm transition-colors">
               01604 696225
             </a>
           </div>

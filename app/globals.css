@@ -51,6 +51,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #004225;
 }
 
+/* Secondary text on light backgrounds — meets 4.5:1 on white */
+.text-secondary {
+  color: #5A5A57;
+}
+
 html {
   scroll-behavior: smooth;
 }

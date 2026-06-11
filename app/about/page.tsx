@@ -43,7 +43,7 @@ export default function AboutPage() {
               <span className="eyebrow text-[#888884]">About Us</span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-6">Independent. Family. Trusted.</h1>
-            <p className="text-white/50 text-lg leading-relaxed font-light">
+            <p className="text-white/75 text-lg leading-relaxed font-light">
               Yardley Hastings Garage is an independent, family-owned business serving Northamptonshire and the surrounding counties.
               We sell, service, repair and restore most motor vehicle makes and models.
             </p>
@@ -58,7 +58,7 @@ export default function AboutPage() {
             <div>
               <div className="w-5 h-[2px] bg-[#004225] mb-6" />
               <h2 className="text-3xl font-semibold text-[#111110] mb-8 tracking-tight">Our story</h2>
-              <div className="space-y-5 text-[#888884] leading-relaxed text-[15px]">
+              <div className="space-y-5 text-[#5A5A57] leading-relaxed text-[15px]">
                 <p>
                   We are an independent, family-run garage based in Yardley Hastings, Northamptonshire.
                   Our team of certified mechanics has over 150 years of combined experience across all makes and models — from modern everyday cars to vintage and prestige classics.
@@ -85,7 +85,7 @@ export default function AboutPage() {
                       <div className="w-4 h-[2px] bg-[#004225] shrink-0" />
                       <h3 className="font-semibold text-[#111110] tracking-tight">{v.title}</h3>
                     </div>
-                    <p className="text-[#888884] text-sm leading-relaxed pl-7">{v.body}</p>
+                    <p className="text-[#5A5A57] text-sm leading-relaxed pl-7">{v.body}</p>
                   </div>
                 ))}
               </div>
@@ -105,7 +105,7 @@ export default function AboutPage() {
                 <div className="shrink-0 w-1.5 h-1.5 bg-[#004225] rounded-full mt-2" />
                 <div>
                   <div className="font-semibold text-[#111110] text-sm tracking-tight">{c.label}</div>
-                  <div className="text-[#888884] text-xs mt-1">{c.detail}</div>
+                  <div className="text-[#5A5A57] text-xs mt-1">{c.detail}</div>
                 </div>
               </div>
             ))}
@@ -119,7 +119,7 @@ export default function AboutPage() {
           <div>
             <div className="w-6 h-[2px] bg-[#004225] mb-5" />
             <h2 className="text-2xl font-semibold tracking-tight mb-2">Come and see us</h2>
-            <p className="text-white/40 text-sm font-light">Bedford Rd W, Yardley Hastings, Northampton NN7 1HB<br />Mon–Fri 8am–5:30pm · Sat 8:30am–12pm</p>
+            <p className="text-white/65 text-sm font-light">Bedford Rd W, Yardley Hastings, Northampton NN7 1HB<br />Mon–Fri 8am–5:30pm · Sat 8:30am–12pm</p>
           </div>
           <div className="flex gap-3 shrink-0">
             <Link href="/contact"

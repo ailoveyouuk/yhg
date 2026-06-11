@@ -20,13 +20,13 @@ export default function Header() {
       {/* Top info bar */}
       <div className="border-b border-[#EFEFEB]">
         <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
-          <span className="text-[11px] tracking-[0.1em] uppercase text-[#888884]">
+          <span className="text-[11px] tracking-[0.1em] uppercase text-[#5A5A57]">
             Independent Family Garage · Yardley Hastings, Northamptonshire
           </span>
           <div className="flex items-center gap-6">
             <a
               href="mailto:admin@yardleyhastingsgarage.co.uk"
-              className="text-[11px] text-[#888884] hover:text-[#111110] transition-colors hidden sm:block tracking-wide"
+              className="text-[11px] text-[#5A5A57] hover:text-[#111110] transition-colors hidden sm:block tracking-wide"
             >
               admin@yardleyhastingsgarage.co.uk
             </a>
@@ -51,7 +51,7 @@ export default function Header() {
             <span className="text-[#111110] font-semibold text-lg tracking-tight group-hover:text-[#004225] transition-colors">
               Yardley Hastings Garage
             </span>
-            <span className="text-[9.5px] font-medium tracking-[0.18em] uppercase text-[#888884]">
+            <span className="text-[9.5px] font-medium tracking-[0.18em] uppercase text-[#5A5A57]">
               Est. Northamptonshire
             </span>
           </Link>

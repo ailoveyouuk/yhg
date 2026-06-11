@@ -16,7 +16,7 @@ export default function ContactPage() {
             <span className="eyebrow text-[#888884]">Contact & Book</span>
           </div>
           <h1 className="text-4xl font-semibold tracking-tight mb-4">Get in touch</h1>
-          <p className="text-white/50 max-w-lg font-light">
+          <p className="text-white/75 max-w-lg font-light">
             Book a service, request a bodywork quote, enquire about a vehicle, or just ask for advice. We are always happy to help.
           </p>
         </div>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                   >
                     Send Enquiry
                   </button>
-                  <p className="text-xs text-[#888884] text-center">We aim to respond within one business day.</p>
+                  <p className="text-xs text-[#5A5A57] text-center">We aim to respond within one business day.</p>
                 </form>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <div className="text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-1">Address</div>
-                      <div className="text-sm text-[#888884]">Bedford Rd W, Yardley Hastings<br />Northampton NN7 1HB</div>
+                      <div className="text-sm text-[#5A5A57]">Bedford Rd W, Yardley Hastings<br />Northampton NN7 1HB</div>
                     </div>
                   </div>
                   <div className="flex gap-3">
@@ -186,7 +186,7 @@ export default function ContactPage() {
                     {[['Mon – Fri', '8:00am – 5:30pm'], ['Saturday', '8:30am – 12:00 noon'], ['Sunday', 'Closed']].map(([day, hrs]) => (
                       <tr key={day} className="border-b border-[#EFEFEB] last:border-0">
                         <td className="py-2.5 font-medium text-[#111110] pr-4">{day}</td>
-                        <td className={`py-2.5 ${hrs === 'Closed' ? 'text-[#888884]/40' : 'text-[#888884]'}`}>{hrs}</td>
+                        <td className={`py-2.5 ${hrs === 'Closed' ? 'text-[#5A5A57]/40' : 'text-[#5A5A57]'}`}>{hrs}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -195,7 +195,7 @@ export default function ContactPage() {
 
               {/* Map placeholder */}
               <div className="bg-[#EFEFEB] h-48 flex items-center justify-center">
-                <div className="text-center text-[#888884]">
+                <div className="text-center text-[#5A5A57]">
                   <svg className="w-6 h-6 mx-auto mb-2 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />

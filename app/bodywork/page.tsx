@@ -43,7 +43,7 @@ export default function BodyworkPage() {
               <span className="eyebrow text-[#888884]">Bodywork & Restoration</span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-6">From a Smart car to a Bentley</h1>
-            <p className="text-white/50 text-lg leading-relaxed font-light">
+            <p className="text-white/75 text-lg leading-relaxed font-light">
               We have repaired and restored everything from brand new vehicles to cars over a hundred years old.
               Every job — however large or small — receives our full professional attention.
             </p>
@@ -58,7 +58,7 @@ export default function BodyworkPage() {
             {approvals.map((a, i) => (
               <div key={a.name} className={`text-center ${i > 0 ? 'pl-8' : ''}`}>
                 <div className="font-semibold text-[#111110] text-base tracking-tight">{a.name}</div>
-                <div className="text-[#888884] text-xs mt-1 tracking-wide">{a.detail}</div>
+                <div className="text-[#5A5A57] text-xs mt-1 tracking-wide">{a.detail}</div>
               </div>
             ))}
           </div>
@@ -79,7 +79,7 @@ export default function BodyworkPage() {
               <div key={c.title} className="bg-white p-8 hover:bg-[#F7F7F5] transition-colors">
                 <div className="w-5 h-[2px] bg-[#004225] mb-5" />
                 <h3 className="text-[#111110] font-semibold mb-3 tracking-tight">{c.title}</h3>
-                <p className="text-[#888884] text-sm leading-relaxed">{c.body}</p>
+                <p className="text-[#5A5A57] text-sm leading-relaxed">{c.body}</p>
               </div>
             ))}
           </div>
@@ -91,7 +91,7 @@ export default function BodyworkPage() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="w-6 h-[2px] bg-[#004225] mx-auto mb-8" />
           <h2 className="text-3xl font-semibold mb-4 tracking-tight">Get a free estimate</h2>
-          <p className="text-white/40 mb-10 max-w-lg mx-auto text-[15px] font-light">
+          <p className="text-white/70 mb-10 max-w-lg mx-auto text-[15px] font-light">
             Bring your vehicle in or send us details and photos. We will assess the damage and provide a clear, honest quote with no obligation.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
