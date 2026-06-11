@@ -70,7 +70,7 @@ export default function Header() {
             ))}
             <Link
               href="/contact"
-              className="ml-6 border border-[#111110] hover:bg-[#111110] hover:text-white text-[#111110] font-medium px-5 py-2 text-sm tracking-wide transition-colors"
+              className="ml-6 bg-[#004225] hover:bg-[#005a30] text-white font-medium px-5 py-2 text-sm tracking-wide transition-colors"
             >
               Book a Service
             </Link>
@@ -111,7 +111,7 @@ export default function Header() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="mt-4 mb-2 block border border-[#111110] text-[#111110] font-medium px-4 py-3 text-sm text-center transition-colors hover:bg-[#111110] hover:text-white"
+            className="mt-4 mb-2 block bg-[#004225] hover:bg-[#005a30] text-white font-medium px-4 py-3 text-sm text-center transition-colors"
           >
             Book a Service
           </Link>

@@ -33,7 +33,7 @@ function VehicleCard({ v }: { v: Vehicle }) {
       <div className="p-6">
         <div className="flex items-start justify-between gap-2 mb-1.5">
           <h3 className="font-semibold text-[#111110] leading-tight tracking-tight">{v.year} {v.make} {v.model}</h3>
-          <span className="text-[#111110] font-semibold shrink-0 text-lg">£{v.price.toLocaleString()}</span>
+          <span className="text-[#004225] font-semibold shrink-0 text-lg">£{v.price.toLocaleString()}</span>
         </div>
         <p className="text-[#888884] text-xs mb-4 tracking-wide">{v.variant}</p>
 
@@ -48,7 +48,7 @@ function VehicleCard({ v }: { v: Vehicle }) {
 
         <Link
           href={`/cars/${v.id}`}
-          className="block w-full text-center border border-[#111110] hover:bg-[#111110] hover:text-white text-[#111110] font-medium px-4 py-2.5 text-sm transition-colors"
+          className="block w-full text-center bg-[#004225] hover:bg-[#005a30] text-white font-medium px-4 py-2.5 text-sm transition-colors"
         >
           View Details & Enquire
         </Link>
@@ -117,7 +117,7 @@ export default function CarsPage() {
           </div>
           <div className="flex gap-3 shrink-0">
             <Link href="/contact"
-              className="border border-[#111110] hover:bg-[#111110] hover:text-white text-[#111110] font-medium px-5 py-2.5 text-sm transition-colors">
+              className="bg-[#004225] hover:bg-[#005a30] text-white font-medium px-5 py-2.5 text-sm transition-colors">
               Get in Touch
             </Link>
             <a href="tel:01604696225"

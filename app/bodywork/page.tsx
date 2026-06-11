@@ -87,7 +87,7 @@ export default function BodyworkPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact"
-              className="inline-flex items-center justify-center bg-white hover:bg-white/90 text-[#111110] font-semibold px-8 py-4 text-sm transition-colors">
+              className="inline-flex items-center justify-center bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-8 py-4 text-sm transition-colors">
               Request a Quote
             </Link>
             <a href="tel:01604696225"

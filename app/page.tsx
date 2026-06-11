@@ -62,7 +62,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-white/90 text-[#111110] font-semibold px-8 py-4 text-sm tracking-wide transition-colors">
+                className="inline-flex items-center justify-center gap-2 bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-8 py-4 text-sm tracking-wide transition-colors">
                 Book a Service
               </Link>
               <Link href="/cars"
@@ -83,7 +83,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-[#EFEFEB]">
             {trust.map((t, i) => (
               <div key={t.label} className={`text-center ${i > 0 ? 'pl-8' : ''}`}>
-                <div className="text-xl font-semibold text-[#111110] tracking-tight">{t.label}</div>
+                <div className="text-xl font-semibold text-[#004225] tracking-tight">{t.label}</div>
                 <div className="text-[11px] text-[#888884] mt-1.5 tracking-[0.1em] uppercase">{t.sub}</div>
               </div>
             ))}
@@ -140,7 +140,7 @@ export default function Home() {
               </p>
               <div className="flex gap-3">
                 <Link href="/cars"
-                  className="bg-white hover:bg-white/90 text-[#111110] font-semibold px-6 py-3 text-sm tracking-wide transition-colors">
+                  className="bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-6 py-3 text-sm tracking-wide transition-colors">
                   Cars for Sale
                 </Link>
                 <Link href="/vans"
@@ -173,8 +173,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[#E5E5E2]">
             {whyUs.map((item, i) => (
               <div key={item.title}
-                className={`p-10 ${i % 2 === 0 ? 'border-r border-[#E5E5E2]' : ''} ${i < 2 ? 'border-b border-[#E5E5E2]' : ''} bg-white`}>
-                <div className="w-5 h-[2px] bg-[#004225] mb-5" />
+                className={`p-10 group hover:bg-[#EAF0EC]/30 transition-colors ${i % 2 === 0 ? 'border-r border-[#E5E5E2]' : ''} ${i < 2 ? 'border-b border-[#E5E5E2]' : ''} bg-white`}>
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-5 h-[2px] bg-[#004225]" />
+                  <span className="w-2 h-2 rounded-full bg-[#004225] opacity-40" />
+                </div>
                 <h3 className="font-semibold text-[#111110] mb-3 text-[17px] tracking-tight">{item.title}</h3>
                 <p className="text-[#888884] leading-relaxed text-sm">{item.body}</p>
               </div>
@@ -195,7 +198,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Link href="/contact"
-              className="inline-flex items-center justify-center bg-white hover:bg-white/90 text-[#111110] font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors">
+              className="inline-flex items-center justify-center bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors">
               Get in Touch
             </Link>
             <a href="tel:01604696225"

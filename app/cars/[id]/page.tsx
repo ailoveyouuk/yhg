@@ -137,7 +137,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
               <div className="bg-white border border-[#EFEFEB] p-7 sticky top-24">
                 <div className="mb-5">
                   <p className="text-xs text-[#888884] uppercase tracking-[0.1em] mb-1">{v.year} {v.make} {v.model}</p>
-                  <div className="text-3xl font-semibold text-[#111110] tracking-tight">£{v.price.toLocaleString()}</div>
+                  <div className="text-3xl font-semibold text-[#004225] tracking-tight">£{v.price.toLocaleString()}</div>
                   <p className="text-[#888884] text-sm mt-1">{v.variant}</p>
                 </div>
 
@@ -149,7 +149,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
 
                 <div className="space-y-2.5 mb-6">
                   <a href="tel:01604696225"
-                    className="flex items-center justify-center gap-2 w-full border border-[#111110] hover:bg-[#111110] hover:text-white text-[#111110] font-medium py-3 text-sm transition-colors">
+                    className="flex items-center justify-center gap-2 w-full bg-[#004225] hover:bg-[#005a30] text-white font-medium py-3 text-sm transition-colors">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                     </svg>
@@ -201,7 +201,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
                     />
                     <button
                       type="submit"
-                      className="w-full bg-[#111110] hover:bg-[#1F1F1D] text-white font-medium py-3 text-sm transition-colors"
+                      className="w-full bg-[#004225] hover:bg-[#005a30] text-white font-medium py-3 text-sm transition-colors"
                     >
                       Send Enquiry
                     </button>

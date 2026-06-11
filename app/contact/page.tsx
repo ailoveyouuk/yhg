@@ -130,7 +130,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#111110] hover:bg-[#1F1F1D] text-white font-semibold py-3.5 text-sm tracking-wide transition-colors"
+                    className="w-full bg-[#004225] hover:bg-[#005a30] text-white font-semibold py-3.5 text-sm tracking-wide transition-colors"
                   >
                     Send Enquiry
                   </button>

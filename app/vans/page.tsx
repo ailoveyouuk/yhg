@@ -64,7 +64,7 @@ export default function VansPage() {
                   <div className="p-6">
                     <div className="flex items-start justify-between gap-2 mb-1.5">
                       <h3 className="font-semibold text-[#111110] tracking-tight">{v.year} {v.make} {v.model}</h3>
-                      <span className="text-[#111110] font-semibold shrink-0 text-lg">£{v.price.toLocaleString()}</span>
+                      <span className="text-[#004225] font-semibold shrink-0 text-lg">£{v.price.toLocaleString()}</span>
                     </div>
                     <p className="text-[#888884] text-xs mb-4 tracking-wide">{v.variant}</p>
                     <div className="flex gap-4 text-xs text-[#888884] mb-5">
@@ -73,7 +73,7 @@ export default function VansPage() {
                       <span>{v.transmission}</span>
                     </div>
                     <Link href={`/vans/${v.id}`}
-                      className="block w-full text-center border border-[#111110] hover:bg-[#111110] hover:text-white text-[#111110] font-medium px-4 py-2.5 text-sm transition-colors">
+                      className="block w-full text-center bg-[#004225] hover:bg-[#005a30] text-white font-medium px-4 py-2.5 text-sm transition-colors">
                       View Details & Enquire
                     </Link>
                   </div>
@@ -97,7 +97,7 @@ export default function VansPage() {
             <p className="text-[#888884] text-sm mt-1">We work with businesses of all sizes. Call us to discuss your requirements.</p>
           </div>
           <a href="tel:01604696225"
-            className="border border-[#111110] hover:bg-[#111110] hover:text-white text-[#111110] font-medium px-6 py-3 text-sm transition-colors whitespace-nowrap">
+            className="bg-[#004225] hover:bg-[#005a30] text-white font-medium px-6 py-3 text-sm transition-colors whitespace-nowrap">
             Call 01604 696225
           </a>
         </div>

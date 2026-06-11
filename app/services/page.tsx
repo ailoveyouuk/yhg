@@ -79,12 +79,12 @@ export default function ServicesPage() {
                     )}
                     {s.booking_available ? (
                       <Link href={`/contact?service=${s.id}`}
-                        className="block w-full text-center border border-[#111110] hover:bg-[#111110] hover:text-white text-[#111110] font-medium py-2.5 text-sm transition-colors">
+                        className="block w-full text-center bg-[#004225] hover:bg-[#005a30] text-white font-medium py-2.5 text-sm transition-colors">
                         Book Now
                       </Link>
                     ) : (
                       <Link href="/contact"
-                        className="block w-full text-center border border-[#EFEFEB] hover:border-[#111110] text-[#888884] hover:text-[#111110] font-medium py-2.5 text-sm transition-colors">
+                        className="block w-full text-center border border-[#EFEFEB] hover:border-[#004225] hover:text-[#004225] text-[#888884] font-medium py-2.5 text-sm transition-colors">
                         Get a Quote
                       </Link>
                     )}
@@ -123,7 +123,7 @@ export default function ServicesPage() {
               </p>
               <div className="flex flex-col gap-3">
                 <Link href="/contact"
-                  className="inline-flex items-center justify-center border border-[#111110] hover:bg-[#111110] hover:text-white text-[#111110] font-medium px-6 py-3 text-sm transition-colors">
+                  className="inline-flex items-center justify-center bg-[#004225] hover:bg-[#005a30] text-white font-medium px-6 py-3 text-sm transition-colors">
                   Send an Enquiry
                 </Link>
                 <a href="tel:01604696225"

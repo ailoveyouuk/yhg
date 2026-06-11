@@ -114,7 +114,7 @@ export default function AboutPage() {
           </div>
           <div className="flex gap-3 shrink-0">
             <Link href="/contact"
-              className="bg-white hover:bg-white/90 text-[#111110] font-semibold px-6 py-3 text-sm transition-colors">
+              className="bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-6 py-3 text-sm transition-colors">
               Get in Touch
             </Link>
             <a href="tel:01604696225"
