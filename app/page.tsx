@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const trust = [
   { label: '150+', sub: 'Years Combined Experience' },
@@ -32,29 +33,53 @@ const whyUs = [
   { title: 'Trusted by Fleet & Insurers', body: 'Major insurance companies and large fleet operators choose us for our consistency, quality and efficiency. The same standards apply to every customer.' },
 ];
 
+// Unsplash placeholder images — replace with real garage photos after shoot
+const HERO_IMAGE = 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80';
+const STRIP_IMAGES = [
+  {
+    src: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80',
+    alt: 'Workshop bay',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80',
+    alt: 'Classic car',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=900&q=80',
+    alt: 'Detail craftsmanship',
+  },
+];
+
 export default function Home() {
   return (
     <>
-      {/* Hero — dark charcoal, BRG accent rule, editorial layout */}
-      <section className="relative bg-[#111110] text-white overflow-hidden">
-        {/* Subtle BRG gradient wash */}
-        <div className="absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage: `radial-gradient(ellipse at 70% 50%, #004225 0%, transparent 65%)`,
-          }}
+      {/* ─── Hero ─── */}
+      <section className="relative bg-[#111110] text-white overflow-hidden min-h-[85vh] flex items-center">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={HERO_IMAGE}
+            alt=""
+            className="w-full h-full object-cover object-center opacity-30"
+          />
+          {/* Gradient overlay — darker at left where text is */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111110] via-[#111110]/80 to-[#111110]/40" />
+        </div>
+
+        {/* BRG subtle wash on right side */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-[0.04]"
+          style={{ background: 'radial-gradient(ellipse at 80% 50%, #004225 0%, transparent 70%)' }}
         />
-        <div className="relative max-w-7xl mx-auto px-6 py-32 lg:py-48">
-          <div className="max-w-3xl">
-            {/* BRG rule line above eyebrow */}
+
+        <div className="relative max-w-7xl mx-auto px-6 py-32 lg:py-48 w-full">
+          <div className="max-w-2xl">
             <div className="flex items-center gap-4 mb-8">
               <div className="w-8 h-px bg-[#004225]" />
-              <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-[#888884]">
-                Independent · Family · Northamptonshire
-              </span>
+              <span className="eyebrow text-[#888884]">Independent · Family · Northamptonshire</span>
             </div>
             <h1 className="text-5xl lg:text-7xl font-semibold leading-[1.05] tracking-tight mb-8 text-white">
-              The standard<br />
-              you expect.
+              The standard<br />you expect.
             </h1>
             <p className="text-white/50 text-lg leading-relaxed mb-12 max-w-xl font-light">
               Servicing, repairs, bodywork and classic restoration — delivered with care and precision.
@@ -75,9 +100,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Bottom fade to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* Trust bar */}
+      {/* ─── Trust bar ─── */}
       <section className="bg-white border-b border-[#EFEFEB]">
         <div className="max-w-7xl mx-auto px-6 py-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-[#EFEFEB]">
@@ -91,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* ─── Services ─── */}
       <section className="bg-white py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 border-l-2 border-[#004225] pl-6">
@@ -122,10 +150,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Vehicles teaser — dark charcoal, BRG accent rule */}
-      <section className="bg-[#1F1F1D] py-28 text-white">
+      {/* ─── Visual image strip ─── */}
+      <section className="bg-[#111110]">
+        <div className="grid grid-cols-3 h-64 lg:h-80">
+          {STRIP_IMAGES.map((img, i) => (
+            <div key={i} className="relative overflow-hidden group">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+              />
+              {/* BRG tint on hover */}
+              <div className="absolute inset-0 bg-[#004225] opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+              {/* Divider lines */}
+              {i < 2 && <div className="absolute right-0 top-0 bottom-0 w-px bg-white/10" />}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── Vehicles teaser — dark with SVG car watermark ─── */}
+      <section className="bg-[#1F1F1D] py-28 text-white relative overflow-hidden">
+        {/* Abstract SVG car silhouette — large watermark */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.035] pointer-events-none select-none"
+          aria-hidden="true">
+          <svg viewBox="0 0 800 300" className="w-[700px] h-auto fill-[#004225]">
+            <path d="M760 185 C750 155 720 130 680 125 L620 120 C600 90 560 55 500 40 C450 28 360 25 300 30 C250 33 210 45 185 60 L100 75 C70 78 45 90 30 108 C18 120 15 132 15 145 L15 175 C15 185 22 195 35 198 L65 200 C68 215 78 228 92 236 C106 244 122 247 138 244 C154 241 166 232 173 220 L570 220 C573 235 583 248 597 256 C611 264 627 267 643 264 C659 261 671 252 678 240 L720 238 C740 235 755 222 760 205 Z"/>
+          </svg>
+        </div>
+
         {/* BRG accent top rule */}
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="w-8 h-[2px] bg-[#004225] mb-12" />
           <div className="flex flex-col lg:flex-row items-start justify-between gap-16">
             <div className="max-w-lg">
@@ -152,7 +208,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-px w-full lg:w-64 shrink-0 bg-white/5">
               {['Vehicle Sourcing', 'MG Approved', 'Subaru Specialist', 'Fleet Enquiries'].map((tag) => (
                 <div key={tag}
-                  className="bg-[#1F1F1D] px-5 py-6 text-center">
+                  className="bg-[#1F1F1D] px-5 py-6 text-center hover:bg-[#004225]/10 transition-colors">
                   <span className="text-white/30 text-xs font-medium tracking-[0.1em] uppercase leading-tight">{tag}</span>
                 </div>
               ))}
@@ -161,8 +217,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why us */}
-      <section className="bg-[#F7F7F5] py-28">
+      {/* ─── Why us — dot grid texture ─── */}
+      <section className="bg-[#F7F7F5] dot-grid py-28">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 border-l-2 border-[#004225] pl-6">
             <span className="eyebrow">Our Reputation</span>
@@ -186,8 +242,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#111110] py-20">
+      {/* ─── CTA ─── */}
+      <section className="bg-[#111110] py-20 diagonal-lines">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-8">
           <div>
             <div className="w-6 h-[2px] bg-[#004225] mb-5" />

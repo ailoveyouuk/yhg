@@ -26,8 +26,17 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#111110] text-white py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-[#111110] text-white py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1920&q=80"
+            alt=""
+            className="w-full h-full object-cover opacity-15"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111110] via-[#111110]/90 to-[#111110]/60" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-6">
           <div className="max-w-2xl">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-8 h-px bg-[#004225]" />
@@ -86,7 +95,7 @@ export default function AboutPage() {
       </section>
 
       {/* Credentials */}
-      <section className="bg-[#F7F7F5] py-20">
+      <section className="bg-[#F7F7F5] dot-grid py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="w-5 h-[2px] bg-[#004225] mb-6" />
           <h2 className="text-2xl font-semibold text-[#111110] mb-10 tracking-tight">Credentials & approvals</h2>

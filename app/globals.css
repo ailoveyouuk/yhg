@@ -54,3 +54,20 @@ h1, h2, h3, h4, h5, h6 {
 html {
   scroll-behavior: smooth;
 }
+
+/* Subtle dot grid — used on off-white textured sections */
+.dot-grid {
+  background-image: radial-gradient(circle, #DDDDD8 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Fine diagonal line pattern — used as a BRG accent wash */
+.diagonal-lines {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(0, 66, 37, 0.06) 6px,
+    rgba(0, 66, 37, 0.06) 7px
+  );
+}

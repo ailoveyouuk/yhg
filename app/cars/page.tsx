@@ -61,8 +61,17 @@ export default function CarsPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-[#111110] text-white py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-[#111110] text-white py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1920&q=80"
+            alt=""
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111110] via-[#111110]/85 to-[#111110]/40" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
             <div>
               <div className="flex items-center gap-4 mb-6">
