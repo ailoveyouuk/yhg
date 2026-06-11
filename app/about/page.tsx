@@ -26,12 +26,12 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate-900 text-white py-20">
+      <section className="bg-[#004225] text-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-2xl">
-            <span className="text-amber-400 text-sm font-semibold uppercase tracking-wider">About Us</span>
-            <h1 className="text-4xl lg:text-5xl font-bold mt-3 mb-5">Independent. Family. Trusted.</h1>
-            <p className="text-slate-300 text-lg leading-relaxed">
+            <span className="text-[#C9A84C] text-xs font-medium uppercase tracking-[0.2em]">About Us</span>
+            <h1 className="text-4xl lg:text-5xl font-serif font-semibold mt-3 mb-5">Independent. Family. Trusted.</h1>
+            <p className="text-green-100/70 text-lg leading-relaxed">
               Yardley Hastings Garage is an independent, family-owned business serving Northamptonshire and the surrounding counties. We sell, service, repair and restore most motor vehicle makes and models.
             </p>
           </div>
@@ -43,8 +43,8 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Our story</h2>
-              <div className="space-y-4 text-slate-600 leading-relaxed">
+              <h2 className="text-3xl font-serif font-semibold text-[#1C1C1A] mb-6">Our story</h2>
+              <div className="space-y-4 text-stone-600 leading-relaxed">
                 <p>
                   We are an independent, family-run garage based in Yardley Hastings, Northamptonshire.
                   Our team of certified mechanics has over 150 years of combined experience across all makes and models — from modern everyday cars to vintage and prestige classics.
@@ -61,17 +61,17 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">What we stand for</h2>
+              <h2 className="text-3xl font-serif font-semibold text-[#1C1C1A] mb-6">What we stand for</h2>
               {values.map((v) => (
-                <div key={v.title} className="flex gap-4 p-5 rounded-xl bg-slate-50">
-                  <div className="shrink-0 w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <div key={v.title} className="flex gap-4 p-5 rounded-xl bg-[#F9F7F4]">
+                  <div className="shrink-0 w-8 h-8 bg-[#F7F1E4] rounded-lg flex items-center justify-center mt-0.5">
+                    <svg className="w-4 h-4 text-[#A8882C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-1">{v.title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed">{v.body}</p>
+                    <h3 className="font-bold text-[#1C1C1A] mb-1">{v.title}</h3>
+                    <p className="text-stone-500 text-sm leading-relaxed">{v.body}</p>
                   </div>
                 </div>
               ))}
@@ -81,16 +81,16 @@ export default function AboutPage() {
       </section>
 
       {/* Credentials */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-[#F9F7F4] py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8">Credentials & approvals</h2>
+          <h2 className="text-2xl font-serif font-semibold text-[#1C1C1A] mb-8">Credentials & approvals</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {credentials.map((c) => (
               <div key={c.label} className="bg-white rounded-xl px-6 py-5 shadow-sm flex items-start gap-4">
-                <div className="shrink-0 w-2 h-2 bg-amber-500 rounded-full mt-2" />
+                <div className="shrink-0 w-2 h-2 bg-[#C9A84C] rounded-full mt-2" />
                 <div>
-                  <div className="font-bold text-slate-900 text-sm">{c.label}</div>
-                  <div className="text-slate-400 text-xs mt-0.5">{c.detail}</div>
+                  <div className="font-bold text-[#1C1C1A] text-sm">{c.label}</div>
+                  <div className="text-stone-400 text-xs mt-0.5">{c.detail}</div>
                 </div>
               </div>
             ))}
@@ -99,17 +99,17 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-slate-900 text-white py-16">
+      <section className="bg-[#004225] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-8">
           <div>
-            <h2 className="text-2xl font-bold mb-2">Come and see us</h2>
-            <p className="text-slate-300">Bedford Rd W, Yardley Hastings, Northampton NN7 1HB<br />Mon–Fri 8am–5:30pm · Sat 8:30am–12pm</p>
+            <h2 className="text-2xl font-serif font-semibold mb-2">Come and see us</h2>
+            <p className="text-green-100/70">Bedford Rd W, Yardley Hastings, Northampton NN7 1HB<br />Mon–Fri 8am–5:30pm · Sat 8:30am–12pm</p>
           </div>
           <div className="flex gap-4 shrink-0">
-            <Link href="/contact" className="bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-6 py-3 rounded text-sm transition-colors">
+            <Link href="/contact" className="bg-[#C9A84C] hover:bg-[#D4B86A] text-[#1C1C1A] font-bold px-6 py-3 rounded text-sm transition-colors">
               Get in Touch
             </Link>
-            <a href="tel:01604696225" className="border border-slate-500 hover:border-white text-white font-semibold px-6 py-3 rounded text-sm transition-colors">
+            <a href="tel:01604696225" className="border border-white/20 hover:border-white text-white font-semibold px-6 py-3 rounded text-sm transition-colors">
               01604 696225
             </a>
           </div>

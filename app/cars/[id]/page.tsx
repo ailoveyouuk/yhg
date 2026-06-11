@@ -48,15 +48,15 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
   return (
     <>
       {/* Breadcrumb */}
-      <div className="bg-slate-900 text-slate-400 text-sm px-4 py-3">
+      <div className="bg-[#004225] text-stone-400 text-sm px-4 py-3">
         <div className="max-w-7xl mx-auto flex gap-2 items-center">
-          <Link href="/cars" className="hover:text-amber-400 transition-colors">Cars for Sale</Link>
+          <Link href="/cars" className="hover:text-[#C9A84C] transition-colors">Cars for Sale</Link>
           <span>/</span>
           <span className="text-white">{v.year} {v.make} {v.model}</span>
         </div>
       </div>
 
-      <div className="bg-slate-50 min-h-screen">
+      <div className="bg-[#F9F7F4] min-h-screen">
         <div className="max-w-7xl mx-auto px-4 py-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
@@ -79,9 +79,9 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
                     )}
                   </div>
                 ) : (
-                  <div className="h-72 flex items-center justify-center bg-slate-100">
-                    <div className="text-center text-slate-400">
-                      <svg className="w-16 h-16 mx-auto mb-3 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <div className="h-72 flex items-center justify-center bg-stone-100">
+                    <div className="text-center text-stone-400">
+                      <svg className="w-16 h-16 mx-auto mb-3 text-green-100/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                       </svg>
                       <p className="text-sm">Photos coming soon</p>
@@ -92,18 +92,18 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
 
               {/* Description */}
               <div className="bg-white rounded-2xl shadow-sm p-6">
-                <h2 className="text-lg font-bold text-slate-900 mb-3">About this vehicle</h2>
-                <p className="text-slate-600 leading-relaxed text-sm">{v.description}</p>
+                <h2 className="text-lg font-bold text-[#1C1C1A] mb-3">About this vehicle</h2>
+                <p className="text-stone-600 leading-relaxed text-sm">{v.description}</p>
               </div>
 
               {/* Features */}
               {v.features.length > 0 && (
                 <div className="bg-white rounded-2xl shadow-sm p-6">
-                  <h2 className="text-lg font-bold text-slate-900 mb-4">Key features</h2>
+                  <h2 className="text-lg font-bold text-[#1C1C1A] mb-4">Key features</h2>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {v.features.map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-sm text-slate-600">
-                        <svg className="w-4 h-4 text-amber-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <li key={f} className="flex items-center gap-2 text-sm text-stone-600">
+                        <svg className="w-4 h-4 text-[#C9A84C] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
                         {f}
@@ -115,13 +115,13 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
 
               {/* Full spec table */}
               <div className="bg-white rounded-2xl shadow-sm p-6">
-                <h2 className="text-lg font-bold text-slate-900 mb-4">Full specifications</h2>
+                <h2 className="text-lg font-bold text-[#1C1C1A] mb-4">Full specifications</h2>
                 <table className="w-full text-sm">
-                  <tbody className="divide-y divide-slate-100">
+                  <tbody className="divide-y divide-stone-100">
                     {specRows(v).map(([label, value]) => (
                       <tr key={label}>
-                        <td className="py-2.5 text-slate-500 pr-6 w-1/2">{label}</td>
-                        <td className={`py-2.5 font-medium ${label === 'HPI clear' || label === 'V5C present' ? 'text-green-600' : 'text-slate-900'}`}>{value}</td>
+                        <td className="py-2.5 text-stone-500 pr-6 w-1/2">{label}</td>
+                        <td className={`py-2.5 font-medium ${label === 'HPI clear' || label === 'V5C present' ? 'text-[#004225]' : 'text-[#1C1C1A]'}`}>{value}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -135,10 +135,10 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
               {/* Price card */}
               <div className="bg-white rounded-2xl shadow-sm p-6 sticky top-24">
                 <div className="mb-1">
-                  <span className="text-slate-500 text-sm">{v.year} {v.make} {v.model}</span>
+                  <span className="text-stone-500 text-sm">{v.year} {v.make} {v.model}</span>
                 </div>
-                <div className="text-3xl font-bold text-slate-900 mb-1">£{v.price.toLocaleString()}</div>
-                <div className="text-slate-500 text-sm mb-5">{v.variant}</div>
+                <div className="text-3xl font-bold text-[#1C1C1A] mb-1">£{v.price.toLocaleString()}</div>
+                <div className="text-stone-500 text-sm mb-5">{v.variant}</div>
 
                 {v.status === 'reserved' && (
                   <div className="bg-orange-50 border border-orange-200 text-orange-800 text-sm rounded-lg px-4 py-2.5 mb-4 font-medium">
@@ -148,21 +148,21 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
 
                 <div className="space-y-3 mb-6">
                   <a href="tel:01604696225"
-                    className="flex items-center justify-center gap-2 w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold py-3 rounded-lg text-sm transition-colors">
+                    className="flex items-center justify-center gap-2 w-full bg-[#C9A84C] hover:bg-[#D4B86A] text-[#1C1C1A] font-bold py-3 rounded-lg text-sm transition-colors">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                     </svg>
                     Call 01604 696225
                   </a>
                   <a href={`mailto:admin@yardleyhastingsgarage.co.uk?subject=Enquiry: ${v.year} ${v.make} ${v.model}&body=Hi, I'm interested in the ${v.year} ${v.make} ${v.model} listed at £${v.price.toLocaleString()}. Please get in touch.`}
-                    className="flex items-center justify-center gap-2 w-full border border-slate-200 hover:border-slate-400 text-slate-700 font-semibold py-3 rounded-lg text-sm transition-colors">
+                    className="flex items-center justify-center gap-2 w-full border border-stone-200 hover:border-stone-400 text-stone-700 font-semibold py-3 rounded-lg text-sm transition-colors">
                     Email Enquiry
                   </a>
                 </div>
 
                 {/* Quick enquiry form */}
-                <div className="border-t border-slate-100 pt-5">
-                  <h3 className="text-sm font-bold text-slate-900 mb-4">Quick enquiry</h3>
+                <div className="border-t border-stone-100 pt-5">
+                  <h3 className="text-sm font-bold text-[#1C1C1A] mb-4">Quick enquiry</h3>
                   <form
                     name="vehicle-enquiry"
                     method="POST"
@@ -176,30 +176,30 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
                       name="name"
                       required
                       placeholder="Your name"
-                      className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                      className="w-full border border-stone-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C]"
                     />
                     <input
                       type="tel"
                       name="phone"
                       placeholder="Phone number"
-                      className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                      className="w-full border border-stone-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C]"
                     />
                     <input
                       type="email"
                       name="email"
                       required
                       placeholder="Email address"
-                      className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                      className="w-full border border-stone-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C]"
                     />
                     <textarea
                       name="message"
                       rows={3}
                       placeholder="Any questions?"
-                      className="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 resize-none"
+                      className="w-full border border-stone-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C] resize-none"
                     />
                     <button
                       type="submit"
-                      className="w-full bg-slate-900 hover:bg-slate-700 text-white font-bold py-3 rounded-lg text-sm transition-colors"
+                      className="w-full bg-[#004225] hover:bg-[#005a30] text-white font-bold py-3 rounded-lg text-sm transition-colors"
                     >
                       Send Enquiry
                     </button>
