@@ -1,0 +1,138 @@
+[
+  {
+    "id": "interim-service",
+    "category": "Servicing",
+    "name": "Interim Service",
+    "description": "Recommended every 6 months or 6,000 miles. Covers the essentials to keep your vehicle safe and running efficiently between full services.",
+    "includes": [
+      "Engine oil and filter change",
+      "Tyre pressure and condition check",
+      "Brake inspection",
+      "Lights and electrical check",
+      "Fluid top-ups (screenwash, coolant)"
+    ],
+    "price": 89,
+    "price_type": "from",
+    "duration_hours": 1.5,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "full-service",
+    "category": "Servicing",
+    "name": "Full Service",
+    "description": "Comprehensive manufacturer-specification service. Recommended every 12 months or 12,000 miles. Covers all major vehicle systems.",
+    "includes": [
+      "Everything in the Interim Service",
+      "Air filter replacement",
+      "Cabin filter replacement",
+      "Spark plug inspection / replacement (petrol)",
+      "Brake fluid test",
+      "Steering and suspension check",
+      "Full 52-point vehicle health check"
+    ],
+    "price": 149,
+    "price_type": "from",
+    "duration_hours": 3,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "mot",
+    "category": "MOT",
+    "name": "MOT Test",
+    "description": "Annual MOT test at our approved test centre. We can carry out any required remedial work on the same day wherever possible.",
+    "includes": [
+      "Full DVSA-standard MOT inspection",
+      "Written report of all findings",
+      "Same-day remedial work where possible"
+    ],
+    "price": 54.85,
+    "price_type": "fixed",
+    "duration_hours": 1,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "mot-and-service",
+    "category": "MOT",
+    "name": "MOT + Full Service",
+    "description": "The most popular combination. Book your MOT and full service together and save compared to booking separately.",
+    "includes": [
+      "Full MOT test",
+      "Full manufacturer-specification service",
+      "Combined health check report"
+    ],
+    "price": 185,
+    "price_type": "from",
+    "duration_hours": 4,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "wheel-alignment",
+    "category": "Tyres & Wheels",
+    "name": "Laser 4-Wheel Alignment",
+    "description": "Precision laser alignment to manufacturer specification. Reduces tyre wear, improves handling and fuel economy.",
+    "includes": [
+      "4-wheel laser alignment check",
+      "Adjustment to manufacturer specification",
+      "Before and after printout"
+    ],
+    "price": 59,
+    "price_type": "from",
+    "duration_hours": 1,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "air-conditioning",
+    "category": "Air Conditioning",
+    "name": "AC Regas & Service",
+    "description": "Restore your air conditioning to full efficiency. Recommended every 2 years.",
+    "includes": [
+      "Full AC system inspection",
+      "Refrigerant regas",
+      "Leak test",
+      "Performance check"
+    ],
+    "price": 69,
+    "price_type": "from",
+    "duration_hours": 1,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "diagnostic",
+    "category": "Diagnostics",
+    "name": "Electronic Diagnostics",
+    "description": "Warning light on? Our state-of-the-art diagnostic equipment reads fault codes across all modern vehicle systems to pinpoint issues quickly.",
+    "includes": [
+      "Full electronic system scan",
+      "Fault code reading and interpretation",
+      "Written diagnostic report",
+      "Advice on next steps"
+    ],
+    "price": 45,
+    "price_type": "fixed",
+    "duration_hours": 0.5,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "bodywork-quote",
+    "category": "Bodywork",
+    "name": "Bodywork & Accident Repair",
+    "description": "Dings, dents, resprays, accident damage or full restoration. We provide a free estimate for all bodywork.",
+    "includes": [
+      "Free inspection and estimate",
+      "Insurance claim handling",
+      "All makes and models"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": false,
+    "active": true
+  }
+]
