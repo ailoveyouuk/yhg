@@ -4,6 +4,10 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  # Add these in Netlify Dashboard → Site configuration → Environment variables
+  # NEXT_PUBLIC_SUPABASE_URL     = "https://your-project-ref.supabase.co"
+  # NEXT_PUBLIC_SUPABASE_ANON_KEY = "your-anon-key"
+  # SUPABASE_SERVICE_ROLE_KEY    = "your-service-role-key"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

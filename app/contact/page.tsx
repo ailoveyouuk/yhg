@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact & Book',
@@ -28,115 +29,7 @@ export default function ContactPage() {
 
             {/* Form — 3 cols */}
             <div className="lg:col-span-3">
-              <div className="bg-white border border-[#EFEFEB] p-8">
-                <div className="w-5 h-[2px] bg-[#004225] mb-6" />
-                <h2 className="text-xl font-semibold text-[#111110] mb-7 tracking-tight">Send us a message</h2>
-                <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  className="space-y-5"
-                >
-                  <input type="hidden" name="form-name" value="contact" />
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label htmlFor="name" className="block text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-2">
-                        Name <span className="text-[#004225]">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-2">
-                        Phone
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white"
-                        placeholder="01234 567890"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-2">
-                      Email <span className="text-[#004225]">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white"
-                      placeholder="you@example.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="enquiry-type" className="block text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-2">
-                      Type of enquiry
-                    </label>
-                    <select
-                      id="enquiry-type"
-                      name="enquiry-type"
-                      className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white appearance-none"
-                    >
-                      <option value="">Please select…</option>
-                      <option value="service">Book a Service / MOT</option>
-                      <option value="bodywork">Bodywork / Accident Repair Quote</option>
-                      <option value="restoration">Classic Restoration Enquiry</option>
-                      <option value="car-sales">Car Sales Enquiry</option>
-                      <option value="van-sales">Van Sales Enquiry</option>
-                      <option value="fleet">Fleet Enquiry</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="vehicle" className="block text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-2">
-                      Vehicle (make, model, year)
-                    </label>
-                    <input
-                      type="text"
-                      id="vehicle"
-                      name="vehicle"
-                      className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white"
-                      placeholder="e.g. Ford Focus 2019"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-2">
-                      Message <span className="text-[#004225]">*</span>
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={5}
-                      className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors resize-none bg-white"
-                      placeholder="Tell us what you need…"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-[#004225] hover:bg-[#005a30] text-white font-semibold py-3.5 text-sm tracking-wide transition-colors"
-                  >
-                    Send Enquiry
-                  </button>
-                  <p className="text-xs text-[#5A5A57] text-center">We aim to respond within one business day.</p>
-                </form>
-              </div>
+              <ContactForm />
             </div>
 
             {/* Info panel — 2 cols */}
