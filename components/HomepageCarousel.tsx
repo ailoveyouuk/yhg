@@ -114,7 +114,7 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
           <div
             key={`mobile-${panel.id}`}
             className={`relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.18)] ${
-              panel.id === 'stocklist' ? 'h-[23rem]' : 'h-72'
+              panel.id === 'stocklist' ? 'h-[23rem]' : 'h-80'
             }`}
           >
             {/* Background */}
@@ -159,26 +159,33 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
               )}
 
               {/* Heading */}
-              <h2 className="font-semibold text-white leading-[1.05] tracking-tight text-3xl mb-2.5 whitespace-pre-line">
+              <h2 className="font-semibold text-white leading-[1.05] tracking-tight text-2xl mb-2 whitespace-pre-line">
                 {panel.heading}
               </h2>
 
               {/* Body */}
-              <p className="text-white/70 leading-relaxed font-light text-sm mb-4">
+              <p className="text-white/70 leading-relaxed font-light text-sm mb-3">
                 {panel.body}
               </p>
 
               {/* Stocklist preview — mobile only, this panel only */}
               {panel.id === 'stocklist' && <StocklistPreviewMobile vehicles={previewVehicles} />}
 
-              {/* Sub-links — mirrors this panel's header nav dropdown */}
+              {/* Sub-links — mirrors this panel's header nav dropdown.
+                   Rendered as a single-row, horizontally-scrollable strip of
+                   frosted-glass chips (matches the glass CTA styling) rather
+                   than wrapped underlined text — bigger touch targets, and
+                   a fixed one-line height so it can't push the eyebrow pill
+                   above the panel and get clipped. */}
               {panel.subLinks && (
-                <div className="flex flex-wrap gap-x-3 gap-y-1 mb-4">
+                <div
+                  className="flex gap-1.5 overflow-x-auto mb-3 -mx-6 px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                >
                   {panel.subLinks.map((link) => (
                     <Link
                       key={`mobile-sub-${panel.id}-${link.href}`}
                       href={link.href}
-                      className="text-white/60 hover:text-white text-xs tracking-wide underline underline-offset-2 decoration-white/30 hover:decoration-white/70 transition-colors"
+                      className="shrink-0 whitespace-nowrap inline-flex items-center bg-white/10 hover:bg-white/18 border border-white/20 hover:border-white/40 rounded-full px-3 py-1.5 text-white/80 hover:text-white text-[11px] tracking-wide backdrop-blur-sm transition-colors"
                     >
                       {link.label}
                     </Link>
