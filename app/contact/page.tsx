@@ -1,41 +1,67 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import ContactForm from '@/components/ContactForm';
+import PageCard from '@/components/PageCard';
+import { BUSINESS_ADDRESS, BUSINESS_EMAIL, BUSINESS_PHONE, OPENING_HOURS } from '@/data/business';
 
 export const metadata: Metadata = {
   title: 'Contact & Book',
   description: 'Book a service, request a quote or get directions to Yardley Hastings Garage. Bedford Rd W, Yardley Hastings, Northampton NN7 1HB.',
+  openGraph: {
+    title: 'Contact & Book | Yardley Hastings Garage',
+    description: 'Book a service, request a quote or get directions to Yardley Hastings Garage. Bedford Rd W, Yardley Hastings, Northampton NN7 1HB.',
+  },
+  twitter: {
+    title: 'Contact & Book | Yardley Hastings Garage',
+    description: 'Book a service, request a quote or get directions to Yardley Hastings Garage. Bedford Rd W, Yardley Hastings, Northampton NN7 1HB.',
+  },
 };
+
+function ContactFormFallback() {
+  return (
+    <div className="bg-white border border-[#EFEFEB] p-8 h-[520px] flex items-center justify-center">
+      <div className="w-5 h-[2px] bg-[#EFEFEB] animate-pulse" />
+    </div>
+  );
+}
 
 export default function ContactPage() {
   return (
-    <>
-      {/* Hero */}
-      <section className="bg-[#111110] text-white py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-8 h-px bg-[#004225]" />
-            <span className="eyebrow text-[#888884]">Contact & Book</span>
+    <PageCard>
+      {/* ─── Hero ─── */}
+      <section className="bg-[#111110] text-white relative overflow-hidden flex items-end" style={{ minHeight: '40vh' }}>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#111110] via-[#1F1F1D] to-[#111110]" />
+        <div className="absolute inset-0 diagonal-lines opacity-60" />
+
+        <div className="relative max-w-7xl mx-auto px-8 lg:px-14 pb-12 lg:pb-16 w-full">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3.5 py-1 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#6ab88a] flex-shrink-0" />
+              <span className="text-white text-[10px] tracking-[0.15em] uppercase font-medium">Contact &amp; Book</span>
+            </div>
+            <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-4 leading-[1.05]">Get in touch</h1>
+            <p className="text-white/70 max-w-lg font-light text-lg">
+              Book a service, request a quote, enquire about a vehicle, or just ask for advice. We are always happy to help.
+            </p>
           </div>
-          <h1 className="text-4xl font-semibold tracking-tight mb-4">Get in touch</h1>
-          <p className="text-white/75 max-w-lg font-light">
-            Book a service, request a bodywork quote, enquire about a vehicle, or just ask for advice. We are always happy to help.
-          </p>
         </div>
       </section>
 
+      {/* ─── Form + info ─── */}
       <section className="bg-[#F7F7F5] py-16">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-8 lg:px-14">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
 
             {/* Form — 3 cols */}
             <div className="lg:col-span-3">
-              <ContactForm />
+              <Suspense fallback={<ContactFormFallback />}>
+                <ContactForm />
+              </Suspense>
             </div>
 
             {/* Info panel — 2 cols */}
             <div className="lg:col-span-2 space-y-5">
-              {/* Contact details */}
-              <div className="bg-white border border-[#EFEFEB] p-7">
+              <div className="bg-white border border-[#EFEFEB] p-7 rounded-sm">
                 <div className="w-5 h-[2px] bg-[#004225] mb-5" />
                 <h2 className="text-base font-semibold text-[#111110] mb-6 tracking-tight">Contact details</h2>
                 <div className="space-y-5">
@@ -46,7 +72,7 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <div className="text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-1">Address</div>
-                      <div className="text-sm text-[#5A5A57]">Bedford Rd W, Yardley Hastings<br />Northampton NN7 1HB</div>
+                      <div className="text-sm text-[#5A5A57]">{BUSINESS_ADDRESS.line1AndLine2}<br />{BUSINESS_ADDRESS.cityAndPostcode}</div>
                     </div>
                   </div>
                   <div className="flex gap-3">
@@ -55,7 +81,7 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <div className="text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-1">Phone</div>
-                      <a href="tel:01604696225" className="text-sm text-[#004225] hover:text-[#111110] font-semibold transition-colors">01604 696225</a>
+                      <a href={BUSINESS_PHONE.href} className="text-sm text-[#004225] hover:text-[#111110] font-semibold transition-colors">{BUSINESS_PHONE.display}</a>
                     </div>
                   </div>
                   <div className="flex gap-3">
@@ -64,19 +90,18 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <div className="text-xs font-medium text-[#111110] uppercase tracking-[0.1em] mb-1">Email</div>
-                      <a href="mailto:admin@yardleyhastingsgarage.co.uk" className="text-sm text-[#004225] hover:text-[#111110] transition-colors break-all">admin@yardleyhastingsgarage.co.uk</a>
+                      <a href={BUSINESS_EMAIL.href} className="text-sm text-[#004225] hover:text-[#111110] transition-colors break-all">{BUSINESS_EMAIL.display}</a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Hours */}
-              <div className="bg-white border border-[#EFEFEB] p-7">
+              <div className="bg-white border border-[#EFEFEB] p-7 rounded-sm">
                 <div className="w-5 h-[2px] bg-[#004225] mb-5" />
                 <h2 className="text-base font-semibold text-[#111110] mb-5 tracking-tight">Opening hours</h2>
                 <table className="w-full text-sm">
                   <tbody>
-                    {[['Mon – Fri', '8:00am – 5:30pm'], ['Saturday', '8:30am – 12:00 noon'], ['Sunday', 'Closed']].map(([day, hrs]) => (
+                    {OPENING_HOURS.map(([day, hrs]) => (
                       <tr key={day} className="border-b border-[#EFEFEB] last:border-0">
                         <td className="py-2.5 font-medium text-[#111110] pr-4">{day}</td>
                         <td className={`py-2.5 ${hrs === 'Closed' ? 'text-[#5A5A57]/40' : 'text-[#5A5A57]'}`}>{hrs}</td>
@@ -86,20 +111,22 @@ export default function ContactPage() {
                 </table>
               </div>
 
-              {/* Map placeholder */}
-              <div className="bg-[#EFEFEB] h-48 flex items-center justify-center">
-                <div className="text-center text-[#5A5A57]">
-                  <svg className="w-6 h-6 mx-auto mb-2 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                  </svg>
-                  <p className="text-xs">Google Map — to be embedded</p>
-                </div>
+              <div className="rounded-sm overflow-hidden border border-[#EFEFEB]">
+                <iframe
+                  src={BUSINESS_ADDRESS.mapsEmbed}
+                  width="100%"
+                  height="300"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Yardley Hastings Garage location"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-    </>
+    </PageCard>
   );
 }

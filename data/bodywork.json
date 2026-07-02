@@ -1,0 +1,444 @@
+[
+  {
+    "id": "damage-assessment",
+    "category": "Accident Repair",
+    "name": "Damage Assessment & Estimate",
+    "description": "Every bodywork job begins here. We carry out a thorough inspection of all damage — visible and hidden — and provide a clear, itemised written estimate at no charge. We liaise directly with insurance companies where a claim is being made.",
+    "includes": [
+      "Full visual and structural damage inspection",
+      "Written estimate provided with no obligation",
+      "Direct insurance company liaison where applicable",
+      "Assessment of hidden damage behind panels"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "minor-accident-repair",
+    "category": "Accident Repair",
+    "name": "Minor Accident Repair",
+    "description": "Scuffs, scrapes, parking damage and localised panel impacts repaired to a standard indistinguishable from the factory finish. We carry out the repair, blend adjacent panels for a seamless result and return the vehicle in better condition than before.",
+    "includes": [
+      "Damaged panel reshaped, filled and prepared to OEM standard",
+      "Colour-matched paint mixed and applied",
+      "Adjacent panels blended for seamless finish",
+      "Full cut and polish on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "major-accident-repair",
+    "category": "Accident Repair",
+    "name": "Major Accident Repair",
+    "description": "Significant collision damage often involves multiple panels, structural components and hidden mechanical impact. We assess the full extent of damage, carry out all necessary metalwork and painting, and manage the complete repair process from start to finish.",
+    "includes": [
+      "Structural and mechanical damage assessment",
+      "Jig and measuring system used to verify chassis alignment",
+      "Replacement panels sourced, fitted and painted",
+      "Full quality inspection and road test before handover"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "bumper-repair",
+    "category": "Accident Repair",
+    "name": "Bumper Repair & Replacement",
+    "description": "Cracked, scuffed or torn bumpers are among the most common repairs we carry out. Minor damage is repaired and refinished in situ; severely damaged bumpers are replaced with a new or quality replacement unit, painted to a perfect colour match.",
+    "includes": [
+      "Bumper condition assessed — repair vs replacement advised",
+      "Plastic welding or filler repair for cracks and splits",
+      "New bumper sourced and fitted where required",
+      "Colour-matched paint applied and lacquered"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "panel-replacement",
+    "category": "Accident Repair",
+    "name": "Panel & Trim Replacement",
+    "description": "Door skins, wings, bonnets, boot lids and external trim — when a panel is beyond economic repair, we source the correct replacement part, prepare it properly and finish it to an exacting standard. No shortcuts with filler where metalwork is the right answer.",
+    "includes": [
+      "Replacement panel sourced (OEM or approved equivalent)",
+      "Panel fitted, aligned and adjusted to factory gaps",
+      "Colour-matched and painted with UV-resistant lacquer",
+      "All clips, fixings and seals renewed"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "pdr",
+    "category": "Dent Removal",
+    "name": "Paintless Dent Removal (PDR)",
+    "description": "PDR is the most cost-effective solution for dents where the paintwork is intact. Using specialist access tools to massage the metal back to its original profile from behind the panel, we restore the surface without the need for filler or repainting.",
+    "includes": [
+      "Assessment to confirm paint integrity and PDR suitability",
+      "Specialist PDR tools used to access and work the panel",
+      "Panel returned to original profile without filler or paint",
+      "Suitable for door dings, hail, parking impacts and similar"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "traditional-dent-repair",
+    "category": "Dent Removal",
+    "name": "Traditional Dent Repair",
+    "description": "Larger or sharper dents that have creased the metal, or where the paint has already cracked, require the traditional approach — shaping the panel, applying appropriate filler and refinishing with colour-matched paint. The result is a panel that looks as though it was never damaged.",
+    "includes": [
+      "Panel pulled and worked back to shape",
+      "Fine filler applied and flatted to perfect contour",
+      "Colour-matched primer, base coat and lacquer applied",
+      "Panel blended into adjacent surfaces for seamless result"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "hail-damage",
+    "category": "Dent Removal",
+    "name": "Hail & Multiple Impact Damage",
+    "description": "Hail damage can affect dozens of panels and create hundreds of individual dents. We assess the full extent of damage and recommend the most effective repair method — PDR where paint is undamaged, traditional repair where it isn't. We have repaired vehicles with extensive hail damage to a concours standard.",
+    "includes": [
+      "Full vehicle assessment to map extent and severity of impacts",
+      "PDR used wherever paint surface is intact",
+      "Traditional repair for impacts with paint damage",
+      "Combined approach managed to minimise cost and repair time"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "single-panel-respray",
+    "category": "Paintwork",
+    "name": "Single Panel Respray",
+    "description": "A single panel refinished and blended perfectly into the surrounding paintwork. Whether you need a door, wing, bonnet or bumper painted, we mix your colour from the vehicle's paint code and apply it in our spray booth for a factory-quality result.",
+    "includes": [
+      "Paint code identified and colour mixed to exact specification",
+      "Panel prepared, primed and sealed before paint application",
+      "Base coat and lacquer applied in our dedicated spray booth",
+      "Adjacent panels blended to eliminate any tonal difference"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "multi-panel-respray",
+    "category": "Paintwork",
+    "name": "Multi-Panel Respray",
+    "description": "When several connected panels need to be refinished — across a side, a front end or a full section of the vehicle — we work across all affected surfaces simultaneously, ensuring perfect blending and a finish that reads as one cohesive result rather than a series of individual repairs.",
+    "includes": [
+      "All panels prepared, primed and matched before application",
+      "Colour mixed and applied consistently across all surfaces",
+      "Blending managed at panel edges for visual continuity",
+      "Full cut, machine polish and wax on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "full-respray",
+    "category": "Paintwork",
+    "name": "Full Vehicle Respray",
+    "description": "A complete bare-metal or panel-by-panel respray of the entire vehicle. This is the definitive approach for vehicles requiring a total refresh, a colour change, or where the existing paint has deteriorated beyond spot-repair. We have resprayed everything from modern saloons to pre-war classics.",
+    "includes": [
+      "Full vehicle stripped and panels prepared to bare metal or sealer as appropriate",
+      "Any corrosion or surface defects addressed before painting",
+      "Primer, colour coat and lacquer applied in controlled spray booth conditions",
+      "Final machine polish and protection treatment on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "specialist-finishes",
+    "category": "Paintwork",
+    "name": "Specialist & Custom Finishes",
+    "description": "Pearl, metallic, satin, two-tone and custom colour work requires additional skill and specialist products to achieve a consistent and durable result. We have experience across the full range of modern and heritage finish types, including period-correct colours for classic vehicles.",
+    "includes": [
+      "Specialist materials sourced for the specific finish type",
+      "Test panels produced to confirm colour and sheen before full application",
+      "Multi-stage application process used for pearl and metallic finishes",
+      "Suitable for original colour restoration or bespoke colour changes"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "sill-replacement",
+    "category": "Structural Repair",
+    "name": "Sill Replacement",
+    "description": "Corroded or impact-damaged sills affect both the structural integrity and the appearance of a vehicle. We fabricate or source the correct inner and outer sill sections, weld them in properly and finish the result to a standard that will pass future MOT inspections and look correct.",
+    "includes": [
+      "Inner and outer sill condition fully assessed",
+      "Corrosion cut back to clean metal before new sections are fitted",
+      "Replacement sill sections welded in and seam-sealed",
+      "Rust treatment and protective coating applied before refinishing"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "arch-repair",
+    "category": "Structural Repair",
+    "name": "Arch & Wheelhouse Repair",
+    "description": "Wheel arches accumulate stone chips, salt and moisture, making them a common site for rust ingress. We cut out corroded sections, weld in new metal and apply underseal and cavity wax to prevent recurrence — a repair that should last the lifetime of the vehicle.",
+    "includes": [
+      "Arch and wheelhouse area stripped and corrosion mapped",
+      "Corroded sections cut out and new steel sections welded in",
+      "Seam sealer and stonechip primer applied to exposed seams",
+      "Arch liner refitted or replaced after repair"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "structural-section-repair",
+    "category": "Structural Repair",
+    "name": "Structural Section Replacement",
+    "description": "A, B and C pillar damage, roof sections, inner wings and other structural elements require specialist repair techniques to restore the vehicle to its designed crash performance. We use the correct replacement sections and welding procedures for each vehicle.",
+    "includes": [
+      "Structural damage assessed against manufacturer repair specifications",
+      "OEM or approved equivalent replacement sections sourced",
+      "Welded repair carried out to manufacturer-specified procedures",
+      "Post-repair measurement to confirm correct geometry restoration"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "floor-chassis-repair",
+    "category": "Structural Repair",
+    "name": "Floor Pan & Chassis Repair",
+    "description": "Floor pan corrosion and chassis damage are serious but treatable. We have the fabrication skills to address even significant structural metalwork, sourcing replacement sections or fabricating from sheet steel where pattern parts are unavailable — common on older and classic vehicles.",
+    "includes": [
+      "Underside thoroughly inspected with vehicle on ramps",
+      "Corroded or damaged sections cut back to clean metal",
+      "New steel sections fabricated or sourced and welded in",
+      "Full corrosion protection treatment applied after repair"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "full-restoration",
+    "category": "Classic Restoration",
+    "name": "Full Classic Restoration",
+    "description": "A complete, ground-up restoration — body, paint, mechanical and interior — carried out to the highest standard. We have restored vehicles dating back to 1918. Work can be phased across multiple visits or completed in a single continuous project depending on the vehicle and the owner's requirements.",
+    "includes": [
+      "Comprehensive assessment and project scope agreed upfront",
+      "Body stripped to bare metal, all corrosion treated or replaced",
+      "Full mechanical rebuild undertaken alongside bodywork",
+      "Progress documentation provided throughout the project"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "partial-restoration",
+    "category": "Classic Restoration",
+    "name": "Partial & Rolling Restoration",
+    "description": "Not every classic needs — or benefits from — a full strip at once. A rolling restoration addresses the most important areas first while the vehicle remains usable, spreading both cost and disruption over time. We work to an agreed priority list and update it as the project develops.",
+    "includes": [
+      "Priority assessment to identify most critical repair areas",
+      "Work phased to an agreed schedule and budget",
+      "Vehicle remains usable between phases where possible",
+      "Detailed record kept of work completed and outstanding"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "rust-treatment",
+    "category": "Classic Restoration",
+    "name": "Rust Treatment & Prevention",
+    "description": "Surface rust, bubbling paint and early corrosion addressed before they become structural problems. We remove rust mechanically and chemically, treat affected surfaces with phosphoric acid primer and apply cavity wax to enclosed sections — a treatment that significantly extends vehicle life.",
+    "includes": [
+      "All rust areas identified and mapped",
+      "Mechanical and chemical rust removal carried out",
+      "Phosphoric acid primer applied to treated surfaces",
+      "Cavity wax injection into sills, doors and enclosed sections"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "bare-metal-respray",
+    "category": "Classic Restoration",
+    "name": "Bare Metal Respray",
+    "description": "The definitive preparation for a long-lasting paint finish. Stripping to bare metal allows every imperfection and hidden corrosion area to be addressed before the primer goes on — the only way to ensure the new paint will look correct and last for decades.",
+    "includes": [
+      "All paint and filler stripped to bare metal (chemical or media blast)",
+      "All bare metal surfaces treated with etch primer immediately",
+      "Any corrosion or defects repaired before filling and blocking",
+      "Period-correct or OEM colour applied with modern durable materials"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "windscreen",
+    "category": "Glazing",
+    "name": "Windscreen Replacement",
+    "description": "A cracked or chipped windscreen that cannot be repaired must be replaced. We fit OEM or approved-equivalent glass and, where the vehicle is equipped with ADAS safety systems (lane keep assist, emergency braking etc.), carry out the required camera recalibration after fitting.",
+    "includes": [
+      "Damaged windscreen removed and aperture cleaned",
+      "OEM or approved equivalent glass sourced and fitted",
+      "ADAS camera recalibration carried out where required",
+      "Weatherstrip and trim renewed where worn"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "side-rear-glass",
+    "category": "Glazing",
+    "name": "Side & Rear Glass Replacement",
+    "description": "Door glass, quarter lights, rear screens and tailgate glass — sourced and fitted correctly for all makes and models. We also address seal and channel wear that causes water ingress or wind noise, which can be as disruptive as a broken pane.",
+    "includes": [
+      "Correct glass sourced to OEM specification",
+      "Old glass removed and aperture inspected for seal condition",
+      "New glass fitted with fresh seals and trim as required",
+      "Water test carried out after fitting to confirm weatherproofing"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "sunroof",
+    "category": "Glazing",
+    "name": "Sunroof Repair & Replacement",
+    "description": "Leaking, rattling or inoperative sunroofs are a common issue, particularly on older vehicles. We address drain channel blockages, seal deterioration and mechanism failure — and can replace panel glass where it is damaged or where the mechanism has failed beyond repair.",
+    "includes": [
+      "Sunroof mechanism, seals and drain channels inspected",
+      "Drain channels cleared and flushed",
+      "Seals replaced where deteriorated or leaking",
+      "Glass panel replaced where damaged or mechanism requires it"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "insurance-claims",
+    "category": "Insurance & Fleet",
+    "name": "Insurance Claim Management",
+    "description": "Navigating an insurance claim after an accident adds stress to an already difficult situation. As an approved repairer for major insurers, we handle the entire claim process on your behalf — from initial notification to completed repair — so you don't have to.",
+    "includes": [
+      "Direct liaison with your insurer from first contact",
+      "Authorised and approved by all major insurance companies",
+      "We handle all paperwork, authorisations and approvals",
+      "You deal with us directly — not a remote call centre"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "fleet-bodywork",
+    "category": "Insurance & Fleet",
+    "name": "Fleet Bodywork Programme",
+    "description": "Corporate fleets require responsive, consistent and cost-effective bodywork support. We work with fleet operators of all sizes, providing agreed-response timescales, consolidated invoicing and quality work that gets vehicles back on the road quickly.",
+    "includes": [
+      "Dedicated fleet account with priority scheduling",
+      "Consolidated monthly invoicing available",
+      "Agreed SLA response times for fleet vehicles",
+      "All makes and models covered under one arrangement"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "courtesy-vehicle",
+    "category": "Insurance & Fleet",
+    "name": "Courtesy Vehicle",
+    "description": "A courtesy vehicle is available for customers undertaking major bodywork repairs, subject to availability and insurance requirements. We aim to minimise disruption to your daily routine throughout any repair — particularly for jobs that require several days in the workshop.",
+    "includes": [
+      "Courtesy vehicle available subject to availability",
+      "Applicable for major repairs requiring extended time",
+      "Availability confirmed at time of booking",
+      "Own insurance required or daily rate cover available"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  }
+]

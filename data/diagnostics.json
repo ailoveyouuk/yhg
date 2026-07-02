@@ -1,0 +1,206 @@
+[
+  {
+    "id": "full-system-scan",
+    "category": "Diagnostic Scanning",
+    "name": "Full Vehicle Diagnostic Scan",
+    "description": "A complete scan of every available control module in the vehicle — engine, transmission, ABS, airbag, body control, climate, instrument cluster and more. Modern vehicles contain between 30 and 100 individual ECUs communicating across a shared network; a full scan reads fault codes across all of them simultaneously and identifies whether stored codes reflect an active fault or a historic event. This is the correct starting point for any warning light, intermittent fault or unexplained behaviour.",
+    "includes": [
+      "Full multi-module scan using professional multi-brand diagnostic equipment",
+      "All fault codes read and categorised — active, pending and historic",
+      "Module communication network checked for U-code network and CAN bus faults",
+      "Written diagnostic report with fault summary provided before any repair is discussed"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "targeted-fault-investigation",
+    "category": "Diagnostic Scanning",
+    "name": "Targeted Fault Investigation",
+    "description": "Where a full scan has identified a fault or faults, or where a specific symptom points to a known system, targeted investigation goes deeper than code reading. We examine live data from the relevant sensors and actuators — fuel trims, lambda values, injection timing, pressure readings — to identify the root cause before recommending any parts. A fault code identifies the system and the nature of the failure; targeted investigation identifies why it failed. Replacing components based on a code alone without this step frequently results in repeat faults and unnecessary spend.",
+    "includes": [
+      "Live data analysis of all relevant parameters in the affected system",
+      "Fuel trim, lambda, sensor output and actuator response assessed under real operating conditions",
+      "Root cause identified and distinguished from secondary symptoms",
+      "Clear written explanation of findings and recommended course of action"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "fault-code-clear-recheck",
+    "category": "Diagnostic Scanning",
+    "name": "Post-Repair Fault Code Clear & Recheck",
+    "description": "After any repair to a system that generated fault codes, those codes must be cleared from the module's memory and the system monitored to confirm the fault does not return. Some repairs also require specific adaptation or relearn procedures to complete correctly — throttle body relearns, idle speed adaptations, injector coding and similar. We carry out these procedures as standard after all relevant repair work, and recheck after a short drive cycle to confirm the fault is genuinely resolved.",
+    "includes": [
+      "All fault codes cleared from affected module or modules post-repair",
+      "Any required adaptation, relearn or coding procedure completed",
+      "Drive cycle completed and system rescanned to confirm fault has not returned",
+      "Final report confirming clean or identifying any outstanding issues"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "engine-management-light",
+    "category": "Warning Lights",
+    "name": "Engine Management Light Investigation",
+    "description": "An illuminated engine management light (EML) stores a diagnostic trouble code in the form P0xxx through P3xxx — covering the engine, fuel system, ignition, emissions control and associated sensors. A P0 code is a standardised OBD-II code applicable to all manufacturers; a P1 code is manufacturer-specific. We read and interpret both using professional equipment that accesses the full code range. The EML can indicate anything from a loose fuel filler cap to a misfiring cylinder or failing catalytic converter — we identify the cause before discussing any repair.",
+    "includes": [
+      "Full powertrain module scan and fault code interpretation",
+      "Live engine data examined to support fault diagnosis where relevant",
+      "Manufacturer-specific and generic fault codes both read and explained",
+      "Repair recommendation provided with root cause confirmed before any work proceeds"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "abs-esc-warning",
+    "category": "Warning Lights",
+    "name": "ABS & Electronic Stability Control Fault",
+    "description": "ABS and electronic stability control (ESC) warnings are stored as C-codes (chassis) within the relevant control module. These systems share wheel speed sensors and, on many vehicles, yaw rate and steering angle sensors — a single failed sensor can illuminate both ABS and ESC warnings simultaneously. We scan the module, identify the specific fault code and sensor involved, and test the sensor's output in live data before recommending replacement. A vehicle with an active ABS fault will still have normal unassisted braking, but stopping distances increase significantly in an emergency.",
+    "includes": [
+      "ABS and ESC module scanned for all stored fault codes",
+      "Wheel speed sensors tested in live data at rolling speed to confirm function",
+      "Yaw rate, steering angle and lateral acceleration sensor outputs verified where relevant",
+      "Root cause confirmed before any parts are sourced"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "airbag-srs-fault",
+    "category": "Warning Lights",
+    "name": "Airbag & SRS System Fault",
+    "description": "An illuminated airbag warning light means the SRS (supplemental restraint system) has detected a fault and the airbags may not deploy correctly in a collision — or may deploy unexpectedly. B-codes (body) stored in the SRS module identify which component has failed: clock spring, seat occupancy sensor, impact sensor, squib circuit or the airbag unit itself. SRS faults require professional equipment to read and clear; consumer OBD readers typically cannot access SRS modules. We diagnose the specific fault before any repair recommendation is made.",
+    "includes": [
+      "SRS module fully scanned using professional equipment capable of reading B-codes",
+      "Fault code identified and the specific component or circuit confirmed",
+      "Pre-tensioner and seat belt system checked alongside airbag circuits",
+      "Written fault summary provided — no repair work undertaken without your approval"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "service-reset",
+    "category": "Warning Lights",
+    "name": "Service Indicator Reset",
+    "description": "Modern service indicators use oil quality sensors or time-and-distance algorithms rather than a simple mileage counter, and must be reset through the vehicle's diagnostic interface — not the instrument cluster reset procedure. An incorrect reset using the steering wheel buttons or ignition sequence leaves the ECU tracking from the wrong baseline and results in an inaccurate next service interval. We perform the correct OBD-based reset using manufacturer-appropriate software for all common makes and models.",
+    "includes": [
+      "Service indicator reset performed via the vehicle diagnostic interface — not the instrument panel sequence",
+      "Service type logged correctly (oil service, inspection service, major service as appropriate)",
+      "Reset confirmed by rescanning the instrument cluster module",
+      "Suitable for all common makes including BMW, Volkswagen Group, Mercedes, Ford, Vauxhall and others"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "adas-static-calibration",
+    "category": "ADAS Calibration",
+    "name": "ADAS Static Camera Calibration",
+    "description": "Advanced driver assistance systems — lane keep assist, autonomous emergency braking, traffic sign recognition, adaptive cruise control — rely on cameras and sensors mounted to or behind the windscreen. Any windscreen replacement, camera repositioning or front-end impact requires static calibration to reset the camera's reference angles. Static calibration places the vehicle on a level surface in a controlled environment and positions calibration targets at manufacturer-specified distances and heights for the camera to re-reference. From 2016 to 2023, the proportion of windscreen replacements requiring ADAS calibration rose from 1% to 44% — it is now the rule rather than the exception.",
+    "includes": [
+      "Vehicle positioned and levelled in our calibration bay to the required standard",
+      "Manufacturer-specific calibration targets placed to the correct dimensions for the vehicle",
+      "Camera recalibrated through the diagnostic interface using brand-appropriate software",
+      "Post-calibration scan performed to confirm all ADAS system faults are resolved"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "adas-dynamic-calibration",
+    "category": "ADAS Calibration",
+    "name": "ADAS Dynamic Calibration",
+    "description": "Some vehicles require or benefit from dynamic calibration — a road test under controlled conditions at a specified speed while the diagnostic tool monitors the camera's self-calibration sequence. This is either an alternative to static calibration or a required supplementary step following it, depending on the vehicle and camera system involved. We carry out both static and dynamic calibration procedures as required by the manufacturer's service documentation for the specific vehicle.",
+    "includes": [
+      "Dynamic calibration drive carried out at manufacturer-specified speed with diagnostic tool connected",
+      "Camera self-calibration monitored and confirmed as complete during the drive",
+      "Combined with static calibration where the manufacturer requires both procedures",
+      "Post-procedure scan completed to verify all ADAS faults are cleared"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "ev-hybrid-diagnostic-scan",
+    "category": "Electric & Hybrid",
+    "name": "EV & Hybrid Full Diagnostic Scan",
+    "description": "Electric and hybrid vehicles carry additional control modules not present in combustion-engined cars — the battery management system (BMS), inverter, motor controller, on-board charger and thermal management system among them. Generic OBD-II tools cannot access the majority of these. We use multi-brand professional diagnostic equipment with EV-specific software to scan the full module set, read manufacturer-specific fault codes across all powertrain and high-voltage systems, and identify faults that would not be visible on a standard scan.",
+    "includes": [
+      "Full module scan including BMS, inverter, motor controller and on-board charger",
+      "Manufacturer-specific EV fault codes read and interpreted across all high-voltage systems",
+      "12V auxiliary battery system and its interaction with the high-voltage system checked",
+      "Written report covering all findings across both conventional and EV-specific systems"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "hv-battery-health",
+    "category": "Electric & Hybrid",
+    "name": "High-Voltage Battery Health Assessment",
+    "description": "The high-voltage battery pack in a hybrid or electric vehicle is managed by the battery management system, which monitors individual cell voltages, temperatures and state of charge continuously. A failing BMS or degraded cell group will log specific fault codes and, in many cases, will have begun limiting available power or charge capacity before any warning light appears. We carry out a BMS health assessment that reads cell-level data across the pack to identify failing groups, degraded capacity and temperature management issues — providing a factual picture of battery condition rather than a simple range estimate.",
+    "includes": [
+      "BMS data read at cell-group level to identify voltage imbalances and degradation",
+      "State of health (SoH) assessed and compared against manufacturer baseline for the vehicle age and mileage",
+      "Thermal management system operation checked — battery cooling is a common source of premature degradation",
+      "Written report on battery condition with clear findings and, where relevant, available remediation options"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "ev-charging-fault",
+    "category": "Electric & Hybrid",
+    "name": "EV Charging System Fault Diagnosis",
+    "description": "Charging faults in electric and hybrid vehicles are frequently misattributed to the battery when the actual fault lies in the on-board charger, charge port, EVSE communication protocol or the 12V auxiliary battery that governs system wake-up. We diagnose charging faults systematically — beginning with the 12V system and working through the on-board charger, charge port circuitry and BMS communication — to identify the specific fault before any component is condemned. Many charging faults are significantly less expensive to resolve than an initial diagnosis of battery failure would suggest.",
+    "includes": [
+      "12V auxiliary battery tested first — a failing 12V prevents high-voltage system wake-up",
+      "On-board charger and charge port circuitry scanned for specific fault codes",
+      "EVSE communication protocol checked where AC charging faults are reported",
+      "Root cause confirmed in writing before any repair is recommended or costed"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  }
+]

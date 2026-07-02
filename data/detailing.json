@@ -1,0 +1,444 @@
+[
+  {
+    "id": "pre-wash-snow-foam",
+    "category": "Exterior Preparation",
+    "name": "Pre-Wash & Snow Foam Treatment",
+    "description": "The correct starting point for any safe exterior treatment. A high-pressure pre-rinse clears loose contamination before a snow foam is applied and left to dwell, beginning to lift remaining dirt without any contact. This stage alone dramatically reduces the risk of inflicting swirls during the main wash.",
+    "includes": [
+      "High-pressure pre-rinse to flush loose dirt and debris",
+      "pH-balanced snow foam applied and left to dwell",
+      "Wheel arches, sills and lower panels pre-cleaned separately",
+      "Foam rinsed before any contact wash begins"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "two-bucket-hand-wash",
+    "category": "Exterior Preparation",
+    "name": "Safe Two-Bucket Hand Wash",
+    "description": "A thorough, swirl-safe hand wash using the two-bucket method — one bucket for clean shampoo solution, one for rinsing — with grit guards in both. Separate wash media is used for the wheels and lower panels to prevent cross-contamination of the upper paintwork.",
+    "includes": [
+      "Two-bucket method with grit guards in both buckets",
+      "pH-neutral shampoo selected to suit current protection level",
+      "Separate mitt and water for wheels and lower panels",
+      "Final rinse and careful hand-dry with clean waffle-weave towels"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "decontamination",
+    "category": "Exterior Preparation",
+    "name": "Chemical & Clay Decontamination",
+    "description": "Iron fallout, tar spots and industrial contamination bond to paintwork and cannot be removed by washing alone. A full decontamination stage is essential before any polishing or protection work — without it, polishing embeds contamination further into the clearcoat rather than removing it.",
+    "includes": [
+      "pH-sensitive iron fallout remover applied across all painted surfaces",
+      "Tar and adhesive remover applied to lower panels and sills",
+      "Clay bar or clay mitt used to remove remaining bonded contamination",
+      "Surface wiped and re-assessed for condition before proceeding"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "paint-assessment",
+    "category": "Exterior Preparation",
+    "name": "Paint Depth & Condition Assessment",
+    "description": "Before any machine work begins, we measure paint thickness across all panels using a digital depth gauge. This identifies areas of previous repair, panels with limited clearcoat remaining, and zones that require a modified correction approach — preventing irreversible damage from overcutting.",
+    "includes": [
+      "Digital paint depth gauge readings taken across all panels",
+      "Previous repairs and resprayed areas identified and mapped",
+      "Paint condition assessed under raking artificial light to identify defect types",
+      "Findings discussed with owner and treatment plan agreed before work begins"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "enhancement-polish",
+    "category": "Paint Correction",
+    "name": "Single-Stage Enhancement Polish",
+    "description": "For paintwork in good overall condition that has lost gloss and depth, a single-stage enhancement removes light swirls, water spots and surface haze using a fine cutting compound followed by a finishing polish. The result is noticeably cleaner, deeper paint without the time investment of a full correction.",
+    "includes": [
+      "Paint depth and condition assessed before beginning",
+      "Single-stage machine polish with compound and pad matched to paint condition",
+      "Light swirls, water marks and minor surface haze removed",
+      "Panel inspection under lighting after each section to confirm improvement"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "two-stage-correction",
+    "category": "Paint Correction",
+    "name": "Two-Stage Paint Correction",
+    "description": "Our most common correction treatment. A cutting stage addresses heavier swirling, light scratches and oxidation using a more aggressive compound, followed by a refining stage to eliminate any haze introduced and maximise gloss. The result is a significant, measurable improvement in paint clarity.",
+    "includes": [
+      "Stage 1: medium compound and cutting pad to remove primary defects",
+      "Stage 2: fine finishing polish to eliminate haze and maximise gloss depth",
+      "Panel wipe-down between stages to assess correction progress",
+      "Correction level agreed with owner before work begins; unrealistic expectations managed honestly"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "multi-stage-correction",
+    "category": "Paint Correction",
+    "name": "Multi-Stage Full Correction",
+    "description": "For paintwork with significant defects — deep swirling, buffer trails, heavy oxidation or chemical etching — a multi-stage process works through progressively finer compounds and pads to achieve the maximum possible clarity and gloss. This is the foundation required before any premium long-term protection is applied.",
+    "includes": [
+      "Full paint depth assessment to confirm safe correction is achievable",
+      "Compounding, cutting and finishing stages completed in sequence",
+      "Defects assessed under multiple light sources throughout to track progress",
+      "Before and after photographs taken to document improvement"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "wet-sanding",
+    "category": "Paint Correction",
+    "name": "Wet Sanding",
+    "description": "Orange peel texture, paint runs, deep scratches within the clearcoat and surface irregularities that cannot be polished out require wet sanding — carefully levelling the surface with abrasive film before polishing to a mirror finish. This is an advanced technique carried out only where paint depth comfortably allows.",
+    "includes": [
+      "Area assessed and appropriate abrasive grade selected for the defect type",
+      "Wet sanding performed carefully to level surface without cutting through",
+      "Multi-stage machine polish used to restore full clarity after levelling",
+      "Paint depth monitored throughout to maintain safe clearcoat thickness"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "carnauba-wax",
+    "category": "Paint Protection",
+    "name": "Carnauba Wax",
+    "description": "Natural carnauba wax delivers a warm, organic gloss depth that many owners prefer on classic, dark or single-stage painted vehicles. Applied by hand after polishing, it provides three to six months of protection and can be easily topped up at home between professional applications.",
+    "includes": [
+      "Applied by hand to clean, polished or decontaminated paintwork",
+      "Warm, rich gloss with the natural depth characteristic of carnauba",
+      "Protection duration of 3–6 months depending on washing and exposure",
+      "Simple to maintain and top up with a quality paste or spray wax"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "paint-sealant",
+    "category": "Paint Protection",
+    "name": "Synthetic Paint Sealant",
+    "description": "A modern polymer sealant that chemically bonds to the clearcoat and provides six to twelve months of durable protection against environmental contamination, UV degradation and light soiling. More resilient than wax and easier to maintain — well suited to daily-driven vehicles in variable conditions.",
+    "includes": [
+      "Polymer sealant applied by machine or hand to fully clean, dry paintwork",
+      "Chemical bond to clearcoat surface for superior durability over wax",
+      "6–12 month protection with strong water beading and contamination resistance",
+      "Can be topped up between applications with a compatible spray sealant"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "ceramic-coating",
+    "category": "Paint Protection",
+    "name": "Ceramic Coating (SiO2)",
+    "description": "A professional-grade nano-ceramic coating that forms a permanent chemical bond with the clearcoat. Highly hydrophobic, UV-stable and resistant to chemical contamination, minor scratching and environmental fallout. Two to five year durability with correct maintenance makes this the most cost-effective long-term protection available.",
+    "includes": [
+      "Paintwork fully corrected and decontaminated before application",
+      "Professional SiO2 ceramic coating applied panel by panel in controlled conditions",
+      "24–48 hour cure period required following application",
+      "Full aftercare guide provided; maintenance wash products recommended"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "graphene-coating",
+    "category": "Paint Protection",
+    "name": "Graphene Coating",
+    "description": "The next generation beyond SiO2 ceramic. Graphene coatings deliver all the benefits of ceramic with improved heat dissipation, significantly reduced water spotting in hard water areas and enhanced anti-static properties that repel airborne contamination. Three to seven year durability with correct care.",
+    "includes": [
+      "Full preparation and correction required before application",
+      "Graphene-infused coating applied in a controlled, dust-free environment",
+      "Superior heat resistance versus standard SiO2 ceramic coatings",
+      "5+ year durability with correct maintenance wash products and annual inspection"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "ppf",
+    "category": "Paint Protection",
+    "name": "Paint Protection Film (PPF)",
+    "description": "A self-healing urethane film that provides physical protection against stone chips, road debris, light abrasions and minor impacts. Available for targeted high-impact areas — bonnet leading edge, front bumper, mirror caps — or full panel and full-vehicle coverage. Self-healing properties activate with heat.",
+    "includes": [
+      "Pre-cut or custom-cut film applied to agreed coverage areas",
+      "Self-healing urethane construction protects against chips and impact marks",
+      "Available in gloss (optically clear) or satin finish",
+      "Compatible with ceramic coating applied over the top for combined protection"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "glass-treatment",
+    "category": "Exterior Finishing",
+    "name": "Glass Polish & Rain Repellent",
+    "description": "Contaminated or lightly scratched glass reduces clarity and increases the visual effort required in wet conditions. We polish all exterior glass with a dedicated glass compound to remove contamination and water marks before applying a hydrophobic rain-repellent coating that causes water to bead and clear at speed.",
+    "includes": [
+      "All exterior glass polished with dedicated glass compound",
+      "Hydrophobic rain-repellent sealant applied to all glass surfaces",
+      "Wiper blade condition checked; streaking caused by dirty blades addressed",
+      "Improved wet-weather visibility and reduced wiper dependency at speed"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "alloy-wheel-detail",
+    "category": "Exterior Finishing",
+    "name": "Alloy Wheel Detail & Sealant",
+    "description": "Wheels accumulate brake dust, iron fallout and road contamination at a rate far beyond the rest of the vehicle. We chemically clean and decontaminate each wheel, hand-detail the face, spokes and where possible the barrel, then apply a dedicated wheel sealant to protect against heat, brake dust and road grime.",
+    "includes": [
+      "Acid-free wheel cleaner and iron fallout remover applied to each wheel",
+      "Full hand-detail of face, spokes and barrel using detailing brushes",
+      "Wheel polish applied to lacquered or painted alloys where condition allows",
+      "Dedicated wheel sealant applied for ongoing protection and easier maintenance"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "tyre-trim-dressing",
+    "category": "Exterior Finishing",
+    "name": "Tyre & Exterior Trim Dressing",
+    "description": "Correctly finished tyres and exterior plastics make an immediate and significant visual difference to any vehicle. We use a long-lasting tyre dressing that delivers a natural, not over-dressed result, alongside a high-quality plastic restorer and rubber conditioner for all exterior trim and door seals.",
+    "includes": [
+      "Tyres cleaned and dried before application of long-lasting dressing",
+      "Satin-natural finish — not the excessive wet look of consumer products",
+      "All exterior plastic trim, rubber seals and unpainted surfaces treated",
+      "Fade-resistant formulation suitable for all trim types including matte finishes"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "engine-bay-detail",
+    "category": "Exterior Finishing",
+    "name": "Engine Bay Detail",
+    "description": "A detailed and presented engine bay improves the appearance of any vehicle, makes inspection easier and is a key requirement for concours presentation or a credible sale. We degrease, rinse and dress each material type — plastics, rubbers, metals and hoses — carefully and without disturbing sensors or electrics.",
+    "includes": [
+      "Engine cooled before starting; sensitive electrical areas masked",
+      "Dedicated engine degreaser agitated and rinsed with controlled water pressure",
+      "All plastics, rubber hoses and wiring looms dressed with appropriate product",
+      "Final wipe-down, inspection and photograph for reference"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "interior-deep-clean",
+    "category": "Interior Detailing",
+    "name": "Interior Deep Clean",
+    "description": "A thorough top-to-bottom interior treatment covering every surface. Carpets and mats vacuumed and spot-cleaned, dashboard and all trim wiped and dressed, door cards cleaned, interior glass polished, and all vents, switches, gaps and pockets attended to with detailing brushes.",
+    "includes": [
+      "Full vacuum of all carpets, seats, door pockets and boot area",
+      "Dashboard, console, door cards and all trim surfaces cleaned and dressed",
+      "Interior glass polished with dedicated streak-free compound",
+      "All air vents, switches and crevices detailed with brushes and cotton buds"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "fabric-extraction",
+    "category": "Interior Detailing",
+    "name": "Fabric & Carpet Hot Water Extraction",
+    "description": "Hot water extraction shampoo treatment lifts and removes deeply embedded soiling from all fabric upholstery, carpets and mats that vacuuming cannot reach. The result is genuinely clean fabric rather than just surface-treated material. Typical drying time is two to four hours depending on conditions.",
+    "includes": [
+      "Hot water extraction machine used on all fabric seats, carpets and mats",
+      "Appropriate fabric shampoo selected for fibre type and soiling level",
+      "Stain pre-treatment applied to problem areas before main extraction",
+      "Post-extraction vacuum pass to accelerate drying time"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "leather-care",
+    "category": "Interior Detailing",
+    "name": "Leather Cleaning & Conditioning",
+    "description": "Leather requires regular cleaning and conditioning to prevent cracking, colour fading and premature wear. We clean with a pH-neutral leather cleaner to remove surface soiling and accumulated body oils, then apply a conditioner that replenishes natural moisture and protects against UV degradation.",
+    "includes": [
+      "pH-neutral leather cleaner worked into all leather surfaces with soft brushes",
+      "Stitching and crevices cleaned with detailing brushes",
+      "Quality leather conditioner applied to restore suppleness and prevent cracking",
+      "Colour restoration treatment available for faded, cracked or worn areas"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "odour-elimination",
+    "category": "Interior Detailing",
+    "name": "Interior Sanitisation & Odour Elimination",
+    "description": "Persistent odours from pets, smoke, mildew or general use often cannot be resolved by cleaning alone. Following a full interior clean, we deploy an ozone generator or antimicrobial fogging treatment that neutralises odour-causing molecules at the source — not masking them with fragrance.",
+    "includes": [
+      "Full interior clean completed before any sanitisation treatment",
+      "Ozone generator or antimicrobial fogger deployed to neutralise odours at source",
+      "HVAC vents and air conditioning system treated",
+      "Airing period after treatment; interior returned odour-neutral"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "headlining-alcantara",
+    "category": "Interior Detailing",
+    "name": "Headlining & Alcantara Care",
+    "description": "Headlinings and Alcantara or microsuede trim demand specialist treatment — excess moisture or aggressive chemicals can cause adhesive failure or permanent marking. We use low-moisture dry-clean methods and products formulated specifically for these materials.",
+    "includes": [
+      "Headlining adhesive integrity assessed before any treatment begins",
+      "Low-moisture specialist method used to avoid saturation of lining",
+      "Alcantara cleaned with dedicated detailing brush and dry microfibre",
+      "Appropriate fabric protector applied on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "express-detail",
+    "category": "Detail Packages",
+    "name": "Express Exterior Detail",
+    "description": "A focused exterior treatment for vehicles in good condition that need a thorough refresh. Safe pre-wash and two-bucket hand wash, full decontamination, single-stage machine enhancement polish and a choice of wax or sealant protection. An ideal maintenance treatment between more comprehensive sessions.",
+    "includes": [
+      "Safe pre-wash, snow foam and two-bucket hand wash",
+      "Full chemical and clay decontamination",
+      "Single-stage machine enhancement polish",
+      "Wax or synthetic sealant applied; glass, tyres and trim finished"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "full-interior-package",
+    "category": "Detail Packages",
+    "name": "Full Interior Package",
+    "description": "Our comprehensive interior-only treatment — suitable for a new purchase, a vehicle being prepared for sale, or an interior requiring a thorough reset. Every surface inside the vehicle is addressed, from headlining to boot floor, including fabric extraction or leather conditioning depending on the upholstery.",
+    "includes": [
+      "Full vacuum, deep clean and interior glass polish",
+      "Fabric hot-water extraction or leather clean and condition",
+      "Dashboard, door cards and all trim surfaces cleaned and dressed",
+      "Odour neutralisation treatment included as standard"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "full-exterior-package",
+    "category": "Detail Packages",
+    "name": "Full Exterior Package",
+    "description": "Our most comprehensive exterior treatment, suitable as a one-off seasonal reset or as preparation ahead of paint protection application. Full decontamination, multi-stage paint correction and a choice of protection from wax through to ceramic coating — plus wheels, glass, tyres and trim.",
+    "includes": [
+      "Full pre-wash, two-bucket wash and chemical decontamination",
+      "Multi-stage machine polish — correction depth agreed to vehicle condition",
+      "Choice of protection: carnauba wax, sealant, ceramic or graphene coating",
+      "Alloy wheel detail, glass treatment, tyre dressing and trim finish"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "complete-detail",
+    "category": "Detail Packages",
+    "name": "Complete Detail",
+    "description": "The definitive treatment. Every exterior and interior service combined — full preparation, multi-stage paint correction, your choice of paint protection, and a comprehensive interior deep clean. This is the most thorough treatment we offer and the correct starting point for any long-term protection programme.",
+    "includes": [
+      "Full exterior: pre-wash, decontamination, multi-stage correction",
+      "Your choice of protection: wax, sealant, ceramic or graphene coating",
+      "Full interior: fabric extraction or leather care, glass, all trim",
+      "Delivered back detailed, photographed and fully protected"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  }
+]

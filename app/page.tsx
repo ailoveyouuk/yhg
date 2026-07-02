@@ -1,271 +1,81 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import type { Vehicle } from '@/types';
+import vehiclesData from '@/data/vehicles.json';
+import FadeIn from '@/components/FadeIn';
+import HomepageCarousel from '@/components/HomepageCarousel';
+import Testimonials from '@/components/Testimonials';
+import { BUSINESS_PHONE, FOUNDED_YEAR } from '@/data/business';
 
-const trust = [
-  { label: '150+', sub: 'Years Combined Experience' },
-  { label: 'MG Approved', sub: 'Body Repairer' },
-  { label: 'Insurance Approved', sub: 'All Major Insurers' },
-  { label: 'Est.', sub: 'Yardley Hastings' },
-];
-
-const services = [
-  {
-    title: 'Servicing & Mechanical',
-    body: 'Manufacturer-specification servicing and repairs for all makes and models. State-of-the-art diagnostics, laser alignment and air conditioning.',
-    href: '/services',
-  },
-  {
-    title: 'Bodywork & Accident Repair',
-    body: 'From minor cosmetic work to major accident restoration. Approved repairer for MG, working directly with all major insurers.',
-    href: '/bodywork',
-  },
-  {
-    title: 'Classic Restoration',
-    body: 'We have restored vehicles built as far back as 1918. From a beloved classic to a prestige marque — every restoration handled with the same meticulous care.',
-    href: '/bodywork',
-  },
-];
-
-const whyUs = [
-  { title: 'Honest & Straightforward', body: 'We tell you what genuinely needs attention and what can wait. Our reputation is built on transparent advice and fair pricing — nothing more, nothing less.' },
-  { title: 'All Makes & Models', body: 'From everyday family cars to prestige and classic vehicles. Our team carries over 150 years of combined experience across the full breadth of the market.' },
-  { title: 'Manufacturer Approved', body: 'Our work is recognised by major motor manufacturers. We are an MG-approved body repairer and have long-standing relationships with Subaru and Mitsubishi.' },
-  { title: 'Trusted by Fleet & Insurers', body: 'Major insurance companies and large fleet operators choose us for our consistency, quality and efficiency. The same standards apply to every customer.' },
-];
-
-// Unsplash placeholder images — replace with real garage photos after shoot
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80';
-const STRIP_IMAGES = [
-  {
-    src: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80',
-    alt: 'Workshop bay',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80',
-    alt: 'Classic car',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=900&q=80',
-    alt: 'Detail craftsmanship',
-  },
-];
+const vehicles = vehiclesData as Vehicle[];
 
 export default function Home() {
+  const previewVehicles = vehicles
+    .filter((v) => v.type === 'car' && v.status !== 'sold')
+    .sort((a, b) => (a.date_added < b.date_added ? 1 : -1))
+    .slice(0, 3);
+
   return (
     <>
-      {/* ─── Hero ─── */}
-      <section className="relative bg-[#111110] text-white overflow-hidden min-h-[85vh] flex items-center">
-        {/* Background image */}
-        <div className="absolute inset-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={HERO_IMAGE}
-            alt=""
-            className="w-full h-full object-cover object-center opacity-30"
-          />
-          {/* Gradient overlay — darker at left where text is */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#111110] via-[#111110]/80 to-[#111110]/40" />
-        </div>
+      {/* ─── Full-screen accordion carousel ─── */}
+      <HomepageCarousel previewVehicles={previewVehicles} />
 
-        {/* BRG subtle wash on right side */}
-        <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-[0.04]"
-          style={{ background: 'radial-gradient(ellipse at 80% 50%, #004225 0%, transparent 70%)' }}
-        />
-
-        <div className="relative max-w-7xl mx-auto px-6 py-32 lg:py-48 w-full">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-8 h-px bg-[#004225]" />
-              <span className="eyebrow text-[#888884]">Independent · Family · Northamptonshire</span>
-            </div>
-            <h1 className="text-5xl lg:text-7xl font-semibold leading-[1.05] tracking-tight mb-8 text-white">
-              The standard<br />you expect.
-            </h1>
-            <p className="text-white/75 text-lg leading-relaxed mb-12 max-w-xl font-light">
-              Servicing, repairs, bodywork and classic restoration — delivered with care and precision.
-              Trusted by private customers, fleet operators and major insurers across Northamptonshire.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-8 py-4 text-sm tracking-wide transition-colors">
-                Book a Service
-              </Link>
-              <Link href="/cars"
-                className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/50 text-white font-medium px-8 py-4 text-sm tracking-wide transition-colors">
-                View Vehicles
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom fade to white */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
-
-      {/* ─── Trust bar ─── */}
-      <section className="bg-white border-b border-[#EFEFEB]">
-        <div className="max-w-7xl mx-auto px-6 py-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-[#EFEFEB]">
-            {trust.map((t, i) => (
-              <div key={t.label} className={`text-center ${i > 0 ? 'pl-8' : ''}`}>
-                <div className="text-xl font-semibold text-[#004225] tracking-tight">{t.label}</div>
-                <div className="text-[11px] text-[#5A5A57] mt-1.5 tracking-[0.1em] uppercase">{t.sub}</div>
-              </div>
+      {/* ─── Credentials strip ─── */}
+      <div className="bg-[#111110] border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-5">
+          <div className="flex flex-wrap items-center gap-x-10 gap-y-2">
+            {[
+              `Established ${FOUNDED_YEAR}`,
+              'MG Approved Body Repairer',
+              'Insurance Approved',
+              'Independent & Family Run',
+            ].map((c) => (
+              <span
+                key={c}
+                className="text-[#888884] text-[11px] tracking-[0.12em] uppercase flex items-center gap-2"
+              >
+                <span className="w-1 h-1 rounded-full bg-[#004225]" />
+                {c}
+              </span>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* ─── Services ─── */}
-      <section className="bg-white py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16 border-l-2 border-[#004225] pl-6">
-            <span className="eyebrow">What We Do</span>
-            <h2 className="text-4xl font-semibold text-[#111110] mt-3 leading-tight tracking-tight">
-              Craftsmanship across<br />every discipline
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#EFEFEB]">
-            {services.map((s, i) => (
-              <div key={s.title}
-                className={`p-10 group hover:bg-[#F7F7F5] transition-colors ${i < 2 ? 'border-r border-[#EFEFEB]' : ''}`}>
-                <div className="text-[#004225] text-3xl font-semibold tabular-nums opacity-25 mb-6 tracking-tight">
-                  0{i + 1}
-                </div>
-                <h3 className="text-[#111110] font-semibold text-lg mb-4 tracking-tight">{s.title}</h3>
-                <p className="text-[#5A5A57] leading-relaxed text-sm mb-8">{s.body}</p>
-                <Link href={s.href}
-                  className="text-[#004225] hover:text-[#111110] text-sm font-medium flex items-center gap-2 transition-colors group/link">
-                  Learn more
-                  <svg className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ─── Testimonials ─── */}
+      <Testimonials />
 
-      {/* ─── Visual image strip ─── */}
-      <section className="bg-[#111110]">
-        <div className="grid grid-cols-3 h-64 lg:h-80">
-          {STRIP_IMAGES.map((img, i) => (
-            <div key={i} className="relative overflow-hidden group">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-              />
-              {/* BRG tint on hover */}
-              <div className="absolute inset-0 bg-[#004225] opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
-              {/* Divider lines */}
-              {i < 2 && <div className="absolute right-0 top-0 bottom-0 w-px bg-white/10" />}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── Vehicles teaser — dark with SVG car watermark ─── */}
-      <section className="bg-[#1F1F1D] py-28 text-white relative overflow-hidden">
-        {/* Abstract SVG car silhouette — large watermark */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.035] pointer-events-none select-none"
-          aria-hidden="true">
-          <svg viewBox="0 0 800 300" className="w-[700px] h-auto fill-[#004225]">
-            <path d="M760 185 C750 155 720 130 680 125 L620 120 C600 90 560 55 500 40 C450 28 360 25 300 30 C250 33 210 45 185 60 L100 75 C70 78 45 90 30 108 C18 120 15 132 15 145 L15 175 C15 185 22 195 35 198 L65 200 C68 215 78 228 92 236 C106 244 122 247 138 244 C154 241 166 232 173 220 L570 220 C573 235 583 248 597 256 C611 264 627 267 643 264 C659 261 671 252 678 240 L720 238 C740 235 755 222 760 205 Z"/>
-          </svg>
-        </div>
-
-        {/* BRG accent top rule */}
-        <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="w-8 h-[2px] bg-[#004225] mb-12" />
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-16">
-            <div className="max-w-lg">
-              <span className="eyebrow text-[#004225]/80 mb-3 block">For Sale</span>
-              <h2 className="text-4xl font-semibold text-white mt-3 mb-6 leading-tight tracking-tight">
-                Quality vehicles,<br />honestly presented
+      {/* ─── CTA strip ─── */}
+      <section className="bg-[#111110] border-t border-white/5 py-20 diagonal-lines">
+        <FadeIn>
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-8">
+            <div>
+              <div className="w-6 h-[2px] bg-[#004225] mb-5" />
+              <h2 className="text-3xl font-semibold text-white mb-2 tracking-tight">
+                Ready to book, or need advice?
               </h2>
-              <p className="text-white/70 leading-relaxed mb-10 font-light text-[15px]">
-                We carry a curated selection of quality used cars and vans, all prepared by our own mechanics.
-                Our reputation is built on placing the right vehicle with the right customer — not on shifting stock.
-                We are also happy to source specific vehicles on request.
+              <p className="text-white/70 font-light text-sm">
+                Free estimates always available. We are happy to take a look.
               </p>
-              <div className="flex gap-3">
-                <Link href="/cars"
-                  className="bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-6 py-3 text-sm tracking-wide transition-colors">
-                  Cars for Sale
-                </Link>
-                <Link href="/vans"
-                  className="border border-white/20 hover:border-white/40 text-white font-medium px-6 py-3 text-sm tracking-wide transition-colors">
-                  Vans for Sale
-                </Link>
-              </div>
             </div>
-            <div className="grid grid-cols-2 gap-px w-full lg:w-64 shrink-0 bg-white/5">
-              {['Vehicle Sourcing', 'MG Approved', 'Subaru Specialist', 'Fleet Enquiries'].map((tag) => (
-                <div key={tag}
-                  className="bg-[#1F1F1D] px-5 py-6 text-center hover:bg-[#004225]/10 transition-colors">
-                  <span className="text-white/60 text-xs font-medium tracking-[0.1em] uppercase leading-tight">{tag}</span>
-                </div>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors"
+              >
+                Get in Touch
+              </Link>
+              <a
+                href={BUSINESS_PHONE.href}
+                className="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/50 text-white/70 hover:text-white font-medium px-7 py-3.5 text-sm tracking-wide transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                {BUSINESS_PHONE.display}
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ─── Why us — dot grid texture ─── */}
-      <section className="bg-[#F7F7F5] dot-grid py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16 border-l-2 border-[#004225] pl-6">
-            <span className="eyebrow">Our Reputation</span>
-            <h2 className="text-4xl font-semibold text-[#111110] mt-3 leading-tight tracking-tight">
-              Why customers return
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[#E5E5E2]">
-            {whyUs.map((item, i) => (
-              <div key={item.title}
-                className={`p-10 group hover:bg-[#EAF0EC]/30 transition-colors ${i % 2 === 0 ? 'border-r border-[#E5E5E2]' : ''} ${i < 2 ? 'border-b border-[#E5E5E2]' : ''} bg-white`}>
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-5 h-[2px] bg-[#004225]" />
-                  <span className="w-2 h-2 rounded-full bg-[#004225] opacity-40" />
-                </div>
-                <h3 className="font-semibold text-[#111110] mb-3 text-[17px] tracking-tight">{item.title}</h3>
-                <p className="text-[#5A5A57] leading-relaxed text-sm">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── CTA ─── */}
-      <section className="bg-[#111110] py-20 diagonal-lines">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-8">
-          <div>
-            <div className="w-6 h-[2px] bg-[#004225] mb-5" />
-            <h2 className="text-3xl font-semibold text-white mb-2 tracking-tight">
-              Ready to book, or need advice?
-            </h2>
-            <p className="text-white/65 font-light text-sm">Free estimates always available. We are happy to take a look.</p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-            <Link href="/contact"
-              className="inline-flex items-center justify-center bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-7 py-3.5 text-sm tracking-wide transition-colors">
-              Get in Touch
-            </Link>
-            <a href="tel:01604696225"
-              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white/80 hover:text-white font-medium px-7 py-3.5 text-sm tracking-wide transition-colors">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-              </svg>
-              01604 696225
-            </a>
-          </div>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

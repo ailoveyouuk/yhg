@@ -1,9 +1,22 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import PageCard from '@/components/PageCard';
+import { BUSINESS_ADDRESS, BUSINESS_PHONE, FOUNDED_YEAR, OPENING_HOURS_COMPACT, OWNER_NAME } from '@/data/business';
+
+const ABOUT_DESCRIPTION = `Independent family garage in Yardley Hastings, Northamptonshire, established in ${FOUNDED_YEAR}. MG approved body repairer.`;
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Independent family garage in Yardley Hastings, Northamptonshire. MG approved body repairer with over 150 years of combined mechanic experience.',
+  description: ABOUT_DESCRIPTION,
+  openGraph: {
+    title: 'About Us | Yardley Hastings Garage',
+    description: ABOUT_DESCRIPTION,
+  },
+  twitter: {
+    title: 'About Us | Yardley Hastings Garage',
+    description: ABOUT_DESCRIPTION,
+  },
 };
 
 const values = [
@@ -19,49 +32,56 @@ const credentials = [
   { label: 'Mitsubishi Specialist', detail: 'Extensive experience with Mitsubishi models' },
   { label: 'Insurance Approved', detail: 'Approved repairer for major insurers' },
   { label: 'Fleet Approved', detail: 'Trusted by large fleet operators' },
-  { label: '150+ Years Combined Experience', detail: 'Deep knowledge across all makes and models' },
+  { label: `Established ${FOUNDED_YEAR}`, detail: 'Over a century serving Northamptonshire' },
 ];
 
 export default function AboutPage() {
   return (
-    <>
-      {/* Hero */}
-      <section className="bg-[#111110] text-white py-24 relative overflow-hidden">
+    <PageCard>
+      {/* ─── Hero ─── */}
+      <section className="bg-[#111110] text-white relative overflow-hidden flex items-end" style={{ minHeight: '52vh' }}>
         <div className="absolute inset-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=1920&q=80"
+          <Image
+            src="/assets/garage-exterior-front-2.jpg"
             alt=""
-            className="w-full h-full object-cover opacity-15"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            style={{ opacity: 0.3 }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#111110] via-[#111110]/90 to-[#111110]/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111110] via-[#111110]/90 to-[#111110]/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111110]/60 to-transparent" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-6">
+
+        <div className="relative max-w-7xl mx-auto px-8 lg:px-14 pb-14 lg:pb-18 w-full">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-8 h-px bg-[#004225]" />
-              <span className="eyebrow text-[#888884]">About Us</span>
+            {/* Frosted glass eyebrow pill */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3.5 py-1 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#6ab88a] flex-shrink-0" />
+              <span className="text-white text-[10px] tracking-[0.15em] uppercase font-medium">About Us</span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-6">Independent. Family. Trusted.</h1>
-            <p className="text-white/75 text-lg leading-relaxed font-light">
+            <h1 className="text-5xl lg:text-6xl font-semibold tracking-tight mb-4 leading-[1.05]">
+              Independent.<br />Family. Trusted.
+            </h1>
+            <p className="text-white/70 text-lg leading-relaxed font-light">
               Yardley Hastings Garage is an independent, family-owned business serving Northamptonshire and the surrounding counties.
-              We sell, service, repair and restore most motor vehicle makes and models.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Story */}
+      {/* ─── Story ─── */}
       <section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-8 lg:px-14">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             <div>
               <div className="w-5 h-[2px] bg-[#004225] mb-6" />
               <h2 className="text-3xl font-semibold text-[#111110] mb-8 tracking-tight">Our story</h2>
               <div className="space-y-5 text-[#5A5A57] leading-relaxed text-[15px]">
                 <p>
-                  We are an independent, family-run garage based in Yardley Hastings, Northamptonshire.
-                  Our team of certified mechanics has over 150 years of combined experience across all makes and models — from modern everyday cars to vintage and prestige classics.
+                  We are an independent, family-run garage based in Yardley Hastings, Northamptonshire, established in {FOUNDED_YEAR}
+                  and owned and run today by {OWNER_NAME}. Our team of certified mechanics brings deep experience across all makes and models — from modern everyday cars to vintage and prestige classics.
                 </p>
                 <p>
                   Our customers include private individuals, large fleet operators and major insurance companies. Whatever brings you to us, you will always be treated honestly and fairly. We give free estimates and explain all work clearly before we start.
@@ -77,7 +97,7 @@ export default function AboutPage() {
             <div>
               <div className="w-5 h-[2px] bg-[#004225] mb-6" />
               <h2 className="text-3xl font-semibold text-[#111110] mb-8 tracking-tight">What we stand for</h2>
-              <div className="border border-[#EFEFEB]">
+              <div className="border border-[#EFEFEB] rounded-sm overflow-hidden">
                 {values.map((v, i) => (
                   <div key={v.title}
                     className={`p-7 ${i < values.length - 1 ? 'border-b border-[#EFEFEB]' : ''}`}>
@@ -94,11 +114,42 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Credentials */}
+      {/* ─── Workshop photo strip ─── */}
+      <div className="grid grid-cols-3 h-72 lg:h-96 overflow-hidden">
+        <div className="relative overflow-hidden">
+          <Image
+            src="/assets/workshop-classic-aston-1.jpg"
+            alt="Classic Aston Martin restoration in the workshop"
+            fill
+            sizes="33vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="relative overflow-hidden">
+          <Image
+            src="/assets/workshop-interior-3.jpg"
+            alt="Yardley Hastings Garage workshop"
+            fill
+            sizes="33vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="relative overflow-hidden">
+          <Image
+            src="/assets/workshop-interior-4.jpg"
+            alt="Yardley Hastings Garage workshop"
+            fill
+            sizes="33vw"
+            className="object-cover"
+          />
+        </div>
+      </div>
+
+      {/* ─── Credentials ─── */}
       <section className="bg-[#F7F7F5] dot-grid py-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-8 lg:px-14">
           <div className="w-5 h-[2px] bg-[#004225] mb-6" />
-          <h2 className="text-2xl font-semibold text-[#111110] mb-10 tracking-tight">Credentials & approvals</h2>
+          <h2 className="text-2xl font-semibold text-[#111110] mb-10 tracking-tight">Credentials &amp; approvals</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E5E2]">
             {credentials.map((c) => (
               <div key={c.label} className="bg-white px-7 py-6 flex items-start gap-4">
@@ -113,26 +164,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#111110] text-white py-18">
-        <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col sm:flex-row items-center justify-between gap-8">
+      {/* ─── CTA ─── */}
+      <section className="bg-[#111110] text-white py-20">
+        <div className="max-w-7xl mx-auto px-8 lg:px-14 flex flex-col sm:flex-row items-center justify-between gap-8">
           <div>
             <div className="w-6 h-[2px] bg-[#004225] mb-5" />
             <h2 className="text-2xl font-semibold tracking-tight mb-2">Come and see us</h2>
-            <p className="text-white/65 text-sm font-light">Bedford Rd W, Yardley Hastings, Northampton NN7 1HB<br />Mon–Fri 8am–5:30pm · Sat 8:30am–12pm</p>
+            <p className="text-white/65 text-sm font-light">{BUSINESS_ADDRESS.full}<br />{OPENING_HOURS_COMPACT}</p>
           </div>
           <div className="flex gap-3 shrink-0">
-            <Link href="/contact"
-              className="bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-6 py-3 text-sm transition-colors">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center bg-[#004225] hover:bg-[#005a30] text-white font-semibold px-6 py-3 text-sm transition-colors rounded-sm"
+            >
               Get in Touch
             </Link>
-            <a href="tel:01604696225"
-              className="border border-white/20 hover:border-white/50 text-white font-medium px-6 py-3 text-sm transition-colors">
-              01604 696225
+            <a
+              href={BUSINESS_PHONE.href}
+              className="inline-flex items-center justify-center border border-white/20 hover:border-white/50 text-white font-medium px-6 py-3 text-sm transition-colors rounded-sm"
+            >
+              {BUSINESS_PHONE.display}
             </a>
           </div>
         </div>
       </section>
-    </>
+    </PageCard>
   );
 }

@@ -1,0 +1,155 @@
+[
+  {
+    "id": "class-4-mot",
+    "category": "The Test",
+    "name": "Class 4 MOT Test",
+    "description": "The statutory annual roadworthiness test for cars, taxis, minibuses up to 12 passenger seats and light goods vehicles with a design gross weight up to 3,000kg. Required by law from the third anniversary of first registration. We are a DVSA-authorised test station — results are submitted directly to the national MOT database, and your certificate is issued the same day.",
+    "includes": [
+      "Full DVSA inspection across all testable systems: brakes, lights, steering, suspension, tyres, emissions, bodywork, seatbelts and more",
+      "Written result issued categorising all findings as minor, major, dangerous or advisory",
+      "Result submitted directly to the DVSA national MOT database",
+      "Certificate issued on the day for all vehicles that pass"
+    ],
+    "price": null,
+    "price_type": "fixed",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "class-7-mot",
+    "category": "The Test",
+    "name": "Class 7 MOT Test",
+    "description": "The annual statutory test for goods vehicles and vans with a design gross weight between 3,001kg and 3,500kg — covering most full-size panel vans including the Ford Transit, Mercedes Sprinter, Vauxhall Movano, Volkswagen Crafter and similar. The Class 7 test applies the same core DVSA inspection criteria as Class 4 with brake efficiency thresholds appropriate to the higher weight category.",
+    "includes": [
+      "Full DVSA Class 7 inspection covering all statutory test items for light commercial vehicles",
+      "Brake efficiency tested to Class 7 standards (service brake minimum 50%, parking brake minimum 16%)",
+      "Additional structural and load-bearing area checks appropriate to commercial vehicle use",
+      "Certificate and written result issued on the day; same-day remedials arranged where the work permits"
+    ],
+    "price": null,
+    "price_type": "fixed",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "mot-and-full-service",
+    "category": "The Test",
+    "name": "MOT & Full Service",
+    "description": "Our most efficient annual maintenance combination. Booking an MOT alongside a full service means both requirements are completed in a single visit, with a combined assessment of the vehicle before either job begins. Any items likely to affect the MOT outcome are identified during the service check, giving us the opportunity to resolve them before the test rather than after a formal failure.",
+    "includes": [
+      "Full DVSA MOT test (Class 4 or Class 7 as appropriate to the vehicle)",
+      "Complete full service carried out to manufacturer specification",
+      "Combined written report covering both the service assessment and MOT result",
+      "Any required remedial work quoted and scheduled on the day"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "pre-mot-inspection",
+    "category": "Preparation",
+    "name": "Pre-MOT Inspection",
+    "description": "A thorough pre-test check carried out against current DVSA test criteria before your official MOT. We identify items likely to fail — from tyre tread approaching the 1.6mm legal minimum to brake pad wear, lighting faults and suspension play — giving you the option to address them before the test date, avoid a failure recorded on your MOT history, and significantly improve your first-time pass likelihood. Over one in five vehicles fails its MOT on its first attempt; most of those failures are preventable.",
+    "includes": [
+      "Full check against all current DVSA MOT test criteria for the vehicle class",
+      "Written advisory report identifying likely failures, borderline items and immediate concerns",
+      "Priority booking arranged for any remedial work required before the test date",
+      "Re-test conducted without additional charge once repairs are completed by us"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "advisory-resolution",
+    "category": "Preparation",
+    "name": "Advisory Item Resolution",
+    "description": "MOT advisories record components that passed but are deteriorating — tyres approaching the legal minimum, brake pads thinning, corrosion developing, suspension components showing early play. Left unaddressed, today's advisory is next year's failure. We review and resolve outstanding advisories as a scheduled appointment, working through the items most likely to cause a failure before the next test date.",
+    "includes": [
+      "Full review of all current advisory items from the vehicle's MOT record",
+      "Work prioritised by urgency and likelihood of becoming a failure before the next test",
+      "All remedial work carried out and documented with a written completion record",
+      "Remaining items assessed and a realistic timeline provided for those not immediately addressed"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "failure-rectification-retest",
+    "category": "Preparation",
+    "name": "Failure Rectification & Retest",
+    "description": "Where a vehicle fails its MOT — here or at another station — we carry out the required remedial work and arrange a retest. When we perform the repair ourselves, the retest is carried out at no additional charge, provided it takes place within ten working days of the original test. We prioritise same-day repair and retest wherever the scope of work allows, to minimise time off the road.",
+    "includes": [
+      "Full assessment of all failed items, minor defects and advisories noted at the original test",
+      "Remedial work carried out to restore compliance with DVSA standards",
+      "Retest included at no additional charge when the repair is carried out by us",
+      "Written confirmation of all completed work provided alongside the new test certificate"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "ev-hybrid-mot",
+    "category": "Specialist Testing",
+    "name": "Electric & Hybrid Vehicle MOT",
+    "description": "Electric and hybrid vehicles are tested to the same DVSA standards as combustion-engined cars — the inspection structure is identical, with appropriate modifications for vehicles without a conventional exhaust or internal combustion engine. High-voltage components are not testable items, but our testers follow current DVSA guidance on safe working procedures around orange-insulated high-voltage wiring and are equipped to carry out EV-appropriate diagnostics as part of the test.",
+    "includes": [
+      "Full DVSA MOT test applying current standards for the vehicle class and fuel type",
+      "Brake performance tested as standard — regenerative contribution noted, hydraulic brake efficiency measured separately",
+      "Malfunction indicator lamp (MIL) and high-voltage warning system status checked",
+      "TPMS sensor function verified as mandatory for all vehicles where fitted as original equipment"
+    ],
+    "price": null,
+    "price_type": "fixed",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "historic-vehicle-mot",
+    "category": "Specialist Testing",
+    "name": "Historic & Classic Vehicle MOT",
+    "description": "Vehicles manufactured before 1 January 1986 are exempt from the statutory annual MOT requirement under the rolling 40-year historic vehicle exemption — provided the vehicle has not been substantially modified. MOT exemption does not remove the legal requirement to keep the vehicle in a roadworthy condition, and we strongly encourage owners of exempt vehicles to present them for a voluntary annual test as a responsible safeguard. For vehicles just outside the exemption window, we carry out the standard test with full awareness of the additional component tolerances DVSA permits for older vehicles.",
+    "includes": [
+      "Full DVSA statutory test for all vehicles presented, whether exempt or not",
+      "DVSA age-related component tolerances applied where appropriate for historic vehicles",
+      "Voluntary test certificate issued and submitted to the national MOT database",
+      "Honest advice given on whether a vehicle is likely to qualify for the historic exemption"
+    ],
+    "price": null,
+    "price_type": "fixed",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "fleet-mot",
+    "category": "Specialist Testing",
+    "name": "Fleet MOT Programme",
+    "description": "Managing MOT renewal dates across a working fleet adds administrative complexity that grows with the number of vehicles. We work with fleet operators of all sizes — from small trades to larger commercial operations — offering priority scheduling, flexible drop-off and collection arrangements, and a consolidated record of all test outcomes, certificates and outstanding advisories across the fleet. Class 4 and Class 7 vehicles covered.",
+    "includes": [
+      "Priority scheduling across all fleet vehicles to minimise off-road time",
+      "Flexible early drop-off and late collection available for working vehicles",
+      "Consolidated test results and advisory records maintained across all fleet vehicles",
+      "Same-day remedials completed wherever the scope of work allows"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  }
+]

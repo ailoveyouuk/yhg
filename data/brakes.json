@@ -1,0 +1,189 @@
+[
+  {
+    "id": "brake-health-check",
+    "category": "Inspection & Assessment",
+    "name": "Brake System Health Check",
+    "description": "A comprehensive visual and measured inspection of the entire braking system — pads, discs, calipers, fluid, hoses and handbrake. Brake pad wear is measured rather than estimated, and disc thickness is checked against the minimum thickness (MIN TH) stamped on each disc face. Discs worn below this threshold are a major MOT defect and an immediate safety concern. We report findings in writing with pad thickness measurements and disc condition before any repair discussion.",
+    "includes": [
+      "Brake pad wear measured at all four corners — remaining thickness recorded",
+      "Disc thickness measured and checked against MIN TH specification on both sides",
+      "Disc face condition assessed for scoring, lipping, heat cracking and corrosion",
+      "Caliper slide pins, seals and hose condition inspected; handbrake function verified"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "brake-fluid-test",
+    "category": "Inspection & Assessment",
+    "name": "Brake Fluid Moisture & Condition Test",
+    "description": "Brake fluid is hygroscopic — it absorbs moisture from the atmosphere through the system over time, and that moisture directly lowers the fluid's boiling point. Fresh DOT 4 fluid has a dry boiling point of approximately 260°C. At just 3% water contamination, that drops to around 155°C — well within the temperature range achievable under hard braking. The result is vapour lock: the fluid boils, gas compresses instead of fluid, and the pedal goes to the floor. We test moisture content electronically and report the actual condition of the fluid before any recommendation is made.",
+    "includes": [
+      "Electronic moisture content test using a calibrated refractometer",
+      "Fluid colour and clarity assessed for contamination and degradation",
+      "Result compared against manufacturer's recommended replacement threshold",
+      "Recommendation for change or continued monitoring provided with test reading"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "front-brake-pads",
+    "category": "Pads & Discs",
+    "name": "Front Brake Pad Replacement",
+    "description": "Front brakes generate the majority of braking force under deceleration — typically 60 to 70 percent — and wear proportionally faster than rears. We fit OEM-quality pads meeting ECE Regulation 90 (the European approval standard for replacement friction materials). Pad compound matters: semi-metallic pads offer strong heat tolerance for varied driving; ceramic compounds run cooler, quieter and produce less dust on daily drivers. We advise on the appropriate compound for the vehicle and usage rather than defaulting to the cheapest available.",
+    "includes": [
+      "OEM-quality pads fitted to ECE R90 approval standard",
+      "Caliper slide pins cleaned, inspected and lubricated with high-temperature copper grease",
+      "Disc face condition assessed — replacement recommended if scoring or lipping is present",
+      "Bedding-in guidance provided: new pads require progressive use over the first 200 miles"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "rear-brake-pads",
+    "category": "Pads & Discs",
+    "name": "Rear Brake Pad Replacement",
+    "description": "Rear pads wear more slowly but are replaced incorrectly on a significant proportion of vehicles — particularly those fitted with electronic parking brakes. An EPB caliper piston cannot be compressed with a standard tool; it must be rotated inward using a threaded rewind mechanism, and the EPB motor must be retracted to the service position using diagnostic software before the caliper can be worked on. Attempting the job without the correct tooling risks damaging the caliper piston seal and creating a brake imbalance that may not be immediately apparent.",
+    "includes": [
+      "EPB retracted to service position via diagnostic interface where applicable",
+      "Rear pads replaced with OEM-quality friction material to ECE R90 standard",
+      "EPB caliper piston rewound using the correct rotational tool — not compressed",
+      "EPB calibration completed through diagnostic interface after reassembly"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "front-discs-pads",
+    "category": "Pads & Discs",
+    "name": "Front Disc & Pad Replacement",
+    "description": "When a disc has worn beyond its minimum thickness, developed deep scoring from metal-to-metal contact, or cracked from heat cycling, pad replacement alone is not a safe repair. Discs and pads must be replaced as a matched pair — a new pad bedding against a worn or scored disc cannot form a uniform transfer film across the full contact area, causing vibration, reduced braking efficiency and accelerated pad wear. We replace front discs in axle pairs as standard; fitting a new disc to one side and leaving a worn disc on the other creates a braking force imbalance across the axle.",
+    "includes": [
+      "OEM-quality vented front discs replaced as a matched axle pair",
+      "OEM-quality brake pads fitted to ECE R90 standard at the same time",
+      "Hub face cleaned to prevent disc run-out before disc is fitted",
+      "Caliper slide pins fully serviced; road test carried out before handover"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "rear-discs-pads",
+    "category": "Pads & Discs",
+    "name": "Rear Disc & Pad Replacement",
+    "description": "Rear disc and pad replacement on EPB-equipped vehicles requires both the mechanical work and the diagnostic procedure: the EPB motor must be retracted before disassembly and recalibrated after. Some vehicles also use an integrated drum handbrake mechanism behind the rear disc — a separate internal shoe assembly that requires its own assessment and adjustment independent of the disc and pad replacement. We are experienced across all common configurations.",
+    "includes": [
+      "EPB retracted to service position via diagnostic software before work begins",
+      "OEM-quality rear discs replaced as a matched axle pair; pads replaced at the same time",
+      "Integrated drum handbrake mechanism inspected and adjusted where present",
+      "EPB piston rewound correctly, system calibrated, handbrake function verified on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "brake-fluid-change",
+    "category": "Brake Fluid",
+    "name": "Brake Fluid Change",
+    "description": "A complete drain and refill of the hydraulic braking system with fresh fluid to the manufacturer's specified DOT rating. Most manufacturers recommend a brake fluid change every two years regardless of mileage, as moisture accumulation is time-dependent rather than mileage-dependent. DOT 4 is the most common specification on modern vehicles; some high-performance and BMW applications require DOT 4+ or LV (low viscosity) variants. Using the incorrect specification can affect ABS and ESC performance on vehicles with electronically controlled brake circuits.",
+    "includes": [
+      "Complete hydraulic system drained and refilled with manufacturer-specified fluid grade",
+      "All four calipers fully bled to remove all old fluid and any trapped air",
+      "Fluid reservoir cleaned before fresh fluid is added",
+      "Pedal feel and ABS system function verified on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "caliper-service",
+    "category": "Calipers & Lines",
+    "name": "Brake Caliper Service & Overhaul",
+    "description": "Brake calipers are precision hydraulic components that seize, stick and corrode progressively — a sticking caliper applies constant partial braking load to one disc, causes accelerated and uneven pad wear on that corner, and generates heat that degrades the fluid in the local circuit faster than elsewhere. The slide pins that allow the caliper body to move freely as pads wear are the most common failure point, and are often neglected at pad changes. We service or replace calipers as required, always assessing whether a rebuild is cost-effective versus replacement.",
+    "includes": [
+      "Caliper removed, slide pins extracted and cleaned or replaced if corroded",
+      "Piston retraction and seal condition assessed — piston replaced or caliper rebuilt as required",
+      "Caliper guide surfaces cleaned and protected with high-temperature lubricant",
+      "System bled after refit; braking performance verified under load before handover"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "brake-hoses-pipes",
+    "category": "Calipers & Lines",
+    "name": "Brake Hose & Pipe Replacement",
+    "description": "Flexible brake hoses degrade internally as well as externally — the inner liner can delaminate and create a one-way valve effect that traps hydraulic pressure and prevents the caliper from releasing. Externally perished or swollen hoses are a MOT failure. Steel brake pipes corrode from the outside, particularly under the vehicle floor and along the rear axle, and a corroded section will fail suddenly rather than gradually. We source OEM or copper-nickel alloy replacement pipes, which offer significantly better corrosion resistance than standard steel.",
+    "includes": [
+      "Hoses and pipes inspected internally and externally for delamination, swelling and corrosion",
+      "Failed sections replaced with OEM or copper-nickel alloy replacement pipe",
+      "Unions and end fittings renewed as standard to prevent weeping joints",
+      "System fully bled and pressure-tested after any pipe or hose replacement"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "handbrake-adjustment",
+    "category": "Handbrake & Parking Brake",
+    "name": "Handbrake Adjustment & Drum Shoe Replacement",
+    "description": "Cable-operated handbrakes stretch and slip over time, and the internal drum shoe assembly on vehicles with drum rear brakes or combined disc-drum arrangements wears at a different rate from the main disc and pad. A handbrake that requires excessive travel to hold the vehicle, or that fails to achieve the MOT's 16% efficiency minimum on the rolling road, will cause a failure. We adjust the cable mechanism and replace the drum shoes where worn — a job that requires access behind the rear hub and is often deferred longer than it should be.",
+    "includes": [
+      "Handbrake cable tension adjusted to correct travel specification",
+      "Rear drum or combined disc-drum assembly inspected for shoe and spring condition",
+      "Drum shoes replaced as an axle pair where worn or contaminated",
+      "Handbrake holding efficiency verified at correct application force before handover"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "epb-service",
+    "category": "Handbrake & Parking Brake",
+    "name": "Electronic Parking Brake (EPB) Service",
+    "description": "The electronic parking brake has replaced the cable-operated handbrake on most new vehicles sold in the UK since around 2010. The EPB motor and actuator require periodic servicing — cleaning and lubrication of the mechanism and the caliper interface — and the system must be reset through the diagnostic interface after any rear brake work. EPB faults generate specific diagnostic codes (typically C-code chassis faults) and may disable the automatic hold function as well as the parking brake. We carry software for all common EPB systems.",
+    "includes": [
+      "EPB module scanned for fault codes and actuator function verified",
+      "EPB motor and caliper interface cleaned and lubricated per manufacturer service procedure",
+      "System reset and calibration completed through the diagnostic interface",
+      "Auto-hold function and manual EPB operation tested before vehicle is returned"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  }
+]

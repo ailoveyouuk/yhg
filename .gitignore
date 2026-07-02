@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw source material — not used by the app (originals/pre-optimisation
+# assets kept locally only; the site serves from public/assets instead)
+/Assets/
+/Reviews/
+/Stocklist/
+
+# editor/fs temp files
+.fuse_hidden*

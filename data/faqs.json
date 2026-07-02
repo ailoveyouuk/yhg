@@ -1,0 +1,74 @@
+[
+  {
+    "category": "Booking & Visiting",
+    "items": [
+      {
+        "q": "What are your opening hours?",
+        "a": "We're open Monday to Friday, 8:00am – 5:30pm, and Saturday 8:30am – 12:00 noon. We're closed on Sundays. See our Contact page for directions."
+      },
+      {
+        "q": "Do I need to book in advance?",
+        "a": "We can often accommodate same-day bookings for MOTs and many repairs, but booking ahead means we can guarantee you a slot. Get in touch by phone or through our contact form and we'll find a time that suits you."
+      },
+      {
+        "q": "Do you offer free estimates?",
+        "a": "Yes — free estimates are always available. We're happy to take a look at your vehicle and give you honest, clear advice before any work begins."
+      }
+    ]
+  },
+  {
+    "category": "Servicing, MOTs & Repairs",
+    "items": [
+      {
+        "q": "What services do you offer?",
+        "a": "We cover servicing and repairs, MOT testing, brakes, tyres, diagnostics, bodywork and accident repair, and detailing — see our Services pages for the full list."
+      },
+      {
+        "q": "Are you DVSA-authorised for MOT testing?",
+        "a": "Yes. We're a DVSA-authorised test centre carrying out Class 4 and Class 7 MOT tests, with results submitted directly to the national MOT database."
+      },
+      {
+        "q": "Do you work on all makes and models?",
+        "a": "Yes, we've been serving Northamptonshire since 1906, with experience across all makes and models — from everyday cars to classic and prestige vehicles. We're also an MG-approved body repairer, and have particular experience with Subaru and Mitsubishi models."
+      },
+      {
+        "q": "Are you approved by insurers?",
+        "a": "Yes, we're an approved repairer for major insurers and are also trusted by large fleet operators."
+      },
+      {
+        "q": "Will you tell me if something doesn't actually need doing?",
+        "a": "Always. Honest advice is one of our core values — we'll tell you what genuinely needs attention and what can wait, with fair, transparent pricing throughout."
+      }
+    ]
+  },
+  {
+    "category": "Buying a Vehicle",
+    "items": [
+      {
+        "q": "Do your used vehicles come with a warranty?",
+        "a": "Every vehicle on our stocklist comes with a minimum six-month warranty, a full service and a fresh MOT included as standard. Full details are listed on each vehicle's page."
+      },
+      {
+        "q": "What payment methods do you accept?",
+        "a": "We accept Visa, Mastercard and bank transfer. We do not offer finance."
+      },
+      {
+        "q": "Can I view a vehicle before deciding?",
+        "a": "Of course — we'd encourage it. Get in touch via our Contact page or call us to arrange a time to come and view or test drive a vehicle from our stocklist."
+      }
+    ]
+  },
+  {
+    "category": "Policies",
+    "items": [
+      {
+        "q": "What are my rights if something goes wrong?",
+        "a": "As a UK consumer, you're protected by the Consumer Rights Act 2015 whether you're buying a vehicle or having work carried out. See our Consumer Rights page for a full plain-English summary."
+      },
+      {
+        "q": "How do you handle my personal data?",
+        "a": "We only collect the information you give us — for example through our contact form — and use it to respond to your enquiry and provide our services. We don't use tracking or advertising cookies. See our Privacy Policy and Cookies Policy for full details."
+      }
+    ]
+  }
+]

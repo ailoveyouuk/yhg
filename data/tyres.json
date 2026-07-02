@@ -1,0 +1,206 @@
+[
+  {
+    "id": "car-tyre-supply-fitting",
+    "category": "Supply & Fitting",
+    "name": "Car Tyre Supply & Fitting",
+    "description": "We source and fit tyres across all budget, mid-range and premium categories for cars and SUVs of all sizes. We advise on the correct tyre for your vehicle, usage pattern and budget — always matching the load index and speed rating to manufacturer specification. Tyres are always fitted in axle pairs to maintain balanced handling; we will not fit a single tyre to a driven or steered axle where the other side differs significantly in brand, construction or wear state.",
+    "includes": [
+      "Tyre sourced to match vehicle manufacturer load index and speed rating",
+      "New valve fitted as standard on every wheel",
+      "Tyre fitted, balanced and torqued to manufacturer specification",
+      "Old tyre disposed of responsibly at no extra charge"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "van-tyre-supply-fitting",
+    "category": "Supply & Fitting",
+    "name": "Commercial Van Tyre Supply & Fitting",
+    "description": "Light commercial vehicles require CP (commercial passenger) or C-type (reinforced) tyres rated for the vehicle's maximum authorised load. Standard car tyres are not legal on most vans. We source and fit the correct load-rated van tyres for all common light commercial vehicles up to 3,500kg — Transit, Sprinter, Crafter, Vivaro, Transporter and similar — always to the correct specification for the axle position.",
+    "includes": [
+      "Correct CP or C-rated commercial tyre sourced to match van load index and speed rating",
+      "New heavy-duty valve fitted as standard",
+      "Fitted, balanced and torqued to manufacturer specification for the axle",
+      "Old tyre disposed of responsibly; inflation pressures set to manufacturer recommendation for the load carried"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "puncture-repair",
+    "category": "Supply & Fitting",
+    "name": "Puncture Assessment & Repair",
+    "description": "Not every puncture requires a replacement tyre. Where damage is confined to the central three-quarters of the tread area, is no larger than 6mm in diameter, and the tyre is otherwise sound, a permanent plug-and-patch repair to British Standard BS AU 159 is a safe and cost-effective solution. We assess every puncture honestly — if the damage is in the sidewall, at the shoulder, or if the tyre has run flat and the sidewall is compromised, we will tell you clearly and explain why a replacement is the only safe option.",
+    "includes": [
+      "Tyre removed and inspected internally before any repair is attempted",
+      "BS AU 159-compliant combination plug-patch repair applied where the tyre is suitable",
+      "Internal liner inspected for concealed damage before refitting",
+      "Tyre refitted, balanced and pressures set to manufacturer specification"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "wheel-balancing",
+    "category": "Alignment & Balancing",
+    "name": "Wheel Balancing",
+    "description": "An out-of-balance wheel creates vibration that is felt through the steering at motorway speeds, accelerates tyre wear in a distinctive diagonal scalloping pattern, and increases rolling resistance. Balancing is required whenever a new tyre is fitted, but also degrades over time as balance weights shift or detach. If you notice steering vibration at speed, balancing should be the first check.",
+    "includes": [
+      "Each wheel dynamically balanced on our computer balancing machine",
+      "Balance weights added, adjusted or replaced to achieve correct static and dynamic balance",
+      "Suitable for all rim sizes including large alloy wheels and low-profile tyres",
+      "Completed while-you-wait in most cases"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "four-wheel-alignment",
+    "category": "Alignment & Balancing",
+    "name": "4-Wheel Laser Alignment",
+    "description": "Full 4-wheel laser alignment measures and corrects all adjustable geometry angles — toe, camber and caster — on all four wheels simultaneously against manufacturer specification. This is the correct procedure after any suspension or steering component replacement, following a significant kerbing or pothole impact, or when uneven tyre wear is present. Misaligned geometry forces tyres to scrub across the road surface rather than roll cleanly, causing accelerated and uneven wear, pulling under braking and increased fuel consumption.",
+    "includes": [
+      "All four wheels measured for toe, camber and caster against OEM specification",
+      "All adjustable angles corrected to manufacturer specification",
+      "Before and after alignment printout provided as a record of the correction",
+      "Tyre wear pattern assessed and cause diagnosed during the procedure"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "front-tracking",
+    "category": "Alignment & Balancing",
+    "name": "Front Wheel Tracking",
+    "description": "Front wheel tracking — adjusting the toe angle of the front axle only — is the appropriate correction where a vehicle pulls to one side, where the steering is slightly off-centre on a straight road, or as a basic check after minor suspension work where full 4-wheel geometry is not indicated. Tracking is a subset of full wheel alignment. Where we find additional geometry issues during the procedure, we will advise on whether a full 4-wheel alignment would be the more appropriate solution.",
+    "includes": [
+      "Front axle toe angle measured and adjusted to manufacturer specification",
+      "Steering wheel centering verified and corrected where required",
+      "Tyre wear pattern assessed for signs of camber or caster-related issues",
+      "Result confirmed with a brief road test before handover"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "tpms-diagnosis-replacement",
+    "category": "Pressure & Sensors",
+    "name": "TPMS Sensor Diagnosis & Replacement",
+    "description": "Tyre pressure monitoring systems have been mandatory on all new passenger vehicles sold in the UK since November 2012 and have formed part of the MOT since January 2015 — a vehicle originally fitted with TPMS will fail its MOT if the system is not functioning. TPMS sensors have a finite battery life of typically seven to ten years and must be replaced when they fail. A TPMS warning light that will not clear after pressures are set correctly almost always indicates a sensor failure. We carry sensors in stock for all common makes and models.",
+    "includes": [
+      "Full TPMS system scan to identify which sensor or sensors have failed",
+      "Sensor battery life and signal strength assessed for all remaining sensors",
+      "Failed sensor(s) replaced with OEM-equivalent units",
+      "System relearn procedure completed to register new sensors to the vehicle"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "tpms-reset-relearn",
+    "category": "Pressure & Sensors",
+    "name": "TPMS Reset & Relearn",
+    "description": "After any tyre rotation, wheel change or sensor service, the TPMS system must be reset and the sensors relearned to the vehicle's ECU. Without this step, the warning light remains illuminated and the system does not correctly associate each sensor with its wheel position. The relearn procedure varies significantly by manufacturer — some use a manual sequence, others require diagnostic equipment to initiate. We carry the software to complete this correctly for all common vehicles.",
+    "includes": [
+      "Tyre pressures set to manufacturer specification before the reset procedure begins",
+      "TPMS relearn procedure carried out using manufacturer-appropriate method",
+      "All four sensor positions confirmed as registered to the vehicle",
+      "System operation verified before handover"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "run-flat-tyres",
+    "category": "Specialist Tyres",
+    "name": "Run-Flat Tyre Supply & Fitting",
+    "description": "Run-flat tyres use a reinforced sidewall construction that supports the vehicle's weight during a deflation, allowing continued driving at reduced speed — typically up to 50mph for a maximum of 50 miles — without the need to stop and change the tyre. They are standard fitment on many BMW, MINI and Mercedes models and cannot be replaced with standard tyres on vehicles without a spare wheel unless a temporary spare or puncture kit is added. A critical limitation: run-flat tyres that have been driven on while deflated cannot be repaired and must be replaced, even if the tyre appears undamaged. TPMS is essential on any run-flat-equipped vehicle.",
+    "includes": [
+      "Correct run-flat tyre sourced to match vehicle speed rating, load index and rim size",
+      "Fitted using equipment suitable for run-flat stiff-sidewall construction",
+      "TPMS sensor serviced or relearned as required after fitting",
+      "Driving limitations explained clearly — maximum 50mph / 50 miles on deflation"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "ev-tyres",
+    "category": "Specialist Tyres",
+    "name": "Electric Vehicle Tyre Supply & Fitting",
+    "description": "Electric vehicles place specific demands on tyres that standard equivalents are not designed to meet. The additional weight of battery packs requires higher load-rated tyres; the near-instant torque delivery from electric motors accelerates wear on the inner tread edges; and the absence of engine noise makes tyre roar far more noticeable, making low-noise construction a priority. We source and fit tyres from manufacturers with EV-specific lines — marked 'EV', 'Electric', 'e-' or with the appropriate homologation codes — for all common electric and hybrid models.",
+    "includes": [
+      "EV-appropriate tyre sourced with correct load index for the vehicle's kerb weight",
+      "Tyre construction assessed for noise reduction suitability to the model",
+      "Fitted, balanced and torqued to EV manufacturer specification",
+      "TPMS sensors serviced and relearned as required"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "all-season-winter-tyres",
+    "category": "Specialist Tyres",
+    "name": "All-Season & Winter Tyre Supply & Fitting",
+    "description": "Winter tyres use a softer compound that remains pliable below 7°C — the threshold at which standard summer tyres begin to harden and lose grip — along with additional sipes in the tread for water evacuation and grip on snow and ice. All-season tyres carrying the three-peak mountain snowflake (3PMSF) symbol have passed a standardised braking test on packed snow and offer a practical year-round alternative for drivers who do not want to maintain two sets of tyres. We stock both all-season and dedicated winter fitments for all common sizes.",
+    "includes": [
+      "All-season or winter tyre sourced to correct load index and speed rating for the vehicle",
+      "3PMSF symbol confirmed on all winter and all-season tyres where severe snow performance is required",
+      "Fitted in a complete set of four to maintain balanced handling and braking performance",
+      "TPMS relearned and pressures set to cold-inflation manufacturer specification"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "free-tyre-safety-check",
+    "category": "Tyre Safety",
+    "name": "Free Tyre Safety Inspection",
+    "description": "A free visual and measured inspection of all four tyres covering tread depth, condition and inflation. Over 6 million tyres on UK roads have illegal tread at any given time — driving on tyres below the 1.6mm legal minimum risks a fine of up to £2,500 and three penalty points per tyre, and significantly compromises stopping performance in wet conditions. We carry out tyre safety checks at no charge, with no obligation. If we find anything of concern, we will explain it clearly before any discussion of replacement.",
+    "includes": [
+      "Tread depth measured across the central three-quarters of each tyre at multiple points",
+      "Tyre condition checked for bulges, cuts, cracking, embedded objects and sidewall damage",
+      "Inflation pressures checked and set to manufacturer specification",
+      "Written findings provided; no obligation to proceed with any work"
+    ],
+    "price": 0,
+    "price_type": "fixed",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  }
+]

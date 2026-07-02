@@ -1,0 +1,9 @@
+-- ============================================================
+-- SUPERSEDED — do not run.
+--
+-- This migration created a `vehicles` table in Supabase, but the
+-- stocklist was reverted to a simpler file-based approach
+-- (data/vehicles.json, deployed via git push to Netlify) instead of a
+-- hosted database. Left in place only because files in this workspace
+-- can't be deleted — safe to ignore.
+-- ============================================================

@@ -1,0 +1,8 @@
+-- ============================================================
+-- SUPERSEDED — do not run.
+--
+-- Seed data for the `vehicles` table from 002_vehicles.sql, which is
+-- also superseded. The stocklist now lives in data/vehicles.json
+-- instead. Left in place only because files in this workspace can't
+-- be deleted — safe to ignore.
+-- ============================================================

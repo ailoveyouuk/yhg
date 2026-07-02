@@ -24,7 +24,6 @@ export interface Enquiry {
   message: string | null;
   project_id: string | null;
   created_at: string;
-  // joined
   customer?: Customer;
 }
 
@@ -47,7 +46,6 @@ export interface Project {
   estimated_completion: string | null;
   created_at: string;
   updated_at: string;
-  // joined
   customer?: Customer;
   enquiry?: Enquiry;
 }
@@ -80,7 +78,7 @@ export interface Aftercare {
 }
 
 // ────────────────────────────────────────────────────────────
-// Vehicle / Service types (existing)
+// Vehicle / Service types
 // ────────────────────────────────────────────────────────────
 
 export type VehicleStatus = 'available' | 'reserved' | 'sold';
@@ -116,13 +114,74 @@ export interface Vehicle {
   notes: string;
 }
 
-export type ServiceCategory =
+// ─── Mechanical service categories ───────────────────────────
+export type MechanicalCategory =
   | 'Servicing'
   | 'MOT'
-  | 'Tyres & Wheels'
-  | 'Air Conditioning'
-  | 'Diagnostics'
-  | 'Bodywork';
+  | 'Brakes'
+  | 'Tyres & Alignment'
+  | 'Engine & Drivetrain'
+  | 'Steering & Suspension'
+  | 'Electrical & Diagnostics'
+  | 'Climate & Cooling'
+  | 'Exhaust & Emissions';
+
+// ─── Bodywork categories ──────────────────────────────────────
+export type BodyworkCategory =
+  | 'Accident Repair'
+  | 'Dent Removal'
+  | 'Paintwork'
+  | 'Structural Repair'
+  | 'Classic Restoration'
+  | 'Glazing'
+  | 'Insurance & Fleet';
+
+// ─── Detailing categories ─────────────────────────────────────
+export type DetailingCategory =
+  | 'Exterior Preparation'
+  | 'Paint Correction'
+  | 'Paint Protection'
+  | 'Exterior Finishing'
+  | 'Interior Detailing'
+  | 'Detail Packages';
+
+// ─── MOT categories ───────────────────────────────────────────
+export type MOTCategory =
+  | 'The Test'
+  | 'Preparation'
+  | 'Specialist Testing';
+
+// ─── Brake categories ─────────────────────────────────────────
+export type BrakeCategory =
+  | 'Inspection & Assessment'
+  | 'Pads & Discs'
+  | 'Brake Fluid'
+  | 'Calipers & Lines'
+  | 'Handbrake & Parking Brake';
+
+// ─── Diagnostics categories ───────────────────────────────────
+export type DiagnosticsCategory =
+  | 'Diagnostic Scanning'
+  | 'Warning Lights'
+  | 'ADAS Calibration'
+  | 'Electric & Hybrid';
+
+// ─── Tyre categories ──────────────────────────────────────────
+export type TyreCategory =
+  | 'Supply & Fitting'
+  | 'Alignment & Balancing'
+  | 'Pressure & Sensors'
+  | 'Specialist Tyres'
+  | 'Tyre Safety';
+
+export type ServiceCategory =
+  | MechanicalCategory
+  | BodyworkCategory
+  | DetailingCategory
+  | MOTCategory
+  | TyreCategory
+  | DiagnosticsCategory
+  | BrakeCategory;
 
 export interface Service {
   id: string;

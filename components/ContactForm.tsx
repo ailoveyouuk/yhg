@@ -1,12 +1,54 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error';
+type BagItem = { id: string; name: string; category: string };
+type EnquiryType = 'service' | 'bodywork' | 'detailing' | 'restoration' | 'car-sales' | 'fleet' | 'other' | '';
+
+const ENQUIRY_OPTIONS: { value: EnquiryType; label: string }[] = [
+  { value: '', label: 'Please select…' },
+  { value: 'service', label: 'Book a Service / MOT' },
+  { value: 'bodywork', label: 'Bodywork / Accident Repair Quote' },
+  { value: 'detailing', label: 'Detailing Enquiry' },
+  { value: 'restoration', label: 'Classic Restoration Enquiry' },
+  { value: 'car-sales', label: 'Car Sales Enquiry' },
+  { value: 'fleet', label: 'Fleet Enquiry' },
+  { value: 'other', label: 'Other' },
+];
 
 export default function ContactForm() {
   const [state, setState] = useState<FormState>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [preMessage, setPreMessage] = useState('');
+  const [preType, setPreType] = useState<EnquiryType>('');
+  const [typeOverridden, setTypeOverridden] = useState(false);
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const type = searchParams.get('type') as EnquiryType | null;
+    const validTypes: EnquiryType[] = ['service', 'bodywork', 'detailing', 'restoration', 'car-sales', 'fleet', 'other'];
+    if (type && validTypes.includes(type)) {
+      setPreType(type);
+    }
+    // Pre-populate message from service bag for any request type
+    if (type === 'service' || type === 'bodywork' || type === 'detailing') {
+      try {
+        const saved = localStorage.getItem('yhg-service-request');
+        if (saved) {
+          const items: BagItem[] = JSON.parse(saved);
+          if (items.length > 0) {
+            setPreMessage(
+              `Services requested:\n${items.map((i) => `• ${i.name} (${i.category})`).join('\n')}\n\nAdditional notes:`
+            );
+          }
+        }
+      } catch {
+        // ignore
+      }
+    }
+  }, [searchParams]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -37,6 +79,7 @@ export default function ContactForm() {
 
       setState('success');
       form.reset();
+      try { localStorage.removeItem('yhg-service-request'); } catch { /* ignore */ }
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
       setState('error');
@@ -53,12 +96,12 @@ export default function ContactForm() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
             </svg>
           </div>
-          <h3 className="text-lg font-semibold text-[#111110] tracking-tight">Enquiry received</h3>
+          <h3 className="text-lg font-semibold text-[#111110] tracking-tight">Request received</h3>
           <p className="text-sm text-[#5A5A57] max-w-xs mx-auto">
-            Thank you for getting in touch. We aim to respond within one business day.
+            Thank you. We&apos;ll be in touch shortly to discuss your requirements and confirm the details.
           </p>
           <button
-            onClick={() => setState('idle')}
+            onClick={() => { setState('idle'); setPreMessage(''); setPreType(''); setTypeOverridden(false); }}
             className="mt-4 text-xs text-[#004225] font-semibold uppercase tracking-[0.1em] hover:text-[#111110] transition-colors"
           >
             Send another message
@@ -68,10 +111,19 @@ export default function ContactForm() {
     );
   }
 
+  const hasBagItems = !!preMessage;
+
   return (
     <div className="bg-white border border-[#EFEFEB] p-8">
       <div className="w-5 h-[2px] bg-[#004225] mb-6" />
-      <h2 className="text-xl font-semibold text-[#111110] mb-7 tracking-tight">Send us a message</h2>
+      <h2 className="text-xl font-semibold text-[#111110] mb-1 tracking-tight">Send us a message</h2>
+      {hasBagItems ? (
+        <p className="text-xs text-[#5A5A57] mb-7">
+          Your selected items have been pre-filled below. Add any extra notes and we&apos;ll be in touch to confirm.
+        </p>
+      ) : (
+        <div className="mb-7" />
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -80,10 +132,7 @@ export default function ContactForm() {
               Name <span className="text-[#004225]">*</span>
             </label>
             <input
-              type="text"
-              id="name"
-              name="name"
-              required
+              type="text" id="name" name="name" required
               disabled={state === 'submitting'}
               className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white disabled:opacity-50"
               placeholder="Your name"
@@ -94,9 +143,7 @@ export default function ContactForm() {
               Phone
             </label>
             <input
-              type="tel"
-              id="phone"
-              name="phone"
+              type="tel" id="phone" name="phone"
               disabled={state === 'submitting'}
               className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white disabled:opacity-50"
               placeholder="01234 567890"
@@ -109,10 +156,7 @@ export default function ContactForm() {
             Email <span className="text-[#004225]">*</span>
           </label>
           <input
-            type="email"
-            id="email"
-            name="email"
-            required
+            type="email" id="email" name="email" required
             disabled={state === 'submitting'}
             className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white disabled:opacity-50"
             placeholder="you@example.com"
@@ -124,19 +168,15 @@ export default function ContactForm() {
             Type of enquiry
           </label>
           <select
-            id="enquiry-type"
-            name="enquiry-type"
+            id="enquiry-type" name="enquiry-type"
             disabled={state === 'submitting'}
+            value={typeOverridden ? undefined : preType}
+            onChange={() => setTypeOverridden(true)}
             className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white appearance-none disabled:opacity-50"
           >
-            <option value="">Please select…</option>
-            <option value="service">Book a Service / MOT</option>
-            <option value="bodywork">Bodywork / Accident Repair Quote</option>
-            <option value="restoration">Classic Restoration Enquiry</option>
-            <option value="car-sales">Car Sales Enquiry</option>
-            <option value="van-sales">Van Sales Enquiry</option>
-            <option value="fleet">Fleet Enquiry</option>
-            <option value="other">Other</option>
+            {ENQUIRY_OPTIONS.map((o) => (
+              <option key={o.value} value={o.value}>{o.label}</option>
+            ))}
           </select>
         </div>
 
@@ -145,9 +185,7 @@ export default function ContactForm() {
             Vehicle (make, model, year)
           </label>
           <input
-            type="text"
-            id="vehicle"
-            name="vehicle"
+            type="text" id="vehicle" name="vehicle"
             disabled={state === 'submitting'}
             className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors bg-white disabled:opacity-50"
             placeholder="e.g. Ford Focus 2019"
@@ -159,25 +197,21 @@ export default function ContactForm() {
             Message <span className="text-[#004225]">*</span>
           </label>
           <textarea
-            id="message"
-            name="message"
-            required
-            rows={5}
+            id="message" name="message" required
+            rows={hasBagItems ? 8 : 5}
             disabled={state === 'submitting'}
+            defaultValue={preMessage}
             className="w-full border border-[#EFEFEB] px-4 py-3 text-sm text-[#111110] focus:outline-none focus:border-[#111110] transition-colors resize-none bg-white disabled:opacity-50"
             placeholder="Tell us what you need…"
           />
         </div>
 
         {state === 'error' && (
-          <p className="text-xs text-red-600 border border-red-200 bg-red-50 px-4 py-3">
-            {errorMsg}
-          </p>
+          <p className="text-xs text-red-600 border border-red-200 bg-red-50 px-4 py-3">{errorMsg}</p>
         )}
 
         <button
-          type="submit"
-          disabled={state === 'submitting'}
+          type="submit" disabled={state === 'submitting'}
           className="w-full bg-[#004225] hover:bg-[#005a30] disabled:opacity-60 text-white font-semibold py-3.5 text-sm tracking-wide transition-colors"
         >
           {state === 'submitting' ? 'Sending…' : 'Send Enquiry'}

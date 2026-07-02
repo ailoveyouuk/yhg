@@ -1,19 +1,36 @@
 [
   {
+    "id": "oil-filter-change",
+    "category": "Servicing",
+    "name": "Oil & Filter Change",
+    "description": "Your engine's most fundamental routine. Clean oil reduces internal wear, restores fuel efficiency and protects components between major services. We use the correct grade and specification for your exact vehicle.",
+    "includes": [
+      "Drain and refill with manufacturer-specified oil grade",
+      "New OE-quality oil filter fitted",
+      "Oil level and pressure verified",
+      "Screen wash and coolant topped up if required"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
     "id": "interim-service",
     "category": "Servicing",
     "name": "Interim Service",
-    "description": "Recommended every 6 months or 6,000 miles. Covers the essentials to keep your vehicle safe and running efficiently between full services.",
+    "description": "Recommended every six months or 6,000 miles, the interim service covers the critical safety and fluid checks that keep your car running safely and efficiently. Fast, thorough and always carried out to manufacturer specification.",
     "includes": [
       "Engine oil and filter change",
-      "Tyre pressure and condition check",
-      "Brake inspection",
-      "Lights and electrical check",
-      "Fluid top-ups (screenwash, coolant)"
+      "Brake system inspection (pads, discs, fluid level)",
+      "Tyre condition, pressure and tread depth check",
+      "All fluid levels inspected and topped up",
+      "Lights, wipers, horn and visual safety check"
     ],
-    "price": 89,
-    "price_type": "from",
-    "duration_hours": 1.5,
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
     "booking_available": true,
     "active": true
   },
@@ -21,19 +38,35 @@
     "id": "full-service",
     "category": "Servicing",
     "name": "Full Service",
-    "description": "Comprehensive manufacturer-specification service. Recommended every 12 months or 12,000 miles. Covers all major vehicle systems.",
+    "description": "A comprehensive annual service covering every major vehicle system to manufacturer specification. Recommended every twelve months or 12,000 miles — the most complete routine maintenance we carry out.",
     "includes": [
-      "Everything in the Interim Service",
-      "Air filter replacement",
-      "Cabin filter replacement",
-      "Spark plug inspection / replacement (petrol)",
-      "Brake fluid test",
-      "Steering and suspension check",
-      "Full 52-point vehicle health check"
+      "All items from the Interim Service",
+      "Air filter and cabin pollen filter replacement",
+      "Spark plug inspection or replacement (petrol engines)",
+      "Full 52-point vehicle health check with written report",
+      "Fuel system condition and drive belt inspection"
     ],
-    "price": 149,
-    "price_type": "from",
-    "duration_hours": 3,
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "major-service",
+    "category": "Servicing",
+    "name": "Major Service",
+    "description": "The complete two-yearly or 24,000-mile service. Covers everything in the full service plus all long-interval components requiring scheduled attention, leaving your vehicle in the best possible mechanical condition.",
+    "includes": [
+      "All items from the Full Service",
+      "Brake fluid change (if overdue or contaminated)",
+      "Coolant condition, concentration and pH check",
+      "Gearbox and differential fluid levels checked",
+      "Steering, suspension and drivetrain comprehensive inspection"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
     "booking_available": true,
     "active": true
   },
@@ -41,15 +74,33 @@
     "id": "mot",
     "category": "MOT",
     "name": "MOT Test",
-    "description": "Annual MOT test at our approved test centre. We can carry out any required remedial work on the same day wherever possible.",
+    "description": "DVSA-authorised annual roadworthiness test for cars (Class 4) and light vans (Class 7). We can carry out any required remedial work on the same day wherever possible, and re-tests are included when we complete the repair work.",
     "includes": [
       "Full DVSA-standard MOT inspection",
-      "Written report of all findings",
-      "Same-day remedial work where possible"
+      "Written report of all findings, advisories and failures",
+      "Same-day remedial work wherever possible",
+      "Re-test included when repair carried out by us"
     ],
-    "price": 54.85,
-    "price_type": "fixed",
-    "duration_hours": 1,
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "pre-mot-check",
+    "category": "MOT",
+    "name": "Pre-MOT Inspection",
+    "description": "A thorough pre-test check before your official MOT. We identify likely failures in advance so repairs can be completed beforehand — saving time, avoiding a failed certificate and significantly increasing first-time pass likelihood.",
+    "includes": [
+      "Check of all MOT-relevant systems and components",
+      "Written advisory report on items likely to fail",
+      "Priority repair booking arranged before your test date",
+      "Gives you the option to address issues before the official test"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
     "booking_available": true,
     "active": true
   },
@@ -57,82 +108,595 @@
     "id": "mot-and-service",
     "category": "MOT",
     "name": "MOT + Full Service",
-    "description": "The most popular combination. Book your MOT and full service together and save compared to booking separately.",
+    "description": "Our most popular combination. Booking your MOT alongside a full service is the most efficient use of your annual service visit — completing all required maintenance and the roadworthiness test in one appointment.",
     "includes": [
-      "Full MOT test",
-      "Full manufacturer-specification service",
-      "Combined health check report"
+      "Full DVSA-standard MOT test",
+      "Complete full service to manufacturer specification",
+      "Combined health check report",
+      "Any required remedial work quoted and booked on the day"
     ],
-    "price": 185,
-    "price_type": "from",
-    "duration_hours": 4,
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "brake-inspection",
+    "category": "Brakes",
+    "name": "Brake System Health Check",
+    "description": "A comprehensive inspection of your entire braking system. We check pad and disc condition, fluid quality, caliper function, brake lines and handbrake performance — identifying issues before they become safety concerns.",
+    "includes": [
+      "Front and rear brake pad wear measurement",
+      "Brake disc thickness, scoring and corrosion check",
+      "Brake fluid moisture content test",
+      "Caliper operation and handbrake function check"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "brake-fluid",
+    "category": "Brakes",
+    "name": "Brake Fluid Change",
+    "description": "Brake fluid absorbs moisture over time, lowering its boiling point and causing brake fade under heavy use. Recommended every two years — one of the most overlooked yet critical safety maintenance items on any vehicle.",
+    "includes": [
+      "Complete brake fluid bleed and refill",
+      "DOT 4 fluid used as standard (vehicle-specific grades available)",
+      "System pressurised and checked for leaks post-bleed",
+      "Pedal feel and handbrake function verified on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "front-brake-pads",
+    "category": "Brakes",
+    "name": "Front Brake Pad Replacement",
+    "description": "Front brakes take the majority of braking force and wear faster than rears. We fit quality pads meeting or exceeding OEM specification, and always recommend inspecting disc condition at the same time.",
+    "includes": [
+      "OEM-specification front brake pads fitted",
+      "Caliper slider pins cleaned and lubricated",
+      "Brake disc surface condition assessed",
+      "Brakes bedded in and pedal feel verified"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "rear-brake-pads",
+    "category": "Brakes",
+    "name": "Rear Brake Pad Replacement",
+    "description": "Rear pads wear more slowly but are critical for balanced braking. On vehicles with electronic parking brakes (EPB), specialist tooling is required to retract the caliper pistons — which we carry as standard.",
+    "includes": [
+      "OEM-specification rear brake pads fitted",
+      "Electric parking brake (EPB) retraction where applicable",
+      "Caliper slider pins cleaned and lubricated",
+      "Handbrake function verified on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "front-discs-pads",
+    "category": "Brakes",
+    "name": "Front Disc & Pad Replacement",
+    "description": "When discs are worn beyond safe tolerance, replacement pads alone are not sufficient. We always recommend replacing discs and pads as a matched set for safe, even braking performance and maximum longevity.",
+    "includes": [
+      "OEM-quality brake discs and pads fitted as a matched set",
+      "Hub face cleaned to prevent disc run-out",
+      "Caliper slider pins fully serviced and lubricated",
+      "Full road test carried out before vehicle handover"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "rear-discs-pads",
+    "category": "Brakes",
+    "name": "Rear Disc & Pad Replacement",
+    "description": "Rear disc and pad replacement requires particular attention on vehicles with integrated handbrake mechanisms or electronic parking brakes. Our technicians are experienced across all common systems and makes.",
+    "includes": [
+      "OEM-quality rear brake discs and pads fitted as a set",
+      "EPB motor retraction and system calibration where required",
+      "Integrated drum handbrake mechanism inspected and serviced",
+      "Road test and handbrake function check on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "tyre-fitting",
+    "category": "Tyres & Alignment",
+    "name": "Tyre Supply & Fitting",
+    "description": "We source and fit tyres across all budget, mid-range and premium categories for cars, SUVs and light vans. We advise on the right tyre for your vehicle and usage, and always balance and fit in pairs to the same axle.",
+    "includes": [
+      "Tyre sourced to match vehicle speed and load ratings",
+      "New valve fitted as standard",
+      "Fitted, balanced and torqued to manufacturer specification",
+      "Old tyre disposed of responsibly"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "wheel-balancing",
+    "category": "Tyres & Alignment",
+    "name": "Wheel Balancing",
+    "description": "Wheel imbalance causes steering vibration, accelerates tyre wear and increases rolling resistance. If you feel vibration at speed or have recently had a tyre fitted, balancing should be checked as a matter of course.",
+    "includes": [
+      "Each wheel dynamically balanced on our computer balancing machine",
+      "Balance weights added or adjusted for correct static and dynamic balance",
+      "Suitable for all tyre sizes including large alloy wheels",
+      "Completed while-you-wait in most cases"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
     "booking_available": true,
     "active": true
   },
   {
     "id": "wheel-alignment",
-    "category": "Tyres & Wheels",
+    "category": "Tyres & Alignment",
     "name": "Laser 4-Wheel Alignment",
-    "description": "Precision laser alignment to manufacturer specification. Reduces tyre wear, improves handling and fuel economy.",
+    "description": "Precision 4-wheel laser alignment to manufacturer specification corrects steering geometry that has shifted through use, kerbing or suspension wear. Misalignment causes uneven tyre wear, poor handling and increased fuel consumption.",
     "includes": [
-      "4-wheel laser alignment check",
-      "Adjustment to manufacturer specification",
-      "Before and after printout"
+      "Full 4-wheel laser alignment measured against OEM specification",
+      "Toe, camber and caster adjusted where geometrically possible",
+      "Before and after alignment printout provided",
+      "Tyre wear pattern assessment and cause diagnosis included"
     ],
-    "price": 59,
-    "price_type": "from",
-    "duration_hours": 1,
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
     "booking_available": true,
     "active": true
   },
   {
-    "id": "air-conditioning",
-    "category": "Air Conditioning",
-    "name": "AC Regas & Service",
-    "description": "Restore your air conditioning to full efficiency. Recommended every 2 years.",
+    "id": "tpms-service",
+    "category": "Tyres & Alignment",
+    "name": "TPMS Sensor Service",
+    "description": "Tyre pressure monitoring sensors require periodic servicing or replacement, particularly after a tyre change. A dashboard TPMS warning that won't clear usually points to a faulty or depleted sensor — which we carry in stock for most common vehicles.",
     "includes": [
-      "Full AC system inspection",
-      "Refrigerant regas",
-      "Leak test",
-      "Performance check"
+      "TPMS fault code diagnosis across all sensors",
+      "Sensor replacement (individual or full set as required)",
+      "System reset and relearn procedure completed",
+      "Tyre pressures set to manufacturer specification before handover"
     ],
-    "price": 69,
-    "price_type": "from",
-    "duration_hours": 1,
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "spark-plugs",
+    "category": "Engine & Drivetrain",
+    "name": "Spark Plug Replacement",
+    "description": "Worn or fouled spark plugs reduce combustion efficiency, causing rough running, reduced fuel economy, misfires and difficult cold starts. Replacement intervals vary — typically every 30,000 miles for copper plugs, up to 60,000 miles for iridium types.",
+    "includes": [
+      "All spark plugs replaced as a complete set",
+      "Correct heat range and reach specified for your engine",
+      "Ignition leads and coil packs visually inspected",
+      "Engine management fault codes cleared if plug-related"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "timing-belt",
+    "category": "Engine & Drivetrain",
+    "name": "Timing Belt & Water Pump Replacement",
+    "description": "The timing belt is one of the most critical components in your engine — failure causes catastrophic and expensive damage with no warning. We strongly recommend replacing the water pump at the same time, as access requires the same strip-down.",
+    "includes": [
+      "Timing belt, tensioner and idler pulley replaced as a set",
+      "Water pump replacement (strongly recommended at same time)",
+      "Coolant refreshed as part of the water pump procedure",
+      "Full visual engine bay inspection on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "clutch-replacement",
+    "category": "Engine & Drivetrain",
+    "name": "Clutch Replacement",
+    "description": "A slipping, juddering or heavy clutch is a clear sign that replacement is due. We replace the complete clutch kit as standard — friction disc, pressure plate and release bearing — to ensure reliability and avoid early repeat repairs.",
+    "includes": [
+      "Full clutch kit replacement (disc, pressure plate and release bearing)",
+      "Flywheel inspected; resurfaced or replaced if required",
+      "Gearbox oil level checked and topped up on completion",
+      "Road tested to confirm correct engagement and smooth operation"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "gearbox-service-manual",
+    "category": "Engine & Drivetrain",
+    "name": "Manual Gearbox Service",
+    "description": "Gearbox oil degrades over time, increasing wear and causing stiffer, noisier gear changes. Regular oil changes significantly extend gearbox life — typically recommended every 40,000 to 60,000 miles depending on vehicle and usage.",
+    "includes": [
+      "Drain and refill with manufacturer-specified gearbox fluid",
+      "Gearbox breather and seals inspected for leaks",
+      "Gear selection and synchromesh function checked",
+      "Linkage adjustment carried out if required"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "gearbox-service-auto",
+    "category": "Engine & Drivetrain",
+    "name": "Automatic & DSG Gearbox Service",
+    "description": "Automatic and DSG transmissions operate at high temperatures and are more demanding on fluid than manuals. Neglecting fluid changes leads to hesitation, harsh or delayed shifts and, ultimately, premature transmission failure.",
+    "includes": [
+      "Transmission fluid drain and refill to manufacturer specification",
+      "Sump filter replacement where applicable",
+      "DSG mechatronic and clutch pack adaptation reset where required",
+      "Full shift quality assessment and fault code check"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "dpf-service",
+    "category": "Engine & Drivetrain",
+    "name": "DPF Service (Diesel)",
+    "description": "A blocked diesel particulate filter causes power loss, increased fuel consumption and an engine management warning light. We offer a professional regeneration service that avoids filter replacement in many cases, saving significant cost.",
+    "includes": [
+      "Diagnostic scan to confirm DPF blockage and soot load percentage",
+      "Forced regeneration using professional DPF cleaning equipment",
+      "DPF pressure differential and temperature sensor check",
+      "Fault code clearance and road test to confirm regeneration"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "egr-service",
+    "category": "Engine & Drivetrain",
+    "name": "EGR Valve Service (Diesel)",
+    "description": "The EGR (exhaust gas recirculation) valve can become heavily carbon-fouled on diesel engines, causing rough idle, poor throttle response and increased emissions. Professional cleaning often restores full function without the cost of replacement.",
+    "includes": [
+      "EGR valve removed and inspected for carbon build-up",
+      "Professional ultrasonic or chemical cleaning carried out",
+      "EGR cooler and intake manifold inspected for associated blockage",
+      "Full fault code scan and system test after refitting"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "suspension-check",
+    "category": "Steering & Suspension",
+    "name": "Suspension Health Check",
+    "description": "A thorough visual and physical inspection of every steering and suspension component. Essential after a pothole impact, if you're experiencing unusual handling or noise, or as part of MOT preparation — often uncovers wear before it becomes a safety concern.",
+    "includes": [
+      "Front and rear shock absorber function and condition test",
+      "All bushes, ball joints and drop links inspected for play and wear",
+      "Steering rack, column and track rod ends checked",
+      "Subframe and mounting point condition assessed"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "shock-absorbers",
+    "category": "Steering & Suspension",
+    "name": "Shock Absorber Replacement",
+    "description": "Failed shock absorbers increase stopping distances, cause excessive body roll and leave the vehicle feeling unsettled. We always replace fronts or rears as a pair to maintain balanced handling and even tyre wear across the axle.",
+    "includes": [
+      "Shock absorbers replaced as a matched pair (front or rear)",
+      "Top mounts and bump stops inspected and replaced if worn",
+      "Wheel alignment check recommended after rear replacement",
+      "Road test on completion to verify handling improvement"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "coil-springs",
+    "category": "Steering & Suspension",
+    "name": "Coil Spring Replacement",
+    "description": "A broken or sagged coil spring affects ride height, handling and creates rubbing or clunking over uneven surfaces. Springs must always be replaced as a pair on the same axle to prevent uneven ride height and handling characteristics.",
+    "includes": [
+      "Springs replaced as a matched pair on the same axle",
+      "Spring seat, bump stop and dust cover condition checked",
+      "Vehicle ride height verified after replacement",
+      "4-wheel alignment recommended after any spring replacement"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "wheel-bearings",
+    "category": "Steering & Suspension",
+    "name": "Wheel Bearing Replacement",
+    "description": "Wheel bearing noise — typically a rumbling or growling that changes with cornering load — worsens progressively and can lead to serious safety risks if neglected. We carry a wide range of OEM-quality bearings for all common makes.",
+    "includes": [
+      "Faulty wheel bearing identified and replaced",
+      "Hub and carrier condition inspected (replacement if worn)",
+      "ABS sensor cleaned and operation verified",
+      "Wheel torqued to manufacturer specification and road tested"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "track-rod-ends",
+    "category": "Steering & Suspension",
+    "name": "Track Rod End & Steering Linkage",
+    "description": "Worn track rod ends cause imprecise steering, uneven tyre wear and an MOT failure. Replacement must be followed by a 4-wheel alignment to re-establish correct toe settings — which we carry out as standard after all steering linkage work.",
+    "includes": [
+      "Worn track rod end(s) removed and replaced",
+      "Lock nut torqued to manufacturer specification",
+      "4-wheel laser alignment carried out after replacement",
+      "Steering feel, self-centring and play verified on road test"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "anti-roll-bar",
+    "category": "Steering & Suspension",
+    "name": "Anti-Roll Bar Links & Bushes",
+    "description": "Worn anti-roll bar drop links and bushes are a common cause of clunking over bumps and increased body roll. They are also a frequent MOT advisory. Replacement is straightforward and makes an immediate improvement to handling refinement.",
+    "includes": [
+      "Anti-roll bar drop links replaced (front and/or rear as required)",
+      "Anti-roll bar mounting bushes replaced where worn",
+      "Steering and suspension torqued to manufacturer specification",
+      "Road test to confirm elimination of noise and improved stability"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
     "booking_available": true,
     "active": true
   },
   {
     "id": "diagnostic",
-    "category": "Diagnostics",
-    "name": "Electronic Diagnostics",
-    "description": "Warning light on? Our state-of-the-art diagnostic equipment reads fault codes across all modern vehicle systems to pinpoint issues quickly.",
+    "category": "Electrical & Diagnostics",
+    "name": "Full Diagnostic Health Check",
+    "description": "Our multi-brand diagnostic equipment reads fault codes across all vehicle control systems — engine, transmission, ABS, airbags, body control and more. The most effective first step when any warning light appears or a fault develops.",
     "includes": [
-      "Full electronic system scan",
-      "Fault code reading and interpretation",
-      "Written diagnostic report",
-      "Advice on next steps"
-    ],
-    "price": 45,
-    "price_type": "fixed",
-    "duration_hours": 0.5,
-    "booking_available": true,
-    "active": true
-  },
-  {
-    "id": "bodywork-quote",
-    "category": "Bodywork",
-    "name": "Bodywork & Accident Repair",
-    "description": "Dings, dents, resprays, accident damage or full restoration. We provide a free estimate for all bodywork.",
-    "includes": [
-      "Free inspection and estimate",
-      "Insurance claim handling",
-      "All makes and models"
+      "Full scan across all available vehicle control modules",
+      "Live data readings and fault code interpretation",
+      "Written diagnostic report with fault summary",
+      "Clear advice on required repairs and recommended priority"
     ],
     "price": null,
     "price_type": "quote",
     "duration_hours": null,
-    "booking_available": false,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "engine-management-light",
+    "category": "Electrical & Diagnostics",
+    "name": "Engine Management Light Investigation",
+    "description": "An illuminated EML can indicate anything from a minor sensor fault to a serious mechanical issue. We carry out a targeted diagnostic scan to pinpoint the root cause and advise on the repair before any work is carried out.",
+    "includes": [
+      "Targeted OBD-II scan and fault code interpretation",
+      "Live engine data analysis where relevant to the fault",
+      "Root cause identified and confirmed before repair quotation",
+      "Fault codes cleared after any rectification work"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "battery",
+    "category": "Electrical & Diagnostics",
+    "name": "Battery Test & Replacement",
+    "description": "Modern vehicles place high demands on their batteries, particularly those with start-stop systems and large electrical loads. A weak battery causes hard starting and electrical gremlins well before complete failure. We test battery condition while you wait.",
+    "includes": [
+      "Battery health, cold cranking amps (CCA) and state-of-charge tested",
+      "Charging circuit and alternator output tested simultaneously",
+      "OEM-quality replacement battery fitted if required",
+      "Battery registration completed on vehicles that require it (BMW, Mercedes etc.)"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "alternator",
+    "category": "Electrical & Diagnostics",
+    "name": "Alternator Testing & Replacement",
+    "description": "A failing alternator drains the battery, causes electrical warning lights and eventually leaves you stranded. We test the full charging system under load and can source and fit replacement alternators for all common makes and models.",
+    "includes": [
+      "Full charging circuit load test carried out",
+      "Alternator output voltage and current verified",
+      "Drive belt and tensioner condition inspected",
+      "Battery recharged and full system verified after replacement"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "ac-regas",
+    "category": "Climate & Cooling",
+    "name": "Air Conditioning Regas",
+    "description": "Air conditioning systems lose refrigerant gradually — most require regassing every two to three years to maintain cooling performance. We handle both R134a (pre-2017 vehicles) and the newer R1234yf refrigerant used in modern cars.",
+    "includes": [
+      "Full AC system pressure test and leak check",
+      "Refrigerant recovered, vacuum held and system recharged",
+      "Correct refrigerant type and manufacturer-specified quantity used",
+      "Cooling performance and compressor operation verified on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "ac-full-service",
+    "category": "Climate & Cooling",
+    "name": "Air Conditioning Full Service",
+    "description": "Beyond a standard regas, our full AC service includes inspection and cleaning of the system's internal components. Recommended where performance is reduced, odours are present, or the system hasn't been serviced in several years.",
+    "includes": [
+      "Full regas with correct refrigerant type and quantity",
+      "Evaporator and condenser performance check",
+      "Anti-bacterial cabin treatment to eliminate musty odours",
+      "Compressor, expansion valve and pressure switch operation verified"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "coolant-flush",
+    "category": "Climate & Cooling",
+    "name": "Coolant System Flush",
+    "description": "Engine coolant degrades over time, losing its ability to prevent corrosion and regulate operating temperature. Overdue coolant is a leading contributor to head gasket and water pump failures — most manufacturers recommend a change every three to five years.",
+    "includes": [
+      "Full coolant drain, flush and refill with manufacturer-specified mix",
+      "Cooling system pressure test to check for leaks",
+      "Thermostat function and opening temperature verified",
+      "Hoses, clips and water pump condition inspected during procedure"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "cabin-filter",
+    "category": "Climate & Cooling",
+    "name": "Cabin Air Filter Replacement",
+    "description": "The cabin filter captures dust, pollen, bacteria and particulates before they enter the interior. A blocked filter reduces HVAC airflow, increases blower motor load and causes musty odours. Typically recommended every 12 months or 12,000 miles.",
+    "includes": [
+      "Old cabin filter removed and condition inspected",
+      "New OEM-quality cabin filter fitted",
+      "Filter housing cleaned before installation",
+      "AC recirculation and fresh air modes tested on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "exhaust-repair",
+    "category": "Exhaust & Emissions",
+    "name": "Exhaust Inspection & Repair",
+    "description": "Blowing joints, rattles and emission failures often result from corroded gaskets, cracked sections or failed mounting rubbers. We inspect the full system and carry out targeted repairs where complete replacement is not required.",
+    "includes": [
+      "Full exhaust system inspection from manifold to tailpipe",
+      "Blow points, joint condition and mounting rubbers assessed",
+      "Welded repairs or section replacement carried out as appropriate",
+      "Emissions function test on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "exhaust-section",
+    "category": "Exhaust & Emissions",
+    "name": "Exhaust Section Replacement",
+    "description": "When a single section of the exhaust system fails — centre pipe, middle box or rear box — targeted replacement is more cost-effective than a full system. We source matched sections for all common makes and carry out most replacements while-you-wait.",
+    "includes": [
+      "Failed section identified and removed",
+      "OEM or quality aftermarket replacement sourced and fitted",
+      "All joint gaskets renewed as standard",
+      "Full system check and emissions function verified on completion"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
+    "active": true
+  },
+  {
+    "id": "catalytic-converter",
+    "category": "Exhaust & Emissions",
+    "name": "Catalytic Converter Replacement",
+    "description": "A failed catalytic converter causes an emissions failure and engine management light. Failure is often caused by misfires, oil consumption or physical damage — we diagnose and address the root cause before replacement to prevent recurrence.",
+    "includes": [
+      "Full diagnostic scan to confirm catalytic converter failure",
+      "Root cause identified and addressed before replacement",
+      "OEM-quality replacement fitted with new gaskets and hardware",
+      "Fault codes cleared and emissions levels verified after replacement"
+    ],
+    "price": null,
+    "price_type": "quote",
+    "duration_hours": null,
+    "booking_available": true,
     "active": true
   }
 ]
