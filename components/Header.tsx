@@ -6,15 +6,16 @@ import { usePathname } from 'next/navigation';
 import { useServiceBag } from '@/contexts/ServiceBagContext';
 import { ESTABLISHED_TAGLINE } from '@/data/business';
 
+// MOT, Tyres, Diagnostics and Brakes each still have their own standalone
+// page (still linked from the Servicing homepage panel and the footer),
+// but are folded under "Servicing" here to keep the primary nav consistent
+// with the four homepage carousel panels: Stocklist, Servicing, Bodywork,
+// Detailing.
 const centerNav = [
   { label: 'Stocklist', href: '/cars' },
-  { label: 'Services', href: '/services' },
+  { label: 'Servicing', href: '/services' },
   { label: 'Bodywork', href: '/bodywork' },
   { label: 'Detailing', href: '/detailing' },
-  { label: 'MOT', href: '/mot' },
-  { label: 'Tyres', href: '/tyres' },
-  { label: 'Diagnostics', href: '/diagnostics' },
-  { label: 'Brakes', href: '/brakes' },
 ];
 
 const rightNav = [

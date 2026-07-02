@@ -18,6 +18,11 @@ type Cta = {
   variant: 'primary' | 'secondary' | 'glass';
 };
 
+type SubLink = {
+  label: string;
+  href: string;
+};
+
 type Panel = {
   id: string;
   sliverLabel: string;
@@ -27,6 +32,10 @@ type Panel = {
   heading: string;
   body: string;
   ctas: Cta[];
+  /** Quick links to related standalone pages folded out of the primary nav
+   *  under "Servicing" (see components/Header.tsx) — shown on this panel
+   *  so MOT, Tyres, Diagnostics and Brakes stay easy to find. */
+  subLinks?: SubLink[];
 };
 
 const panels: Panel[] = [
@@ -51,6 +60,12 @@ const panels: Panel[] = [
     heading: 'Every make.\nDone right.',
     body: 'Manufacturer-spec servicing, diagnostics and repairs for all vehicles. State-of-the-art equipment, honest advice.',
     ctas: [{ label: 'Explore Services', href: '/services', variant: 'glass' }],
+    subLinks: [
+      { label: 'MOT', href: '/mot' },
+      { label: 'Tyres', href: '/tyres' },
+      { label: 'Diagnostics', href: '/diagnostics' },
+      { label: 'Brakes', href: '/brakes' },
+    ],
   },
   {
     id: 'bodywork',
@@ -142,6 +157,21 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
 
               {/* Stocklist preview — mobile only, this panel only */}
               {panel.id === 'stocklist' && <StocklistPreviewMobile vehicles={previewVehicles} />}
+
+              {/* Sub-links — Servicing panel only, folded out of the primary nav */}
+              {panel.subLinks && (
+                <div className="flex flex-wrap gap-x-3 gap-y-1 mb-4">
+                  {panel.subLinks.map((link) => (
+                    <Link
+                      key={`mobile-sub-${panel.id}-${link.href}`}
+                      href={link.href}
+                      className="text-white/60 hover:text-white text-xs tracking-wide underline underline-offset-2 decoration-white/30 hover:decoration-white/70 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-2">
@@ -311,6 +341,21 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
                   </Link>
                 ))}
               </div>
+
+              {/* Sub-links — Servicing panel only, folded out of the primary nav */}
+              {panel.subLinks && (
+                <div className="flex flex-wrap gap-x-5 gap-y-1.5 mt-5 pointer-events-auto">
+                  {panel.subLinks.map((link) => (
+                    <Link
+                      key={`sub-${panel.id}-${link.href}`}
+                      href={link.href}
+                      className="text-white/55 hover:text-white text-xs tracking-wide underline underline-offset-2 decoration-white/25 hover:decoration-white/70 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* ─── Stocklist preview — subtle "in stock now" cards, active panel only ─── */}
