@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
+import StructuredData from "@/components/StructuredData";
 import { FOUNDED_YEAR } from "@/data/business";
 
 const SITE_DESCRIPTION = `Expert car servicing, MOT testing, bodywork and repairs in Yardley Hastings, Northamptonshire. Family-run garage established in ${FOUNDED_YEAR}.`;
@@ -84,6 +85,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased min-h-screen flex flex-col">
+        <StructuredData />
         <Providers>
           <Header />
           <main className="flex-1">{children}</main>

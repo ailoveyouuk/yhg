@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageCard from '@/components/PageCard';
 import FaqAccordion from '@/components/FaqAccordion';
+import faqsData from '@/data/faqs.json';
 import { BUSINESS_PHONE } from '@/data/business';
 import { pageMetadata } from '@/lib/seo';
 
@@ -11,9 +12,42 @@ export const metadata: Metadata = pageMetadata({
   path: '/faq',
 });
 
+// FAQPage structured data — built directly from the same faqs.json the
+// FaqAccordion component renders, so the schema can never drift out of
+// sync with what's actually shown on the page.
+type FaqItem = { q: string; a: string };
+type FaqCategory = { category: string; items: FaqItem[] };
+
+function buildFaqSchema() {
+  const categories = faqsData as FaqCategory[];
+  const mainEntity = categories.flatMap((cat) =>
+    cat.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    }))
+  );
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity,
+  };
+}
+
 export default function FaqPage() {
+  const faqSchema = buildFaqSchema();
+
   return (
     <PageCard>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ─── Hero ─── */}
       <section className="bg-[#111110] text-white relative overflow-hidden flex items-end" style={{ minHeight: '34vh' }}>
         <div className="absolute inset-0 bg-gradient-to-br from-[#111110] via-[#1F1F1D] to-[#111110]" />
