@@ -92,14 +92,10 @@ export default function Footer() {
             <h3 className="text-white text-[10px] font-medium uppercase tracking-[0.16em] mb-6">Our Services</h3>
             <ul className="space-y-3 text-sm">
               {[
-                ['MOT Testing', '/mot'],
-                ['Servicing & Repairs', '/services'],
-                ['Brakes', '/brakes'],
-                ['Tyres', '/tyres'],
-                ['Diagnostics', '/diagnostics'],
+                ['Stocklist', '/cars'],
+                ['Servicing', '/services'],
                 ['Bodywork & Accident Repair', '/bodywork'],
                 ['Detailing', '/detailing'],
-                ['Stocklist', '/cars'],
               ].map(([label, href]) => (
                 <li key={label}>
                   <Link href={href} className="text-white/65 hover:text-white transition-colors">{label}</Link>
