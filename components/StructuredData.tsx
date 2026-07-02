@@ -32,6 +32,12 @@ export default function StructuredData() {
     url: SITE_URL,
     telephone: BUSINESS_PHONE.href.replace('tel:', '+44'),
     email: BUSINESS_EMAIL.href.replace('mailto:', ''),
+    // Symbolic mid-range indicator (Google's $-$$$$ style scale) rather than
+    // a literal figure — pricing here is genuinely quote-based (see the
+    // Services page's "How we quote" section), so a single number would be
+    // misleading. "££" signals fair/standard independent-garage pricing,
+    // not budget or premium-marked-up.
+    priceRange: '££',
     address: {
       '@type': 'PostalAddress',
       streetAddress: `${BUSINESS_ADDRESS.line1}, ${BUSINESS_ADDRESS.line2}`,
