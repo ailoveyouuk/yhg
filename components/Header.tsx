@@ -17,20 +17,46 @@ type NavItem = {
 // primary nav consistent with the four homepage carousel panels (Stocklist,
 // Servicing, Bodywork, Detailing) while keeping all four sub-pages reachable
 // from every page on the site, not just the homepage panel.
+//
+// Bodywork and Detailing get the same treatment for consistency: their
+// sub-links point at anchor sections on their own page (via the same
+// toAnchorId() slugging used in app/bodywork/page.tsx and
+// app/detailing/page.tsx — category name lowercased, non-alphanumeric runs
+// collapsed to a single hyphen) rather than separate standalone routes,
+// since those categories don't have their own dedicated pages.
 const centerNav: NavItem[] = [
   { label: 'Stocklist', href: '/cars' },
   {
     label: 'Servicing',
     href: '/services',
     subLinks: [
+      { label: 'Service', href: '/services#servicing' },
       { label: 'MOT', href: '/mot' },
       { label: 'Tyres', href: '/tyres' },
       { label: 'Diagnostics', href: '/diagnostics' },
       { label: 'Brakes', href: '/brakes' },
     ],
   },
-  { label: 'Bodywork', href: '/bodywork' },
-  { label: 'Detailing', href: '/detailing' },
+  {
+    label: 'Bodywork',
+    href: '/bodywork',
+    subLinks: [
+      { label: 'Accident Repair', href: '/bodywork#accident-repair' },
+      { label: 'Dent Removal', href: '/bodywork#dent-removal' },
+      { label: 'Paintwork', href: '/bodywork#paintwork' },
+      { label: 'Classic Restoration', href: '/bodywork#classic-restoration' },
+    ],
+  },
+  {
+    label: 'Detailing',
+    href: '/detailing',
+    subLinks: [
+      { label: 'Paint Correction', href: '/detailing#paint-correction' },
+      { label: 'Paint Protection', href: '/detailing#paint-protection' },
+      { label: 'Interior Detailing', href: '/detailing#interior-detailing' },
+      { label: 'Detail Packages', href: '/detailing#detail-packages' },
+    ],
+  },
 ];
 
 const rightNav: NavItem[] = [
