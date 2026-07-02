@@ -5,19 +5,13 @@ import servicesData from '@/data/services.json';
 import PageCard from '@/components/PageCard';
 import ServiceGrid from '@/components/ServiceGrid';
 import { BUSINESS_PHONE, FOUNDED_YEAR, OPENING_HOURS } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Servicing & Repairs',
   description: 'Full manufacturer-specification car and van servicing, MOT, diagnostics, laser alignment and mechanical repairs for all makes and models in Northamptonshire.',
-  openGraph: {
-    title: 'Servicing & Repairs | Yardley Hastings Garage',
-    description: 'Full manufacturer-specification car and van servicing, MOT, diagnostics, laser alignment and mechanical repairs for all makes and models in Northamptonshire.',
-  },
-  twitter: {
-    title: 'Servicing & Repairs | Yardley Hastings Garage',
-    description: 'Full manufacturer-specification car and van servicing, MOT, diagnostics, laser alignment and mechanical repairs for all makes and models in Northamptonshire.',
-  },
-};
+  path: '/services',
+});
 
 const services = servicesData as Service[];
 

@@ -3,11 +3,13 @@ import Link from 'next/link';
 import PageCard from '@/components/PageCard';
 import FaqAccordion from '@/components/FaqAccordion';
 import { BUSINESS_PHONE } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'FAQ',
   description: 'Frequently asked questions about booking, servicing, MOTs, buying a vehicle and our policies at Yardley Hastings Garage.',
-};
+  path: '/faq',
+});
 
 export default function FaqPage() {
   return (

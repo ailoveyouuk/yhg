@@ -4,19 +4,13 @@ import tyresData from '@/data/tyres.json';
 import PageCard from '@/components/PageCard';
 import ServiceGrid from '@/components/ServiceGrid';
 import { BUSINESS_PHONE, OPENING_HOURS } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Tyres',
   description: 'Tyre supply, fitting, balancing and 4-wheel alignment at Yardley Hastings Garage. Car and commercial van tyres, run-flats, EV tyres, TPMS and free safety checks. Northamptonshire.',
-  openGraph: {
-    title: 'Tyres | Yardley Hastings Garage',
-    description: 'Tyre supply, fitting, balancing and 4-wheel alignment at Yardley Hastings Garage. Car and commercial van tyres, run-flats, EV tyres, TPMS and free safety checks. Northamptonshire.',
-  },
-  twitter: {
-    title: 'Tyres | Yardley Hastings Garage',
-    description: 'Tyre supply, fitting, balancing and 4-wheel alignment at Yardley Hastings Garage. Car and commercial van tyres, run-flats, EV tyres, TPMS and free safety checks. Northamptonshire.',
-  },
-};
+  path: '/tyres',
+});
 
 const services = tyresData as Service[];
 

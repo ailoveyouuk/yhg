@@ -34,7 +34,6 @@ export default function VehicleCard({ v }: { v: Vehicle }) {
           <span>{v.transmission}</span>
           <span>{v.colour}</span>
           <span>{v.previous_owners} owner{v.previous_owners !== 1 ? 's' : ''}</span>
-          {v.hpi_clear && <span className="text-[#004225] font-medium">HPI Clear</span>}
           {v.service_history && <span className="text-[#004225] font-medium col-span-2">{v.service_history}</span>}
         </div>
 

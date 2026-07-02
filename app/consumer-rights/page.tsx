@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageCard from '@/components/PageCard';
 import { BUSINESS_EMAIL, BUSINESS_PHONE } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Your Consumer Rights',
   description: 'A plain-English summary of your statutory rights as a UK consumer when buying a vehicle or having work carried out at Yardley Hastings Garage.',
-};
+  path: '/consumer-rights',
+});
 
 function H2({ children }: { children: React.ReactNode }) {
   return <h2 className="text-xl font-semibold text-[#111110] tracking-tight mt-10 mb-3 first:mt-0">{children}</h2>;

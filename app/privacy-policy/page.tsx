@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageCard from '@/components/PageCard';
 import { BUSINESS_ADDRESS, BUSINESS_EMAIL, BUSINESS_NAME } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Privacy Policy',
   description: 'How Yardley Hastings Garage collects, uses and protects your personal data, and your rights under UK GDPR.',
-};
+  path: '/privacy-policy',
+});
 
 function H2({ children }: { children: React.ReactNode }) {
   return <h2 className="text-xl font-semibold text-[#111110] tracking-tight mt-10 mb-3 first:mt-0">{children}</h2>;

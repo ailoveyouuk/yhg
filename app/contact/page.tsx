@@ -3,19 +3,13 @@ import { Suspense } from 'react';
 import ContactForm from '@/components/ContactForm';
 import PageCard from '@/components/PageCard';
 import { BUSINESS_ADDRESS, BUSINESS_EMAIL, BUSINESS_PHONE, OPENING_HOURS } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Contact & Book',
   description: 'Book a service, request a quote or get directions to Yardley Hastings Garage. Bedford Rd W, Yardley Hastings, Northampton NN7 1HB.',
-  openGraph: {
-    title: 'Contact & Book | Yardley Hastings Garage',
-    description: 'Book a service, request a quote or get directions to Yardley Hastings Garage. Bedford Rd W, Yardley Hastings, Northampton NN7 1HB.',
-  },
-  twitter: {
-    title: 'Contact & Book | Yardley Hastings Garage',
-    description: 'Book a service, request a quote or get directions to Yardley Hastings Garage. Bedford Rd W, Yardley Hastings, Northampton NN7 1HB.',
-  },
-};
+  path: '/contact',
+});
 
 function ContactFormFallback() {
   return (

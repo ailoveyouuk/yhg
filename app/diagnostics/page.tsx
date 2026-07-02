@@ -4,19 +4,13 @@ import diagnosticsData from '@/data/diagnostics.json';
 import PageCard from '@/components/PageCard';
 import ServiceGrid from '@/components/ServiceGrid';
 import { BUSINESS_PHONE, OPENING_HOURS } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Diagnostics',
   description: 'Professional vehicle diagnostics at Yardley Hastings Garage. Full system scans, warning light investigation, ADAS calibration, EV and hybrid diagnostics. Northamptonshire.',
-  openGraph: {
-    title: 'Diagnostics | Yardley Hastings Garage',
-    description: 'Professional vehicle diagnostics at Yardley Hastings Garage. Full system scans, warning light investigation, ADAS calibration, EV and hybrid diagnostics. Northamptonshire.',
-  },
-  twitter: {
-    title: 'Diagnostics | Yardley Hastings Garage',
-    description: 'Professional vehicle diagnostics at Yardley Hastings Garage. Full system scans, warning light investigation, ADAS calibration, EV and hybrid diagnostics. Northamptonshire.',
-  },
-};
+  path: '/diagnostics',
+});
 
 const services = diagnosticsData as Service[];
 

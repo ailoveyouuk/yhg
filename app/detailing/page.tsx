@@ -5,19 +5,13 @@ import detailingData from '@/data/detailing.json';
 import PageCard from '@/components/PageCard';
 import ServiceGrid from '@/components/ServiceGrid';
 import { BUSINESS_PHONE, OPENING_HOURS } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Detailing',
   description: 'Professional vehicle detailing at Yardley Hastings Garage. Paint correction, ceramic coating, PPF, interior deep clean and full detail packages. Northamptonshire.',
-  openGraph: {
-    title: 'Detailing | Yardley Hastings Garage',
-    description: 'Professional vehicle detailing at Yardley Hastings Garage. Paint correction, ceramic coating, PPF, interior deep clean and full detail packages. Northamptonshire.',
-  },
-  twitter: {
-    title: 'Detailing | Yardley Hastings Garage',
-    description: 'Professional vehicle detailing at Yardley Hastings Garage. Paint correction, ceramic coating, PPF, interior deep clean and full detail packages. Northamptonshire.',
-  },
-};
+  path: '/detailing',
+});
 
 const services = detailingData as Service[];
 

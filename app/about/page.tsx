@@ -3,21 +3,15 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import PageCard from '@/components/PageCard';
 import { BUSINESS_ADDRESS, BUSINESS_PHONE, FOUNDED_YEAR, OPENING_HOURS_COMPACT, OWNER_NAME } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
 const ABOUT_DESCRIPTION = `Independent family garage in Yardley Hastings, Northamptonshire, established in ${FOUNDED_YEAR}. MG approved body repairer.`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'About Us',
   description: ABOUT_DESCRIPTION,
-  openGraph: {
-    title: 'About Us | Yardley Hastings Garage',
-    description: ABOUT_DESCRIPTION,
-  },
-  twitter: {
-    title: 'About Us | Yardley Hastings Garage',
-    description: ABOUT_DESCRIPTION,
-  },
-};
+  path: '/about',
+});
 
 const values = [
   { title: 'Honest advice', body: 'We tell you what genuinely needs doing and what can wait. We have built our reputation on straight talking and fair pricing.' },

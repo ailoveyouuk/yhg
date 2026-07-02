@@ -4,19 +4,13 @@ import motData from '@/data/mot.json';
 import PageCard from '@/components/PageCard';
 import ServiceGrid from '@/components/ServiceGrid';
 import { BUSINESS_PHONE, OPENING_HOURS } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'MOT Testing',
   description: 'DVSA-authorised MOT testing for cars and light commercial vehicles at Yardley Hastings Garage. Class 4 and Class 7 tests, same-day remedials, pre-MOT inspections. Northamptonshire.',
-  openGraph: {
-    title: 'MOT Testing | Yardley Hastings Garage',
-    description: 'DVSA-authorised MOT testing for cars and light commercial vehicles at Yardley Hastings Garage. Class 4 and Class 7 tests, same-day remedials, pre-MOT inspections. Northamptonshire.',
-  },
-  twitter: {
-    title: 'MOT Testing | Yardley Hastings Garage',
-    description: 'DVSA-authorised MOT testing for cars and light commercial vehicles at Yardley Hastings Garage. Class 4 and Class 7 tests, same-day remedials, pre-MOT inspections. Northamptonshire.',
-  },
-};
+  path: '/mot',
+});
 
 const services = motData as Service[];
 

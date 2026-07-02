@@ -7,6 +7,7 @@ import PageCard from '@/components/PageCard';
 import CarGallery from '@/components/CarGallery';
 import VehicleEnquiryForm from '@/components/VehicleEnquiryForm';
 import { BUSINESS_EMAIL, BUSINESS_PHONE } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
 const vehicles = vehiclesData as Vehicle[];
 
@@ -18,10 +19,21 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params;
   const v = vehicles.find((v) => v.id === id);
   if (!v) return {};
-  return {
+
+  // A short, spec-led summary for search results and social previews — the
+  // full multi-paragraph v.description is shown on the page itself but is
+  // far too long for a meta description (Google truncates ~155-160 chars)
+  // or a link preview card.
+  const summary = `${v.year} ${v.make} ${v.model} ${v.variant} for sale at £${v.price.toLocaleString()}. ${v.mileage.toLocaleString()} miles, ${v.transmission.toLowerCase()}, ${v.fuel.toLowerCase()}. Six-month warranty, full service and MOT included.`;
+
+  return pageMetadata({
     title: `${v.year} ${v.make} ${v.model} — £${v.price.toLocaleString()}`,
-    description: v.description,
-  };
+    description: summary,
+    path: `/cars/${v.id}`,
+    image: v.images[0]
+      ? { url: v.images[0], alt: `${v.year} ${v.make} ${v.model}`, width: 1200, height: 857 }
+      : undefined,
+  });
 }
 
 const specRows = (v: Vehicle) => [
@@ -40,7 +52,6 @@ const specRows = (v: Vehicle) => [
   ['MOT expiry', v.mot_expiry],
   ['Service history', v.service_history],
   ['Previous owners', String(v.previous_owners)],
-  ['HPI clear', v.hpi_clear ? 'Yes' : 'No'],
   ['V5C present', v.v5c_present ? 'Yes' : 'No'],
 ];
 
@@ -143,7 +154,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
                         {specRows(v).map(([label, value]) => (
                           <tr key={label} className="border-b border-[#EFEFEB] last:border-0">
                             <td className="py-2 text-[#5A5A57] pr-4 w-1/2 text-[11px] uppercase tracking-[0.08em]">{label}</td>
-                            <td className={`py-2 font-medium text-sm ${label === 'HPI clear' || label === 'V5C present' ? (value === 'Yes' ? 'text-[#004225]' : 'text-[#111110]') : 'text-[#111110]'}`}>{value}</td>
+                            <td className={`py-2 font-medium text-sm ${label === 'V5C present' ? (value === 'Yes' ? 'text-[#004225]' : 'text-[#111110]') : 'text-[#111110]'}`}>{value}</td>
                           </tr>
                         ))}
                       </tbody>

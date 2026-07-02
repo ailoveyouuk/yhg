@@ -4,19 +4,13 @@ import brakesData from '@/data/brakes.json';
 import PageCard from '@/components/PageCard';
 import ServiceGrid from '@/components/ServiceGrid';
 import { BUSINESS_PHONE, OPENING_HOURS } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Brakes',
   description: 'Brake pads, discs, fluid, calipers and EPB servicing at Yardley Hastings Garage. Free brake safety checks. All makes and models. Northamptonshire.',
-  openGraph: {
-    title: 'Brakes | Yardley Hastings Garage',
-    description: 'Brake pads, discs, fluid, calipers and EPB servicing at Yardley Hastings Garage. Free brake safety checks. All makes and models. Northamptonshire.',
-  },
-  twitter: {
-    title: 'Brakes | Yardley Hastings Garage',
-    description: 'Brake pads, discs, fluid, calipers and EPB servicing at Yardley Hastings Garage. Free brake safety checks. All makes and models. Northamptonshire.',
-  },
-};
+  path: '/brakes',
+});
 
 const services = brakesData as Service[];
 

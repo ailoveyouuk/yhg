@@ -4,19 +4,13 @@ import bodyworkData from '@/data/bodywork.json';
 import PageCard from '@/components/PageCard';
 import ServiceGrid from '@/components/ServiceGrid';
 import { BUSINESS_PHONE, OPENING_HOURS } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Bodywork & Restoration',
   description: 'Accident repair, dents, resprays, classic restoration and structural metalwork at Yardley Hastings Garage. MG approved body repairer. All makes and models, Northamptonshire.',
-  openGraph: {
-    title: 'Bodywork & Restoration | Yardley Hastings Garage',
-    description: 'Accident repair, dents, resprays, classic restoration and structural metalwork at Yardley Hastings Garage. MG approved body repairer. All makes and models, Northamptonshire.',
-  },
-  twitter: {
-    title: 'Bodywork & Restoration | Yardley Hastings Garage',
-    description: 'Accident repair, dents, resprays, classic restoration and structural metalwork at Yardley Hastings Garage. MG approved body repairer. All makes and models, Northamptonshire.',
-  },
-};
+  path: '/bodywork',
+});
 
 const services = bodyworkData as Service[];
 

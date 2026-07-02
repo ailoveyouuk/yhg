@@ -6,19 +6,13 @@ import vehiclesData from '@/data/vehicles.json';
 import PageCard from '@/components/PageCard';
 import StocklistBrowser from '@/components/StocklistBrowser';
 import { BUSINESS_PHONE } from '@/data/business';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Stocklist',
   description: 'Current vehicle stocklist at Yardley Hastings Garage, Northamptonshire. Quality used cars prepared by our own mechanics. Vehicle sourcing also available.',
-  openGraph: {
-    title: 'Stocklist | Yardley Hastings Garage',
-    description: 'Current vehicle stocklist at Yardley Hastings Garage, Northamptonshire. Quality used cars prepared by our own mechanics. Vehicle sourcing also available.',
-  },
-  twitter: {
-    title: 'Stocklist | Yardley Hastings Garage',
-    description: 'Current vehicle stocklist at Yardley Hastings Garage, Northamptonshire. Quality used cars prepared by our own mechanics. Vehicle sourcing also available.',
-  },
-};
+  path: '/cars',
+});
 
 const vehicles = vehiclesData as Vehicle[];
 
