@@ -114,7 +114,7 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
           <div
             key={`mobile-${panel.id}`}
             className={`relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.18)] ${
-              panel.id === 'stocklist' ? 'h-[23rem]' : 'h-80'
+              panel.id === 'stocklist' ? 'h-[23rem]' : 'h-96'
             }`}
           >
             {/* Background */}
@@ -172,20 +172,17 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
               {panel.id === 'stocklist' && <StocklistPreviewMobile vehicles={previewVehicles} />}
 
               {/* Sub-links — mirrors this panel's header nav dropdown.
-                   Rendered as a single-row, horizontally-scrollable strip of
-                   frosted-glass chips (matches the glass CTA styling) rather
-                   than wrapped underlined text — bigger touch targets, and
-                   a fixed one-line height so it can't push the eyebrow pill
-                   above the panel and get clipped. */}
+                   Rendered as a fixed 3-column grid of frosted-glass chips
+                   (matches the glass CTA styling) — every chip is the same
+                   size, wraps to a second row instead of bleeding off the
+                   panel edge, and stays within the panel's fixed height. */}
               {panel.subLinks && (
-                <div
-                  className="flex gap-1.5 overflow-x-auto mb-3 -mx-6 px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-                >
+                <div className="grid grid-cols-3 gap-1.5 mb-3">
                   {panel.subLinks.map((link) => (
                     <Link
                       key={`mobile-sub-${panel.id}-${link.href}`}
                       href={link.href}
-                      className="shrink-0 whitespace-nowrap inline-flex items-center bg-white/10 hover:bg-white/18 border border-white/20 hover:border-white/40 rounded-full px-3 py-1.5 text-white/80 hover:text-white text-[11px] tracking-wide backdrop-blur-sm transition-colors"
+                      className="inline-flex items-center justify-center text-center truncate bg-white/10 hover:bg-white/18 border border-white/20 hover:border-white/40 rounded-full px-2 py-1.5 text-white/80 hover:text-white text-[10px] tracking-wide backdrop-blur-sm transition-colors"
                     >
                       {link.label}
                     </Link>
