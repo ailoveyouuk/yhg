@@ -32,9 +32,9 @@ type Panel = {
   heading: string;
   body: string;
   ctas: Cta[];
-  /** Quick links to related standalone pages folded out of the primary nav
-   *  under "Servicing" (see components/Header.tsx) — shown on this panel
-   *  so MOT, Tyres, Diagnostics and Brakes stay easy to find. */
+  /** Quick links matching this panel's header nav dropdown (see
+   *  components/Header.tsx) — kept in sync with those sub-links so the
+   *  homepage panels and the persistent header nav offer the same shortcuts. */
   subLinks?: SubLink[];
 };
 
@@ -61,6 +61,7 @@ const panels: Panel[] = [
     body: 'Manufacturer-spec servicing, diagnostics and repairs for all vehicles. State-of-the-art equipment, honest advice.',
     ctas: [{ label: 'Explore Services', href: '/services', variant: 'glass' }],
     subLinks: [
+      { label: 'Service', href: '/services#servicing' },
       { label: 'MOT', href: '/mot' },
       { label: 'Tyres', href: '/tyres' },
       { label: 'Diagnostics', href: '/diagnostics' },
@@ -75,6 +76,12 @@ const panels: Panel[] = [
     heading: 'Smart car\nto Bentley.',
     body: 'Accident repair, full resprays and classic restoration. MG approved body repairer. All major insurers accepted.',
     ctas: [{ label: 'Explore Bodywork', href: '/bodywork', variant: 'glass' }],
+    subLinks: [
+      { label: 'Accident Repair', href: '/bodywork#accident-repair' },
+      { label: 'Dent Removal', href: '/bodywork#dent-removal' },
+      { label: 'Paintwork', href: '/bodywork#paintwork' },
+      { label: 'Classic Restoration', href: '/bodywork#classic-restoration' },
+    ],
   },
   {
     id: 'detailing',
@@ -84,6 +91,12 @@ const panels: Panel[] = [
     heading: 'The finish it\ndeserves.',
     body: 'Machine polishing, paint correction, ceramic coating and full interior work. Correct products, methodical preparation.',
     ctas: [{ label: 'Explore Detailing', href: '/detailing', variant: 'glass' }],
+    subLinks: [
+      { label: 'Paint Correction', href: '/detailing#paint-correction' },
+      { label: 'Paint Protection', href: '/detailing#paint-protection' },
+      { label: 'Interior Detailing', href: '/detailing#interior-detailing' },
+      { label: 'Detail Packages', href: '/detailing#detail-packages' },
+    ],
   },
 ];
 
@@ -158,7 +171,7 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
               {/* Stocklist preview — mobile only, this panel only */}
               {panel.id === 'stocklist' && <StocklistPreviewMobile vehicles={previewVehicles} />}
 
-              {/* Sub-links — Servicing panel only, folded out of the primary nav */}
+              {/* Sub-links — mirrors this panel's header nav dropdown */}
               {panel.subLinks && (
                 <div className="flex flex-wrap gap-x-3 gap-y-1 mb-4">
                   {panel.subLinks.map((link) => (
@@ -342,7 +355,7 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
                 ))}
               </div>
 
-              {/* Sub-links — Servicing panel only, folded out of the primary nav */}
+              {/* Sub-links — mirrors this panel's header nav dropdown */}
               {panel.subLinks && (
                 <div className="flex flex-wrap gap-x-5 gap-y-1.5 mt-5 pointer-events-auto">
                   {panel.subLinks.map((link) => (

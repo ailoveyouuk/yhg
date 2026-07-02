@@ -198,7 +198,7 @@ export default function Header() {
               >
                 {item.label}
               </Link>
-              {/* Servicing sub-links — MOT / Tyres / Diagnostics / Brakes */}
+              {/* Sub-links, where present */}
               {item.subLinks && (
                 <div className="flex flex-wrap gap-x-4 gap-y-1 pb-3.5 -mt-1.5">
                   {item.subLinks.map((sub) => (
