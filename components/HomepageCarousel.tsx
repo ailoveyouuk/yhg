@@ -107,9 +107,9 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
               />
             )}
 
-            {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-transparent pointer-events-none" />
+            {/* Gradient overlays — darkened +15% for text legibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent pointer-events-none" />
 
             {/* Content */}
             <div className="absolute bottom-0 left-0 px-6 pb-6 max-w-full">
@@ -213,13 +213,13 @@ export default function HomepageCarousel({ previewVehicles = [] }: { previewVehi
             )}
 
             {/* ─── Gradient overlays — always rendered, opacity controlled ─── */}
-            {/* Active gradients (bottom + left) */}
+            {/* Active gradients (bottom + left) — darkened +15% for text legibility */}
             <div
-              className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none"
+              className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent pointer-events-none"
               style={{ opacity: isActive ? 1 : 0, transition: 'opacity 0.4s ease' }}
             />
             <div
-              className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/10 to-transparent pointer-events-none"
+              className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent pointer-events-none"
               style={{ opacity: isActive ? 1 : 0, transition: 'opacity 0.4s ease' }}
             />
             {/* Sliver overlay */}
