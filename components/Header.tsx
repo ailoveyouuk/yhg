@@ -48,7 +48,7 @@ export default function Header() {
             Yardley Hastings Garage
           </span>
           <span className="text-[#7A7A76] text-[9.5px] tracking-[0.14em] uppercase font-medium block">
-            {ESTABLISHED_TAGLINE}
+            {ESTABLISHED_TAGLINE} · Northamptonshire
           </span>
         </Link>
 
