@@ -5,6 +5,7 @@ import type { Vehicle } from '@/types';
 import vehiclesData from '@/data/vehicles.json';
 import PageCard from '@/components/PageCard';
 import CarGallery from '@/components/CarGallery';
+import VehicleEnquiryForm from '@/components/VehicleEnquiryForm';
 import { BUSINESS_EMAIL, BUSINESS_PHONE } from '@/data/business';
 
 const vehicles = vehiclesData as Vehicle[];
@@ -154,47 +155,7 @@ export default async function VehicleDetailPage({ params }: { params: Promise<{ 
                 <div className="border-t border-[#EFEFEB] pt-6">
                   <div className="w-4 h-[2px] bg-[#004225] mb-4" />
                   <h3 className="text-sm font-semibold text-[#111110] mb-4 tracking-tight">Quick enquiry</h3>
-                  <form
-                    name="vehicle-enquiry"
-                    method="POST"
-                    data-netlify="true"
-                    className="space-y-3"
-                  >
-                    <input type="hidden" name="form-name" value="vehicle-enquiry" />
-                    <input type="hidden" name="vehicle" value={`${v.year} ${v.make} ${v.model} (${v.id})`} />
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      placeholder="Your name"
-                      className="w-full border border-[#EFEFEB] focus:border-[#111110] px-3 py-2.5 text-sm focus:outline-none transition-colors bg-white"
-                    />
-                    <input
-                      type="tel"
-                      name="phone"
-                      placeholder="Phone number"
-                      className="w-full border border-[#EFEFEB] focus:border-[#111110] px-3 py-2.5 text-sm focus:outline-none transition-colors bg-white"
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="Email address"
-                      className="w-full border border-[#EFEFEB] focus:border-[#111110] px-3 py-2.5 text-sm focus:outline-none transition-colors bg-white"
-                    />
-                    <textarea
-                      name="message"
-                      rows={3}
-                      placeholder="Any questions?"
-                      className="w-full border border-[#EFEFEB] focus:border-[#111110] px-3 py-2.5 text-sm focus:outline-none transition-colors resize-none bg-white"
-                    />
-                    <button
-                      type="submit"
-                      className="w-full bg-[#004225] hover:bg-[#005a30] text-white font-medium py-3 text-sm transition-colors"
-                    >
-                      Send Enquiry
-                    </button>
-                  </form>
+                  <VehicleEnquiryForm vehicle={`${v.year} ${v.make} ${v.model} (${v.id})`} />
                 </div>
               </div>
             </div>
