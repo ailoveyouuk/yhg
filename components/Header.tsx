@@ -6,19 +6,34 @@ import { usePathname } from 'next/navigation';
 import { useServiceBag } from '@/contexts/ServiceBagContext';
 import { ESTABLISHED_TAGLINE } from '@/data/business';
 
+type NavItem = {
+  label: string;
+  href: string;
+  subLinks?: { label: string; href: string }[];
+};
+
 // MOT, Tyres, Diagnostics and Brakes each still have their own standalone
-// page (still linked from the Servicing homepage panel and the footer),
-// but are folded under "Servicing" here to keep the primary nav consistent
-// with the four homepage carousel panels: Stocklist, Servicing, Bodywork,
-// Detailing.
-const centerNav = [
+// page, folded under "Servicing" as a dropdown here — keeps the visible
+// primary nav consistent with the four homepage carousel panels (Stocklist,
+// Servicing, Bodywork, Detailing) while keeping all four sub-pages reachable
+// from every page on the site, not just the homepage panel.
+const centerNav: NavItem[] = [
   { label: 'Stocklist', href: '/cars' },
-  { label: 'Servicing', href: '/services' },
+  {
+    label: 'Servicing',
+    href: '/services',
+    subLinks: [
+      { label: 'MOT', href: '/mot' },
+      { label: 'Tyres', href: '/tyres' },
+      { label: 'Diagnostics', href: '/diagnostics' },
+      { label: 'Brakes', href: '/brakes' },
+    ],
+  },
   { label: 'Bodywork', href: '/bodywork' },
   { label: 'Detailing', href: '/detailing' },
 ];
 
-const rightNav = [
+const rightNav: NavItem[] = [
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -55,11 +70,39 @@ export default function Header() {
 
         {/* Centre — primary nav */}
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-0.5">
-          {centerNav.map((item) => (
-            <Link key={item.href} href={item.href} className={pillClass(item.href)}>
-              {item.label}
-            </Link>
-          ))}
+          {centerNav.map((item) =>
+            item.subLinks ? (
+              <div key={item.href} className="relative group">
+                <Link href={item.href} className={pillClass(item.href)}>
+                  {item.label}
+                </Link>
+                {/* Dropdown — MOT / Tyres / Diagnostics / Brakes. Hover-triggered,
+                    with a small invisible bridge (pt-2) so the pointer doesn't
+                    leave the hover area crossing the gap. */}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+                  <div className="bg-white border border-[#EFEFEB] rounded-md shadow-[0_8px_24px_rgba(0,0,0,0.1)] py-1.5 min-w-[150px]">
+                    {item.subLinks.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        className={`block px-4 py-2 text-[13px] font-medium transition-colors ${
+                          isActive(sub.href)
+                            ? 'text-[#004225] bg-[#EAF0EC]'
+                            : 'text-[#5A5A57] hover:text-[#004225] hover:bg-[#F7F7F5]'
+                        }`}
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link key={item.href} href={item.href} className={pillClass(item.href)}>
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         {/* Right — About + Contact + Request badge */}
@@ -118,14 +161,30 @@ export default function Header() {
       {open && (
         <div className="lg:hidden bg-[#F7F7F5] border-t border-[#E8E8E4] px-6 py-3">
           {[...centerNav, ...rightNav].map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="block text-[#7A7A76] hover:text-[#004225] py-3.5 text-base font-medium transition-colors border-b border-[#E8E8E4] last:border-0"
-            >
-              {item.label}
-            </Link>
+            <div key={item.href} className="border-b border-[#E8E8E4] last:border-0">
+              <Link
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="block text-[#7A7A76] hover:text-[#004225] py-3.5 text-base font-medium transition-colors"
+              >
+                {item.label}
+              </Link>
+              {/* Servicing sub-links — MOT / Tyres / Diagnostics / Brakes */}
+              {item.subLinks && (
+                <div className="flex flex-wrap gap-x-4 gap-y-1 pb-3.5 -mt-1.5">
+                  {item.subLinks.map((sub) => (
+                    <Link
+                      key={sub.href}
+                      href={sub.href}
+                      onClick={() => setOpen(false)}
+                      className="text-[#5A5A57] hover:text-[#004225] text-sm transition-colors"
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
           {bagCount > 0 && (
             <button
