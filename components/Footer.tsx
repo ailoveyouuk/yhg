@@ -146,7 +146,10 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col lg:flex-row items-center justify-between text-xs text-white/45 gap-3">
-          <span>© {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved. Website by AI Love You.</span>
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-0.5">
+            <span>© {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.</span>
+            <span className="text-white/30">Website by AI Love You</span>
+          </div>
           <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5">
             {LEGAL_LINKS.map(([label, href]) => (
               <Link key={href} href={href} className="hover:text-white/80 transition-colors">{label}</Link>
